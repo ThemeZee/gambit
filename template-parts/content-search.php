@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the search loop
  *
- * @package zeeDynamic
+ * @package Gambit
  */
 ?>
 
@@ -16,7 +16,7 @@
 
 		<div class="entry-content clearfix">
 			<?php the_excerpt(); ?>
-			<?php zeedynamic_more_link(); ?>
+			<?php gambit_more_link(); ?>
 		</div><!-- .entry-content -->
 
 	</article>

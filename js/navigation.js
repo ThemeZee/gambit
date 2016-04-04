@@ -8,7 +8,7 @@
  *
  * Author: Thomas Weichselbaumer (themezee.com)
  *
- * @package zeeDynamic
+ * @package Gambit
  */
 
 (function($) {
@@ -115,7 +115,7 @@
 		$("#main-navigation").responsiveMenu({
 			menuClass: "main-navigation-menu",
 			toggleClass: "main-navigation-toggle",
-			toggleText: zeedynamic_menu_title,
+			toggleText: gambit_menu_title,
 			maxWidth: "60em"
 		});
 		

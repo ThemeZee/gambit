@@ -5,18 +5,18 @@
  * This file contains several template functions which are used to print out specific HTML markup
  * in the theme. You can override these template functions within your child theme.
  *
- * @package zeeDynamic
+ * @package Gambit
  */
 	
 	
-if ( ! function_exists( 'zeedynamic_site_title' ) ):
+if ( ! function_exists( 'gambit_site_title' ) ):
 /**
  * Displays the site title in the header area
  */
-function zeedynamic_site_title() {
+function gambit_site_title() {
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = gambit_theme_options();
 
 	if ( ( is_home() and $theme_options['blog_title'] == '' ) or is_page_template( 'template-magazine.php' )  ) : ?>
 		
@@ -32,20 +32,20 @@ function zeedynamic_site_title() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_header_image' ) ):
+if ( ! function_exists( 'gambit_header_image' ) ):
 /**
  * Displays the custom header image below the navigation menu
  */
-function zeedynamic_header_image() {
+function gambit_header_image() {
 	
 	// Get theme options from database
-	$theme_options = zeedynamic_theme_options();	
+	$theme_options = gambit_theme_options();	
 	
 	// Display featured image as header image on static pages
 	if( is_page() && has_post_thumbnail() ) : ?>
 		
 		<div id="headimg" class="header-image featured-image-header">
-			<?php the_post_thumbnail( 'zeedynamic-header-image' ); ?>
+			<?php the_post_thumbnail( 'gambit-header-image' ); ?>
 		</div>
 	
 	<?php // Display default header image set on Appearance > Header
@@ -80,39 +80,39 @@ function zeedynamic_header_image() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_post_content' ) ):
+if ( ! function_exists( 'gambit_post_content' ) ):
 /**
  * Displays the post content on archive pages
  */
-function zeedynamic_post_content() {
+function gambit_post_content() {
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = gambit_theme_options();
 	
 	// Return early if no featured image should be displayed
 	if ( 'excerpt' == $theme_options['post_content'] ) {
 		
 		the_excerpt();
-		zeedynamic_more_link();
+		gambit_more_link();
 	
 	} else {
 		
-		the_content( esc_html__( 'Read more', 'zeedynamic' ) );
+		the_content( esc_html__( 'Read more', 'gambit' ) );
 		
 	}
 
-} // zeedynamic_post_content()
+} // gambit_post_content()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_post_image_single' ) ):
+if ( ! function_exists( 'gambit_post_image_single' ) ):
 /**
  * Displays the featured image on single posts
  */
-function zeedynamic_post_image_single() {
+function gambit_post_image_single() {
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = gambit_theme_options();
 	
 	// Display Post Thumbnail if activated
 	if ( true == $theme_options['post_image'] ) :
@@ -121,39 +121,39 @@ function zeedynamic_post_image_single() {
 
 	endif;
 
-} // zeedynamic_post_image_single()
+} // gambit_post_image_single()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_entry_meta' ) ):	
+if ( ! function_exists( 'gambit_entry_meta' ) ):	
 /**
  * Displays the date, author and categories of a post
  */
-function zeedynamic_entry_meta() {
+function gambit_entry_meta() {
 
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = gambit_theme_options();
 	
 	$postmeta = '';
 	
 	// Display date unless user has deactivated it via settings
 	if ( true == $theme_options['meta_date'] ) {
 		
-		$postmeta .= zeedynamic_meta_date();
+		$postmeta .= gambit_meta_date();
 		
 	}
 
 	// Display author unless user has deactivated it via settings
 	if ( true == $theme_options['meta_author'] ) {
 	
-		$postmeta .= zeedynamic_meta_author();
+		$postmeta .= gambit_meta_author();
 	
 	}
 	
 	// Display categories unless user has deactivated it via settings
 	if ( true == $theme_options['meta_category'] ) {
 	
-		$postmeta .= zeedynamic_meta_category();
+		$postmeta .= gambit_meta_category();
 	
 	}
 		
@@ -163,15 +163,15 @@ function zeedynamic_entry_meta() {
 			
 	}
 
-} // zeedynamic_entry_meta()
+} // gambit_entry_meta()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_meta_date' ) ):
+if ( ! function_exists( 'gambit_meta_date' ) ):
 /**
  * Displays the post date
  */
-function zeedynamic_meta_date() { 
+function gambit_meta_date() { 
 
 	$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
 		esc_url( get_permalink() ),
@@ -182,48 +182,48 @@ function zeedynamic_meta_date() {
 
 	return '<span class="meta-date">' . $time_string . '</span>';
 
-}  // zeedynamic_meta_date()
+}  // gambit_meta_date()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_meta_author' ) ):
+if ( ! function_exists( 'gambit_meta_author' ) ):
 /**
  * Displays the post author
  */
-function zeedynamic_meta_author() {  
+function gambit_meta_author() {  
 	
 	$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'zeedynamic' ), get_the_author() ) ),
+		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'gambit' ), get_the_author() ) ),
 		esc_html( get_the_author() )
 	);
 	
 	return '<span class="meta-author"> ' . $author_string . '</span>';
 
-}  // zeedynamic_meta_author()
+}  // gambit_meta_author()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_meta_category' ) ):
+if ( ! function_exists( 'gambit_meta_category' ) ):
 /**
  * Displays the category of posts
  */	
-function zeedynamic_meta_category() { 
+function gambit_meta_category() { 
 
 	return '<span class="meta-category"> ' . get_the_category_list(', ') . '</span>';
 	
-} // zeedynamic_meta_category()
+} // gambit_meta_category()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_entry_tags' ) ):
+if ( ! function_exists( 'gambit_entry_tags' ) ):
 /**
  * Displays the post tags on single post view
  */
-function zeedynamic_entry_tags() {
+function gambit_entry_tags() {
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = gambit_theme_options();
 	
 	// Get Tags
 	$tag_list = get_the_tag_list('', '');
@@ -239,31 +239,31 @@ function zeedynamic_entry_tags() {
 <?php 
 	endif;
 
-} // zeedynamic_entry_tags()
+} // gambit_entry_tags()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_more_link' ) ):
+if ( ! function_exists( 'gambit_more_link' ) ):
 /**
  * Displays the more link on posts
  */
-function zeedynamic_more_link() { ?>
+function gambit_more_link() { ?>
 
-	<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Read more', 'zeedynamic' ); ?></a>
+	<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Read more', 'gambit' ); ?></a>
 
 <?php
 }
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_post_navigation' ) ):
+if ( ! function_exists( 'gambit_post_navigation' ) ):
 /**
  * Displays Single Post Navigation
  */	
-function zeedynamic_post_navigation() { 
+function gambit_post_navigation() { 
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = gambit_theme_options();
 	
 	if ( true == $theme_options['post_navigation'] ) {
 
@@ -275,11 +275,11 @@ function zeedynamic_post_navigation() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_breadcrumbs' ) ):
+if ( ! function_exists( 'gambit_breadcrumbs' ) ):
 /**
  * Displays ThemeZee Breadcrumbs plugin
  */	
-function zeedynamic_breadcrumbs() { 
+function gambit_breadcrumbs() { 
 	
 	if ( function_exists( 'themezee_breadcrumbs' ) ) {
 
@@ -293,11 +293,11 @@ function zeedynamic_breadcrumbs() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_related_posts' ) ):
+if ( ! function_exists( 'gambit_related_posts' ) ):
 /**
  * Displays ThemeZee Related Posts plugin
  */	
-function zeedynamic_related_posts() { 
+function gambit_related_posts() { 
 	
 	if ( function_exists( 'themezee_related_posts' ) ) {
 
@@ -312,11 +312,11 @@ function zeedynamic_related_posts() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_pagination' ) ):
+if ( ! function_exists( 'gambit_pagination' ) ):
 /**
  * Displays pagination on archive pages
  */	
-function zeedynamic_pagination() { 
+function gambit_pagination() { 
 	
 	global $wp_query;
 
@@ -342,22 +342,22 @@ function zeedynamic_pagination() {
 	<?php
 	endif;
 	
-} // zeedynamic_pagination()
+} // gambit_pagination()
 endif;
 
 
 /**
  * Displays credit link on footer line
  */	
-function zeedynamic_footer_text() { ?>
+function gambit_footer_text() { ?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'zeedynamic' ), 
+		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'gambit' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="https://themezee.com/themes/zeedynamic/" title="zeeDynamic WordPress Theme">zeeDynamic</a>'
+			'<a href="https://themezee.com/themes/gambit/" title="Gambit WordPress Theme">Gambit</a>'
 		); ?>
 	</span>
 
 <?php
 }
-add_action( 'zeedynamic_footer_text', 'zeedynamic_footer_text' );
+add_action( 'gambit_footer_text', 'gambit_footer_text' );

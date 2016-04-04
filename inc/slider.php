@@ -7,34 +7,34 @@
  * 
  * The template for displaying the slideshow can be found under /template-parts/post-slider.php
  *
- * @package zeeDynamic
+ * @package Gambit
  */
 
  
 /**
  * Enqueue slider scripts and styles.
  */
-function zeedynamic_slider_scripts() {
+function gambit_slider_scripts() {
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = gambit_theme_options();
 	
 	// Register and Enqueue FlexSlider JS and CSS if necessary
 	if ( true == $theme_options['slider_blog'] or true == $theme_options['slider_magazine'] or is_page_template('template-slider.php') ) :
 
 		// FlexSlider CSS
-		wp_enqueue_style( 'zeedynamic-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
+		wp_enqueue_style( 'gambit-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
 
 		// FlexSlider JS
-		wp_enqueue_script( 'zeedynamic-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.5.0' );
+		wp_enqueue_script( 'gambit-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.5.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script( 'zeedynamic-post-slider', get_template_directory_uri() .'/js/slider.js', array('zeedynamic-flexslider') );
+		wp_enqueue_script( 'gambit-post-slider', get_template_directory_uri() .'/js/slider.js', array('gambit-flexslider') );
 
 	endif;
 	
-} // zeedynamic_slider_scripts
-add_action( 'wp_enqueue_scripts', 'zeedynamic_slider_scripts' );
+} // gambit_slider_scripts
+add_action( 'wp_enqueue_scripts', 'gambit_slider_scripts' );
 
 
 /**
@@ -43,7 +43,7 @@ add_action( 'wp_enqueue_scripts', 'zeedynamic_slider_scripts' );
  * @param int $length Length of excerpt in number of words
  * @return int
  */
-function zeedynamic_slider_excerpt_length($length) {
+function gambit_slider_excerpt_length($length) {
     return 25;
 }
 
@@ -53,10 +53,10 @@ function zeedynamic_slider_excerpt_length($length) {
  *
  * Passes parameters from theme options to the javascript files (js/slider.js)
  */
-function zeedynamic_slider_options() { 
+function gambit_slider_options() { 
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = gambit_theme_options();
 	
 	// Set Parameters array
 	$params = array();
@@ -68,7 +68,7 @@ function zeedynamic_slider_options() {
 	$params['speed'] = $theme_options['slider_speed'];
 	
 	// Passing Parameters to Javascript
-	wp_localize_script( 'zeedynamic-post-slider', 'zeedynamic_slider_params', $params );
+	wp_localize_script( 'gambit-post-slider', 'gambit_slider_params', $params );
 	
-} // zeedynamic_slider_options
-add_action( 'wp_enqueue_scripts', 'zeedynamic_slider_options' );
+} // gambit_slider_options
+add_action( 'wp_enqueue_scripts', 'gambit_slider_options' );

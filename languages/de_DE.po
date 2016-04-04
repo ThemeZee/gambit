@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes + Pro Versions + Add-ons package.
 msgid ""
 msgstr ""
-"Project-Id-Version: zeeDynamic\n"
+"Project-Id-Version: Gambit\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2016-04-03 17:11+0100\n"
 "PO-Revision-Date: 2016-04-03 17:13+0100\n"
@@ -154,10 +154,10 @@ msgstr ""
 #: inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"zeeDynamic requires at least WordPress version 4.2. You are running version "
+"Gambit requires at least WordPress version 4.2. You are running version "
 "%s. Please upgrade and try again."
 msgstr ""
-"zeeDynamic benötigt mindestens WordPress Version 4.2. Du verwendest Version "
+"Gambit benötigt mindestens WordPress Version 4.2. Du verwendest Version "
 "%s. Bitte führe ein Update durch und versuche es erneut."
 
 #: inc/template-tags.php:100 inc/template-tags.php:252
@@ -188,8 +188,8 @@ msgid "Theme Links"
 msgstr "Theme Links"
 
 #: inc/theme-info.php:50 inc/customizer/customizer.php:103
-msgid "https://themezee.com/themes/zeedynamic/"
-msgstr "https://themezee.com/de/themes/zeedynamic/"
+msgid "https://themezee.com/themes/gambit/"
+msgstr "https://themezee.com/de/themes/gambit/"
 
 #: inc/theme-info.php:50 inc/customizer/customizer.php:104
 msgid "Theme Page"
@@ -205,8 +205,8 @@ msgstr "Theme Demo"
 
 #: inc/theme-info.php:53 inc/theme-info.php:74
 #: inc/customizer/customizer.php:105
-msgid "https://themezee.com/docs/zeedynamic-documentation/"
-msgstr "https://themezee.com/de/docs/zeedynamic-dokumentation/"
+msgid "https://themezee.com/docs/gambit-documentation/"
+msgstr "https://themezee.com/de/docs/gambit-dokumentation/"
 
 #: inc/theme-info.php:53 inc/theme-info.php:68
 #: inc/customizer/customizer.php:106
@@ -270,8 +270,8 @@ msgstr ""
 "erweiterte Anpassungsmöglichkeiten."
 
 #: inc/theme-info.php:120 inc/customizer/functions/custom-controls.php:101
-msgid "https://themezee.com/addons/zeedynamic-pro/"
-msgstr "https://themezee.com/de/addons/zeedynamic-pro/"
+msgid "https://themezee.com/addons/gambit-pro/"
+msgstr "https://themezee.com/de/addons/gambit-pro/"
 
 #: inc/theme-info.php:121 inc/customizer/functions/custom-controls.php:102
 #, php-format
