@@ -23,23 +23,45 @@ function gambit_customize_register_general_settings( $wp_customize ) {
 		)
 	);
 	
-	// Add Settings and Controls for Layout
-	$wp_customize->add_setting( 'gambit_theme_options[layout]', array(
-        'default'           => 'right-sidebar',
+	// Add Settings and Controls for Theme Width
+	$wp_customize->add_setting( 'gambit_theme_options[theme_width]', array(
+        'default'           => 'boxed-layout',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'gambit_sanitize_select'
 		)
 	);
-    $wp_customize->add_control( 'gambit_theme_options[layout]', array(
-        'label'    => esc_html__( 'Theme Layout', 'gambit' ),
+    $wp_customize->add_control( 'gambit_theme_options[theme_width]', array(
+        'label'    => esc_html__( 'Theme Width', 'gambit' ),
         'section'  => 'gambit_section_general',
-        'settings' => 'gambit_theme_options[layout]',
+        'settings' => 'gambit_theme_options[theme_width]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'left-sidebar' => esc_html__( 'Left Sidebar', 'gambit' ),
-            'right-sidebar' => esc_html__( 'Right Sidebar', 'gambit' )
+            'boxed-layout' => esc_html__( 'Boxed Layout', 'gambit' ),
+            'wide-layout' => esc_html__( 'Wide Layout', 'gambit' ),
+			)
+		)
+	);
+	
+	// Add Settings and Controls for Theme Layout
+	$wp_customize->add_setting( 'gambit_theme_options[theme_layout]', array(
+        'default'           => 'content-left',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'gambit_sanitize_select'
+		)
+	);
+    $wp_customize->add_control( 'gambit_theme_options[theme_layout]', array(
+        'label'    => esc_html__( 'Theme Layout', 'gambit' ),
+        'section'  => 'gambit_section_general',
+        'settings' => 'gambit_theme_options[theme_layout]',
+        'type'     => 'radio',
+		'priority' => 2,
+        'choices'  => array(
+            'content-left' => esc_html__( 'Content Left', 'gambit' ),
+            'content-center' => esc_html__( 'Content Center', 'gambit' ),
+			'content-right' => esc_html__( 'Content Right', 'gambit' )
 			)
 		)
 	);
@@ -57,7 +79,7 @@ function gambit_customize_register_general_settings( $wp_customize ) {
         'section'  => 'gambit_section_general',
         'settings' => 'gambit_theme_options[blog_title]',
         'type'     => 'text',
-		'priority' => 1
+		'priority' => 3
 		)
 	);
 

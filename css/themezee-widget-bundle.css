@@ -121,7 +121,7 @@
 	font-size: 0.8125rem;
 	font-weight: bold;
 	color: #fff;
-	background: #333333;
+	background: #154585;
 	text-transform: uppercase;
 }
 
@@ -132,13 +132,13 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #e84747;
+	background: #25b5d5;
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
 	color: #fff;
-	background: #e84747;
+	background: #25b5d5;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -188,7 +188,7 @@
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.6em;
-	background: #e84747;
+	background: #25b5d5;
 }
 
 .tzwb-social-icons .social-icons-menu li a:before {
@@ -197,5 +197,5 @@
 
 .tzwb-social-icons .social-icons-menu li a:hover {
 	text-decoration: none;
-	background: #333333;
+	background: #154585;
 }

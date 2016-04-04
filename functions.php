@@ -52,8 +52,8 @@ function gambit_setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'gambit_custom_header_args', array(
 		'header-text' => false,
-		'width'	=> 1230,
-		'height' => 410,
+		'width'	=> 1340,
+		'height' => 420,
 		'flex-height' => true
 	) ) );
 	
@@ -85,7 +85,7 @@ add_action( 'after_setup_theme', 'gambit_content_width', 0 );
 function gambit_widgets_init() {
 	
 	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar', 'gambit' ),
+		'name' => esc_html__( 'Main Sidebar', 'gambit' ),
 		'id' => 'sidebar',
 		'description' => esc_html__( 'Appears on posts and pages except full width template.', 'gambit' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
@@ -93,6 +93,17 @@ function gambit_widgets_init() {
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
 		'after_title' => '</h3></div>',
 	));
+	
+	register_sidebar( array(
+		'name' => esc_html__( 'Small Sidebar', 'gambit' ),
+		'id' => 'sidebar-small',
+		'description' => esc_html__( 'Appears on posts and pages except full width template.', 'gambit' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
+		'after_widget' => '</aside>',
+		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title' => '</h3></div>',
+	));
+	
 	
 	register_sidebar( array(
 		'name' => esc_html__( 'Header', 'gambit' ),
@@ -158,7 +169,7 @@ add_action( 'wp_enqueue_scripts', 'gambit_scripts' );
 function gambit_google_fonts_url() {
     
 	// Set default Fonts
-	$font_families = array( 'Droid Sans:400,400italic,700,700italic', 'Francois One:400,400italic,700,700italic' );
+	$font_families = array( 'Roboto:400,400italic,700,700italic' );
 
 	// Build Fonts URL
 	$query_args = array(
@@ -217,3 +228,4 @@ require get_template_directory() . '/inc/slider.php';
 // include Widget Files
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-sidebar.php';

@@ -50,28 +50,30 @@
 
 			
 			</div><!-- .header-main -->	
-
-			<div id="main-navigation-wrap" class="primary-navigation-wrap">
-			
-				<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
-					<?php 
-						// Display Main Navigation
-						wp_nav_menu( array(
-							'theme_location' => 'primary', 
-							'container' => false, 
-							'menu_class' => 'main-navigation-menu', 
-							'echo' => true, 
-							'fallback_cb' => 'gambit_default_menu')
-						);
-					?>
-				</nav><!-- #main-navigation -->
-				
-			</div>
 		
 		</header><!-- #masthead -->
 		
-		<?php gambit_breadcrumbs(); ?>
+		<div id="main-navigation-wrap" class="primary-navigation-wrap">
+			
+			<nav id="main-navigation" class="primary-navigation container navigation clearfix" role="navigation">
+				<?php 
+					// Display Main Navigation
+					wp_nav_menu( array(
+						'theme_location' => 'primary', 
+						'container' => false, 
+						'menu_class' => 'main-navigation-menu', 
+						'echo' => true, 
+						'fallback_cb' => 'gambit_default_menu')
+					);
+				?>
+			</nav><!-- #main-navigation -->
+				
+		</div>
 		
-		<div id="content" class="site-content container clearfix">
+		<div id="content-wrap" class="site-content-wrap clearfix">
 		
 			<?php gambit_header_image(); ?>
+			
+			<?php gambit_breadcrumbs(); ?>
+			
+			<div id="content" class="site-content container clearfix">

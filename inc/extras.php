@@ -29,10 +29,17 @@ function gambit_body_classes( $classes ) {
 	
 	// Get Theme Options from Database
 	$theme_options = gambit_theme_options();
-		
-	// Switch Sidebar Layout to left
-	if ( 'left-sidebar' == $theme_options['layout'] ) {
-		$classes[] = 'sidebar-left';
+	
+	// Switch Theme Width
+	if ( 'wide-layout' == $theme_options['theme_width'] ) {
+		$classes[] = 'wide-layout';
+	}
+	
+	// Switch Theme Layout
+	if ( 'content-center' == $theme_options['theme_layout'] ) {
+		$classes[] = 'content-center';
+	} elseif ( 'content-right' == $theme_options['theme_layout'] ) {
+		$classes[] = 'content-right';
 	}
 	
 	return $classes;

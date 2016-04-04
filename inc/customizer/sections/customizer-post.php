@@ -25,7 +25,7 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 	
 	// Add Post Layout Settings for archive posts
 	$wp_customize->add_setting( 'gambit_theme_options[post_layout]', array(
-        'default'           => 'index',
+        'default'           => 'small-image',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'gambit_sanitize_select'

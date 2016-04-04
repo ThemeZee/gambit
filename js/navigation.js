@@ -116,14 +116,14 @@
 			menuClass: "main-navigation-menu",
 			toggleClass: "main-navigation-toggle",
 			toggleText: gambit_menu_title,
-			maxWidth: "60em"
+			maxWidth: "55em"
 		});
 		
 		/* Setup Top Navigation */
 		$("#top-navigation").responsiveMenu({
 			menuClass: "top-navigation-menu",
 			toggleClass: "top-navigation-toggle",
-			maxWidth: "60em"
+			maxWidth: "55em"
 		});
 		
 		/* Setup Footer Navigation */

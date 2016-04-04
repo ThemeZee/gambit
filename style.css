@@ -288,7 +288,7 @@ input,
 select,
 textarea {
 	color: #333333;
-	font-family: 'Droid Sans', Tahoma, Arial;
+	font-family: 'Roboto', Tahoma, Arial;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.75;
@@ -432,19 +432,19 @@ table {
 }
 
 a {
-	color: #e84747;
+	color: #25b5d5;
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #e84747;
+	color: #25b5d5;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #333333;
+	color: #154585;
 }
 
 a:focus {
@@ -464,11 +464,12 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	padding: 0.5em 1em;
-	font-family: 'Francois One', Tahoma, Arial;
+	font-family: 'Roboto', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
+	font-weight: bold;
 	color: #fff;
-	background: #e84747;
+	background: #25b5d5;
 	border: none;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -478,7 +479,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #333333;
+	background: #154585;
 }
 
 button:focus,
@@ -591,33 +592,38 @@ textarea {
 # 8.0 - Layout Structure
 --------------------------------------------------------------*/
 .site {
-	max-width: 1140px;
-	width: 100%;
+	max-width: 1340px;
 	margin: 0 auto;
-	background: #fff;
-}
-
-.container {
-	padding: 0 2em;
+	width: 100%;
 }
 
 .site-content {
-	padding-top: 2em;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 2em 0 0 2em;
 	background: #fff;
 }
 
 .content-area {
-	float: left;
-	width: 72%;
+	order: 1;
+	width: 56%;
 	padding-right: 2em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-.sidebar {
-	float: right;
-	width: 28%;
+.main-sidebar {
+	order: 2;
+	width: 22%;
+	padding-right: 2em;
+}
+
+.small-sidebar {
+	order: 3;
+	width: 22%;
+	padding-right: 2em;
 }
 
 /* Fullwidth Template */
@@ -630,10 +636,12 @@ textarea {
 /*--------------------------------------------------------------
 # 9.0 - Header
 --------------------------------------------------------------*/
-.header-main {
+.site-header {
 	background: #fff;
-	padding-top: 2em;
-	padding-bottom: 2em;
+}
+
+.header-main {
+	padding: 2em;
 }
 
 .site-branding {
@@ -653,16 +661,17 @@ textarea {
 	display: inline-block;
 	margin: 0 0.3em;
 	padding: 0;
-	color: #e84747;
-	font-family: 'Francois One', sans-serif;
+	color: #25b5d5;
+	font-family: 'Roboto', sans-serif;
 	font-size: 32px;
 	font-size: 2rem;
+	font-weight: bold;
 	text-decoration: none;
 }
 
 .site-title a:link, 
 .site-title a:visited {
-	color: #e84747;
+	color: #25b5d5;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
@@ -672,7 +681,7 @@ textarea {
 
 .site-title a:hover,
 .site-title a:active {
-	color: #333333;
+	color: #154585;
 }
 
 /* Header Widgets */
@@ -696,13 +705,12 @@ textarea {
 
 /* Custom Header Image */
 .header-image {
-	margin: 0 0 2em;
+	margin: 1px 0 0;
 	text-align: center;
 }
 
 .header-image img {
-	max-width: 1220px;
-	max-height: 400px;
+	max-width: 1340px;
 	vertical-align: top;
 	width: 100%;
 	height: auto;
@@ -716,11 +724,7 @@ textarea {
 ## 10.1 - Main Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
-	background: #fff;
-}
-
-.primary-navigation {
-	background: #333333;
+	background: #154585;
 }
 
 .main-navigation-toggle {
@@ -743,10 +747,11 @@ textarea {
 
 .main-navigation-menu a {
 	display: block;
-	font-family: 'Francois One', Tahoma, Arial;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	padding: 0.75em 1.5em;
+	font-family: 'Roboto', Tahoma, Arial;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	padding: 0.9em 1.5em;
 	text-transform: uppercase;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
@@ -778,7 +783,7 @@ textarea {
 
 .main-navigation-menu a:hover,
 .main-navigation-menu a:active {
-	background: #e84747;
+	background: #25b5d5;
 }
 
 .main-navigation-menu ul {
@@ -789,7 +794,7 @@ textarea {
 	padding: 0;
 	list-style-type: none;
 	list-style-position: outside;
-	background: #333333;
+	background: #154585;
 	border-top: 1px solid #fff;
 }
 
@@ -854,7 +859,7 @@ textarea {
 }
 
 .main-navigation-menu li.current-menu-item > a {
-	background: #e84747;
+	background: #25b5d5;
 }
 
 /*--------------------------------------------------------------
@@ -940,14 +945,13 @@ textarea {
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 2em 0;
-	color: #333;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
 .widget-header {
 	margin: 0 0 1.5em 0;
-	background: #333333;
+	background: #154585;
 }
 
 .widget-title {
@@ -1094,7 +1098,7 @@ textarea {
 }
 
 .widget-magazine-posts .medium-post .entry-title {
-	font-family: 'Droid Sans', Tahoma, Arial;
+	font-family: 'Roboto', Tahoma, Arial;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -1120,7 +1124,7 @@ textarea {
 }
 
 .widget-magazine-posts .small-post .entry-title {
-	font-family: 'Droid Sans', Tahoma, Arial;
+	font-family: 'Roboto', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1192,27 +1196,26 @@ textarea {
 .type-post, 
 .type-page, 
 .type-attachment  {
-	margin: 0 0 1.5em;
+	margin: 0 0 2em;
 	max-width: 100%;
 }
 
 .page-title, 
 .entry-title {
 	display: inline;
-	font-family: 'Francois One', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	font-size: 1.5rem;
 	padding: 0;
 	margin: 0;
-	color: #333333;
-	text-transform: uppercase;
+	color: #154585;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
 .entry-title a:link, 
 .entry-title a:visited {
-	color: #333333;
+	color: #154585;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -1223,11 +1226,11 @@ textarea {
 
 .entry-title a:hover, 
 .entry-title a:active {
-	color: #e84747;
+	color: #25b5d5;
 }
 
 .type-post .wp-post-image {
-	margin: 1em 0 0;
+	margin: 0 0 1em;
 }
 
 .entry-content {
@@ -1242,11 +1245,12 @@ textarea {
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 1em;
-	font-family: 'Francois One', Tahoma, Arial;
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-family: 'Roboto', Tahoma, Arial;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: bold;
 	color: #fff;
-	background: #e84747;
+	background: #25b5d5;
 	text-transform: uppercase;
 	text-decoration: none;
 }
@@ -1258,7 +1262,7 @@ textarea {
 
 .more-link:hover, 
 .more-link:active {
-	background: #333333;
+	background: #154585;
 }
 
 /* Small Post Layout */
@@ -1372,7 +1376,7 @@ textarea {
 	padding: 0.15em 0.6em;
 	text-decoration: none;
 	color: #fff;
-	background: #e84747;
+	background: #25b5d5;
 	border: none;
 	font-size: 12px !important;
 	font-size: 0.75rem !important;
@@ -1391,7 +1395,7 @@ textarea {
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover, 
 .entry-tags .meta-tags a:active {
-	background: #333333;
+	background: #154585;
 }
 
 /* Post Navigation */
@@ -1437,7 +1441,7 @@ textarea {
 	font-size: 0.875rem;
 	font-weight: bold;
 	color: #fff;
-	background: #333333;
+	background: #154585;
 }
 
 .post-pagination a:link, 
@@ -1452,7 +1456,7 @@ textarea {
 
 .post-pagination a:hover,
 .post-pagination .current {
-	background: #e84747;
+	background: #25b5d5;
 }
 
 /* Infinite Scroll Pagination */
@@ -1464,23 +1468,23 @@ textarea {
 	display: inline-block;
 	margin: 0 0 2em;
 	padding: 0.3em 0.8em;
-	font-family: 'Francois One', Tahoma, Arial;
+	font-family: 'Roboto', Tahoma, Arial;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	color: #fff;
-	background: #e84747;
+	background: #25b5d5;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	background-color: #333333;
+	background-color: #154585;
 }
 
 /* Archives and Search Heading */
 .page-header {
 	margin: 0 0 1.5em 0;
-	background: #333333;
+	background: #154585;
 }
 
 .page-header .archive-title {
@@ -1502,7 +1506,8 @@ textarea {
 	font-size: 13px;
 	font-size: 0.8125rem;
 	padding: 0.5em 1em;
-	background: #f5f5f5;
+	background: #fff;
+	border-bottom: 1px solid #eee;
 }
 
 .breadcrumbs .trail-browse,
@@ -1549,7 +1554,7 @@ textarea {
 .comments-header,
 .comment-reply-title {
 	margin: 0 0 1.5em 0;
-	background: #333333;
+	background: #154585;
 }
 
 .comments-header .comments-title,
@@ -1672,8 +1677,8 @@ textarea {
 /*--------------------------------------------------------------
 # 12.0 - Footer
 --------------------------------------------------------------*/
-.footer-wrap {
-	background: #333333;
+.site-footer-wrap {
+	background: #154585;
 }
 
 .site-footer {
@@ -1800,9 +1805,78 @@ object {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+## 14.1 - Desktop X-Large ( < 1120px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 80em) {
+
+	.site-content {
+		padding: 1.5em 0 0 1.5em;
+	}
+
+	.content-area,
+	.main-sidebar,
+	.small-sidebar {
+		padding-right: 1.5em;
+	}
+	
+	.header-main {
+		padding: 1.5em;
+	}
+	
+	.widget, 
+	.widget-magazine-posts .type-post,
+	.type-post, 
+	.type-page, 
+	.type-attachment,
+	.post-pagination,
+	.infinite-scroll #infinite-handle span {
+		margin: 0 0 1.5em;
+	}
+	
+	.widget-magazine-posts .medium-post,
+	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post {
+		padding-right: 1.5em;
+	}
+	
+	.widget-magazine-posts-grid .magazine-posts-grid-row {
+		margin-right: -1.5em;
+	}
+	
+	.widget-magazine-posts-columns .magazine-posts-column-left {
+		padding-right: 0.75em;
+	}
+
+	.widget-magazine-posts-columns .magazine-posts-column-right {
+		padding-left: 0.75em;
+	}
+
+}
+
+/*--------------------------------------------------------------
 ## 14.2 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
+	
+	.content-area {
+		width: 70%;
+	}
+
+	.main-sidebar {
+		width: 30%;
+	}
+
+	.small-sidebar {
+		display: -webkit-flex;
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+		padding: 0;
+	}
+	
+	.small-sidebar .widget {
+		width: 33.333%;
+		padding-right: 1.5em;
+	}
 	
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 18px;
@@ -1824,6 +1898,17 @@ object {
 ## 14.3 - Desktop Small ( < 960px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
+	
+	.small-sidebar .widget {
+		width: 50%;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+## 14.4 - Tablet Large ( < 880px )
+--------------------------------------------------------------*/
+@media only screen and (max-width: 55em) {
 	
 	.site-branding {
 		float: none;
@@ -1882,7 +1967,7 @@ object {
 		font-size: 15px;
 		font-size: 0.9375rem;
 		padding: 0.75em 1.5em;
-		background: #333333;
+		background: #154585;
 		text-align: left;
 	}
 	
@@ -1890,7 +1975,7 @@ object {
 	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
 		cursor: pointer;
-		background: #e84747;
+		background: #25b5d5;
 	}
 	
 	.main-navigation-toggle:after {
@@ -2006,26 +2091,6 @@ object {
 		font-size: 24px;
 	}
 	
-}
-
-/*--------------------------------------------------------------
-## 14.4 - Tablet Large ( < 880px )
---------------------------------------------------------------*/
-@media only screen and (max-width: 55em) {
-	
-	.content-area, 
-	.site-content .fullwidth-content-area {
-		float: none;
-		width: 100%;
-		padding: 0;
-	}
-	
-	.sidebar {
-		float: none;
-		padding: 0;
-		width: 100%;
-	}
-	
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title 	{
 		font-size: 20px;
@@ -2039,6 +2104,26 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
 	
+	.content-area {
+		order: 1;
+		width: 100%;
+	}
+
+	.main-sidebar {
+		order: 2;
+		width: 50%;
+	}
+
+	.small-sidebar {
+		display: block;
+		order: 3;
+		width: 50%;
+	}
+	
+	.small-sidebar .widget {
+		width: 100%;
+	}
+	
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title 	{
 		font-size: 18px;
@@ -2051,6 +2136,14 @@ object {
 ## 14.7 - Mobile Extra Large ( < 640px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
+	
+	.main-sidebar {
+		width: 100%;
+	}
+
+	.small-sidebar {
+		width: 100%;
+	}
 	
 	/* Magazine Post Widgets */
 	.widget-magazine-posts-grid .magazine-posts-grid-row {
@@ -2126,19 +2219,6 @@ object {
 ## 14.9 - Mobile Medium ( < 480px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
-	
-	.container {
-		padding: 0 1.5em;
-	}
-
-	.site-content {
-		padding-top: 1.5em;
-	}
-	
-	.header-main {
-		padding-top: 1.5em;
-		padding-bottom: 1.5em;
-	}
 	
 	.page-title,
 	.entry-title {
@@ -2232,16 +2312,83 @@ object {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## 15.1 - Sidebar Left Layout
+## 15.1 - Theme Width
 --------------------------------------------------------------*/
-.sidebar-left .content-area {
-	float: right;
-	padding-right: 0;
-	padding-left: 4em;
+.wide-layout .site {
+	max-width: 100%;
+	margin: 0;
 }
+
+.wide-layout .container {
+	max-width: 1340px;
+	margin: 0 auto;
+}
+
+.wide-layout .site-content-wrap {
+	margin: 2em 0;
+}
+
+.wide-layout .header-image {
+	margin: 0 0 2em;
+}
+
+@media only screen and (max-width: 80em) {
 	
-.sidebar-left .sidebar {
-	float: left;
+	.wide-layout .site-content-wrap {
+		margin: 1.5em 0;
+	}
+
+	.wide-layout .header-image {
+		margin: 0 0 1.5em;
+	}
+
+}
+
+/*--------------------------------------------------------------
+## 15.2 - Theme Layout
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 50em) {
+	
+	/* Content Center */
+	.content-center .content-area {
+		order: 2;
+	}
+
+	.content-center .main-sidebar {
+		order: 1;
+	}
+
+	/* Content Right */
+	.content-right .content-area {
+		order: 2;
+	}
+
+	.content-right .main-sidebar {
+		order: 1;
+	}
+
+	.content-right .small-sidebar {
+		order: 3;
+	}
+
+}
+
+@media only screen and (min-width: 70em) {
+	
+	/* Content Right */
+	.content-right .content-area {
+		order: 3;
+	}
+
+	.content-right .main-sidebar {
+		order: 2;
+	}
+
+	.content-right .small-sidebar {
+		order: 1;
+	}
+
 }
 
 /*--------------------------------------------------------------
@@ -2249,7 +2396,7 @@ object {
 --------------------------------------------------------------*/
 
 /* Ensure navigation is visible on desktop view */
-@media only screen and (min-width: 60.001em) {
+@media only screen and (min-width: 55.001em) {
 	
 	.main-navigation-menu {
 		display: block !important;
