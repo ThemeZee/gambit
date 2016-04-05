@@ -41,7 +41,7 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 		$defaults = array(
 			'title'				=> '',
 			'category'			=> 0,
-			'number'			=> 6,
+			'number'			=> 4,
 			'excerpt'			=> false,
 			'meta_date'			=> true,
 			'meta_author'		=> false,

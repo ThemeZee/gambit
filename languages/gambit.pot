@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gambit\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-04-03 17:11+0100\n"
-"PO-Revision-Date: 2016-04-03 17:12+0100\n"
+"POT-Creation-Date: 2016-04-05 14:55+0100\n"
+"PO-Revision-Date: 2016-04-05 14:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:17
+#: 404.php:18
 msgid "404: Page not found"
 msgstr ""
 
-#: 404.php:22
+#: 404.php:23
 msgid ""
 "It looks like nothing was found at this location. Maybe try a search or one "
 "of the links below?"
@@ -63,33 +63,37 @@ msgstr ""
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:88 sidebar.php:20
-msgid "Sidebar"
+#: functions.php:88 sidebar-main.php:20
+msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:90 functions.php:100
 msgid "Appears on posts and pages except full width template."
 msgstr ""
 
-#: functions.php:98
+#: functions.php:98 sidebar-small.php:20
+msgid "Small Sidebar"
+msgstr ""
+
+#: functions.php:109
 msgid "Header"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:111
 msgid "Appears on header area. You can use a search or ad widget here."
 msgstr ""
 
-#: functions.php:108
+#: functions.php:119
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:121
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
 msgstr ""
 
-#: functions.php:141
+#: functions.php:152
 msgid "Menu"
 msgstr ""
 
@@ -121,7 +125,7 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: sidebar.php:22
+#: sidebar-main.php:22 sidebar-small.php:22
 msgid ""
 "Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
 msgstr ""
@@ -142,8 +146,8 @@ msgstr ""
 #: inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"Gambit requires at least WordPress version 4.2. You are running version "
-"%s. Please upgrade and try again."
+"Gambit requires at least WordPress version 4.2. You are running version %s. "
+"Please upgrade and try again."
 msgstr ""
 
 #: inc/template-tags.php:100 inc/template-tags.php:252
@@ -305,8 +309,8 @@ msgstr ""
 msgid "Hide header image on front page"
 msgstr ""
 
-#: inc/customizer/default-options.php:46
-#: inc/customizer/sections/customizer-general.php:49
+#: inc/customizer/default-options.php:47
+#: inc/customizer/sections/customizer-general.php:71
 msgid "Latest Posts"
 msgstr ""
 
@@ -314,6 +318,7 @@ msgstr ""
 #: inc/widgets/widget-magazine-posts-columns.php:355
 #: inc/widgets/widget-magazine-posts-columns.php:376
 #: inc/widgets/widget-magazine-posts-grid.php:411
+#: inc/widgets/widget-magazine-posts-sidebar.php:289
 msgid "All Categories"
 msgstr ""
 
@@ -322,18 +327,34 @@ msgid "General Settings"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:35
-msgid "Theme Layout"
+msgid "Theme Width"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:41
-msgid "Left Sidebar"
+msgid "Boxed Layout"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:42
-msgid "Right Sidebar"
+msgid "Wide Layout"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:56
+msgid "Theme Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:62
+msgid "Content Left"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:63
+msgid "Content Center"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:64
+msgid "Content Right"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:78
 msgid "Blog Title"
 msgstr ""
 
@@ -426,6 +447,7 @@ msgstr ""
 
 #: inc/widgets/widget-magazine-posts-columns.php:289
 #: inc/widgets/widget-magazine-posts-grid.php:346
+#: inc/widgets/widget-magazine-posts-sidebar.php:225
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
@@ -448,6 +470,7 @@ msgstr ""
 
 #: inc/widgets/widget-magazine-posts-columns.php:388
 #: inc/widgets/widget-magazine-posts-grid.php:431
+#: inc/widgets/widget-magazine-posts-sidebar.php:301
 msgid "Number of posts:"
 msgstr ""
 
@@ -457,11 +480,13 @@ msgstr ""
 
 #: inc/widgets/widget-magazine-posts-columns.php:403
 #: inc/widgets/widget-magazine-posts-grid.php:446
+#: inc/widgets/widget-magazine-posts-sidebar.php:316
 msgid "Display post date"
 msgstr ""
 
 #: inc/widgets/widget-magazine-posts-columns.php:410
 #: inc/widgets/widget-magazine-posts-grid.php:453
+#: inc/widgets/widget-magazine-posts-sidebar.php:323
 msgid "Display post author"
 msgstr ""
 
@@ -477,10 +502,12 @@ msgid ""
 msgstr ""
 
 #: inc/widgets/widget-magazine-posts-grid.php:402
+#: inc/widgets/widget-magazine-posts-sidebar.php:280
 msgid "Title:"
 msgstr ""
 
 #: inc/widgets/widget-magazine-posts-grid.php:408
+#: inc/widgets/widget-magazine-posts-sidebar.php:286
 msgid "Category:"
 msgstr ""
 
@@ -497,5 +524,17 @@ msgid "Three Columns Grid"
 msgstr ""
 
 #: inc/widgets/widget-magazine-posts-grid.php:439
+#: inc/widgets/widget-magazine-posts-sidebar.php:309
 msgid "Display post excerpt"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-sidebar.php:21
+#, php-format
+msgid "Magazine Posts: Sidebar (%s)"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-sidebar.php:24
+msgid ""
+"Displays your posts from a selected category. You can use this widget in the "
+"Main Sidebar widget area."
 msgstr ""

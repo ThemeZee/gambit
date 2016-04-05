@@ -3,7 +3,7 @@ Theme Name: Gambit
 Theme URI: https://themezee.com/themes/gambit/
 Author: ThemeZee
 Author URI: https://themezee.com
-Description: Gambit is a fully responsive WordPress theme with strong colors and bold fonts. The theme fits perfectly for any news, magazine or blog website. The highlight of Gambit is the flexible magazine homepage template and the stunning featured post slider. Of course the theme supports the newest WordPress core features.
+Description: Gambit is a complex and highly flexible WordPress theme perfectly suited for any news, magazine or blog website. It features several different layout options, two sidebars and a stunning featured post slider. The easy to use Magazine Homepage template allows you to create a powerful online magazine in just a few minutes.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -823,7 +823,7 @@ textarea {
 
 .main-navigation-menu ul .menu-item-has-children > a:after {
 	display: inline-block;
-	margin: 0.2em 0 0 0.2em;
+	margin: 0.3em 0 0 0.2em;
 	font-size: 14px;
 	line-height: 1;
 	font-family: 'Genericons';
@@ -1230,7 +1230,7 @@ textarea {
 }
 
 .type-post .wp-post-image {
-	margin: 0 0 1em;
+	margin: 0 0 0.5em;
 }
 
 .entry-content {
@@ -1275,7 +1275,7 @@ textarea {
 	float: left;
 	max-width: 34%;
 	margin: 0 1.5em 0 0;
-	padding: 0.3em 0;
+	padding: 0.5em 0;
 }
 
 .small-archive-post .entry-title {
@@ -1849,6 +1849,11 @@ object {
 	.widget-magazine-posts-columns .magazine-posts-column-right {
 		padding-left: 0.75em;
 	}
+	
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
 
 }
 
@@ -1879,8 +1884,8 @@ object {
 	}
 	
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 	
 }
@@ -1901,6 +1906,11 @@ object {
 	
 	.small-sidebar .widget {
 		width: 50%;
+	}
+	
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 	
 }
@@ -1964,9 +1974,9 @@ object {
 	.main-navigation-toggle {
 		display: block;
 		width: 100%;
-		font-size: 15px;
-		font-size: 0.9375rem;
-		padding: 0.75em 1.5em;
+		font-size: 14px;
+		font-size: 0.875rem;
+		padding: 0.9em 1.5em;
 		background: #154585;
 		text-align: left;
 	}
@@ -2091,12 +2101,6 @@ object {
 		font-size: 24px;
 	}
 	
-	/* Magazine Post Widgets */
-	.widget-magazine-posts .large-post .entry-title 	{
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
-	
 }
 
 /*--------------------------------------------------------------
@@ -2125,9 +2129,9 @@ object {
 	}
 	
 	/* Magazine Post Widgets */
-	.widget-magazine-posts .large-post .entry-title 	{
-		font-size: 18px;
-		font-size: 1.125rem;
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 	
 }
@@ -2332,14 +2336,14 @@ object {
 	margin: 0 0 2em;
 }
 
-@media only screen and (max-width: 80em) {
+@media only screen and (max-width: 85em) {
 	
 	.wide-layout .site-content-wrap {
-		margin: 1.5em 0;
+		margin: 0;
 	}
 
 	.wide-layout .header-image {
-		margin: 0 0 1.5em;
+		margin: 0;
 	}
 
 }

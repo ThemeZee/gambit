@@ -36,7 +36,7 @@ function gambit_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Set detfault Post Thumbnail size
-	set_post_thumbnail_size( 820, 360, true );
+	set_post_thumbnail_size( 740, 320, true );
 
 	// Register Navigation Menu
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'gambit' ) );
@@ -72,7 +72,7 @@ add_action( 'after_setup_theme', 'gambit_setup' );
  * @global int $content_width
  */
 function gambit_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gambit_content_width', 810 );
+	$GLOBALS['content_width'] = apply_filters( 'gambit_content_width', 740 );
 }
 add_action( 'after_setup_theme', 'gambit_content_width', 0 );
 
@@ -188,14 +188,14 @@ function gambit_google_fonts_url() {
 function gambit_add_image_sizes() {
 	
 	// Add Custom Header Image Size
-	add_image_size( 'gambit-header-image', 1230, 410, true );
+	add_image_size( 'gambit-header-image', 1340, 420, true );
 	
 	// Add Image Size for Archives
-	add_image_size( 'gambit-thumbnail-archive', 350, 280, true );
+	add_image_size( 'gambit-thumbnail-archive', 260, 220, true );
 	
 	// Add different thumbnail sizes for widgets and post layouts
-	add_image_size( 'gambit-thumbnail-small', 100, 80, true );
-	add_image_size( 'gambit-thumbnail-medium', 350, 230, true );
+	add_image_size( 'gambit-thumbnail-small', 100, 75, true );
+	add_image_size( 'gambit-thumbnail-medium', 300, 200, true );
 	add_image_size( 'gambit-thumbnail-large', 420, 280, true );
 	
 }

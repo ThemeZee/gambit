@@ -24,13 +24,16 @@
 			<header class="entry-header">
 		
 				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
+				
+				<?php gambit_entry_meta(); ?>
+				
 			</header><!-- .entry-header -->
 			
 			<div class="entry-content clearfix">
 			
 				<?php the_excerpt(); ?>
-		
+				<?php gambit_more_link(); ?>
+				
 			</div><!-- .entry-content -->
 						
 		</div>

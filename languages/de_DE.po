@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gambit\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-04-03 17:11+0100\n"
-"PO-Revision-Date: 2016-04-03 17:13+0100\n"
+"POT-Creation-Date: 2016-04-05 14:55+0100\n"
+"PO-Revision-Date: 2016-04-05 15:01+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -16,11 +16,11 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: 404.php:17
+#: 404.php:18
 msgid "404: Page not found"
 msgstr "404: Seite nicht gefunden"
 
-#: 404.php:22
+#: 404.php:23
 msgid ""
 "It looks like nothing was found at this location. Maybe try a search or one "
 "of the links below?"
@@ -61,31 +61,35 @@ msgstr "Kommentar hinterlassen"
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: functions.php:88 sidebar.php:20
-msgid "Sidebar"
-msgstr "Sidebar"
+#: functions.php:88 sidebar-main.php:20
+msgid "Main Sidebar"
+msgstr "Main Sidebar"
 
-#: functions.php:90
+#: functions.php:90 functions.php:100
 msgid "Appears on posts and pages except full width template."
 msgstr ""
 "Erscheint auf allen Beiträgen und Seiten mit Ausnahme des Fullwidth "
 "Templates."
 
-#: functions.php:98
+#: functions.php:98 sidebar-small.php:20
+msgid "Small Sidebar"
+msgstr "Zweite Sidebar"
+
+#: functions.php:109
 msgid "Header"
 msgstr "Header"
 
-#: functions.php:100
+#: functions.php:111
 msgid "Appears on header area. You can use a search or ad widget here."
 msgstr ""
 "Erscheint im Header Bereich. Du kannst hier Widgets für ein Suchfeld oder "
 "Werbung verwenden."
 
-#: functions.php:108
+#: functions.php:119
 msgid "Magazine Homepage"
 msgstr "Magazin Startseite"
 
-#: functions.php:110
+#: functions.php:121
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
@@ -93,7 +97,7 @@ msgstr ""
 "Erscheint nur auf dem Magazine Homepage Template. Du kannst hier die Magazin "
 "Beiträge Widgets verwenden."
 
-#: functions.php:141
+#: functions.php:152
 msgid "Menu"
 msgstr "Menü"
 
@@ -127,7 +131,7 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Suchen &hellip;"
 
-#: sidebar.php:22
+#: sidebar-main.php:22 sidebar-small.php:22
 msgid ""
 "Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
 msgstr ""
@@ -154,11 +158,11 @@ msgstr ""
 #: inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"Gambit requires at least WordPress version 4.2. You are running version "
-"%s. Please upgrade and try again."
+"Gambit requires at least WordPress version 4.2. You are running version %s. "
+"Please upgrade and try again."
 msgstr ""
-"Gambit benötigt mindestens WordPress Version 4.2. Du verwendest Version "
-"%s. Bitte führe ein Update durch und versuche es erneut."
+"Gambit benötigt mindestens WordPress Version 4.2. Du verwendest Version %s. "
+"Bitte führe ein Update durch und versuche es erneut."
 
 #: inc/template-tags.php:100 inc/template-tags.php:252
 msgid "Read more"
@@ -328,8 +332,8 @@ msgstr "Header-Bild Link"
 msgid "Hide header image on front page"
 msgstr "Verstecke Header-Bild auf der Startseite"
 
-#: inc/customizer/default-options.php:46
-#: inc/customizer/sections/customizer-general.php:49
+#: inc/customizer/default-options.php:47
+#: inc/customizer/sections/customizer-general.php:71
 msgid "Latest Posts"
 msgstr "Letzte Beiträge"
 
@@ -337,6 +341,7 @@ msgstr "Letzte Beiträge"
 #: inc/widgets/widget-magazine-posts-columns.php:355
 #: inc/widgets/widget-magazine-posts-columns.php:376
 #: inc/widgets/widget-magazine-posts-grid.php:411
+#: inc/widgets/widget-magazine-posts-sidebar.php:289
 msgid "All Categories"
 msgstr "Alle Kategorien"
 
@@ -345,18 +350,34 @@ msgid "General Settings"
 msgstr "Allgemeine Einstellungen"
 
 #: inc/customizer/sections/customizer-general.php:35
+msgid "Theme Width"
+msgstr "Theme Breite"
+
+#: inc/customizer/sections/customizer-general.php:41
+msgid "Boxed Layout"
+msgstr "Box Layout"
+
+#: inc/customizer/sections/customizer-general.php:42
+msgid "Wide Layout"
+msgstr "Wide Layout"
+
+#: inc/customizer/sections/customizer-general.php:56
 msgid "Theme Layout"
 msgstr "Theme Layout"
 
-#: inc/customizer/sections/customizer-general.php:41
-msgid "Left Sidebar"
-msgstr "Sidebar links"
+#: inc/customizer/sections/customizer-general.php:62
+msgid "Content Left"
+msgstr "Content Links"
 
-#: inc/customizer/sections/customizer-general.php:42
-msgid "Right Sidebar"
-msgstr "Sidebar rechts"
+#: inc/customizer/sections/customizer-general.php:63
+msgid "Content Center"
+msgstr "Content Mitte"
 
-#: inc/customizer/sections/customizer-general.php:56
+#: inc/customizer/sections/customizer-general.php:64
+msgid "Content Right"
+msgstr "Content Rechts"
+
+#: inc/customizer/sections/customizer-general.php:78
 msgid "Blog Title"
 msgstr "Blog Titel"
 
@@ -451,6 +472,7 @@ msgstr ""
 
 #: inc/widgets/widget-magazine-posts-columns.php:289
 #: inc/widgets/widget-magazine-posts-grid.php:346
+#: inc/widgets/widget-magazine-posts-sidebar.php:225
 #, php-format
 msgid "View all posts from category %s"
 msgstr "Alle Beiträge in der Kategorie %s ansehen"
@@ -473,6 +495,7 @@ msgstr "Rechte Kategorie:"
 
 #: inc/widgets/widget-magazine-posts-columns.php:388
 #: inc/widgets/widget-magazine-posts-grid.php:431
+#: inc/widgets/widget-magazine-posts-sidebar.php:301
 msgid "Number of posts:"
 msgstr "Anzahl der Beiträge:"
 
@@ -482,11 +505,13 @@ msgstr "Ersten Beitrag hervorheben (großes Bild + Textauszug)"
 
 #: inc/widgets/widget-magazine-posts-columns.php:403
 #: inc/widgets/widget-magazine-posts-grid.php:446
+#: inc/widgets/widget-magazine-posts-sidebar.php:316
 msgid "Display post date"
 msgstr "Zeige das Datum des Beitrags"
 
 #: inc/widgets/widget-magazine-posts-columns.php:410
 #: inc/widgets/widget-magazine-posts-grid.php:453
+#: inc/widgets/widget-magazine-posts-sidebar.php:323
 msgid "Display post author"
 msgstr "Zeige den Author des Beitrags"
 
@@ -504,10 +529,12 @@ msgstr ""
 "verwende dieses Widget NUR in dem Magazin Startseite Widgetbereich."
 
 #: inc/widgets/widget-magazine-posts-grid.php:402
+#: inc/widgets/widget-magazine-posts-sidebar.php:280
 msgid "Title:"
 msgstr "Titel:"
 
 #: inc/widgets/widget-magazine-posts-grid.php:408
+#: inc/widgets/widget-magazine-posts-sidebar.php:286
 msgid "Category:"
 msgstr "Kategorie:"
 
@@ -524,8 +551,31 @@ msgid "Three Columns Grid"
 msgstr "Dreispaltiges Raster"
 
 #: inc/widgets/widget-magazine-posts-grid.php:439
+#: inc/widgets/widget-magazine-posts-sidebar.php:309
 msgid "Display post excerpt"
 msgstr "Zeige Beitragsauszug"
+
+#: inc/widgets/widget-magazine-posts-sidebar.php:21
+#, php-format
+msgid "Magazine Posts: Sidebar (%s)"
+msgstr "Magazin Beiträge: Sidebar  (%s)"
+
+#: inc/widgets/widget-magazine-posts-sidebar.php:24
+msgid ""
+"Displays your posts from a selected category. You can use this widget in the "
+"Main Sidebar widget area."
+msgstr ""
+"Zeigt die Beiträge einer gewählten Kategorie. Bitte verwende dieses Widget "
+"in einer Sidebar."
+
+#~ msgid "Sidebar"
+#~ msgstr "Sidebar"
+
+#~ msgid "Left Sidebar"
+#~ msgstr "Sidebar links"
+
+#~ msgid "Right Sidebar"
+#~ msgstr "Sidebar rechts"
 
 #~ msgid "Leave a comment"
 #~ msgstr "Kommentar hinterlassen"
@@ -795,9 +845,6 @@ msgstr "Zeige Beitragsauszug"
 #~ msgid "Rounded (Default)"
 #~ msgstr "Gerundet (Standard)"
 
-#~ msgid "Boxed Layout"
-#~ msgstr "Box Layout"
-
 #~ msgid "Header Settings"
 #~ msgstr "Header Einstellungen"
 
@@ -830,12 +877,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Flat Layout"
 #~ msgstr "Flat Layout"
-
-#~ msgid "Sidebar Layout"
-#~ msgstr "Sidebar Layout"
-
-#~ msgid "Sliding Sidebar"
-#~ msgstr "Sliding Sidebar"
 
 #~ msgid "Display Sliding Sidebar on mobile screens"
 #~ msgstr "Zeige Sliding Sidebar auf mobilen Geräten"
@@ -900,9 +941,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "https://themezee.com/addons/glades-pro/"
 #~ msgstr "https://themezee.com/de/addons/glades-pro/"
-
-#~ msgid "Theme Width"
-#~ msgstr "Theme Breite"
 
 #~ msgid "Footer Text"
 #~ msgstr "Footer Text"
@@ -989,9 +1027,6 @@ msgstr "Zeige Beitragsauszug"
 #~ msgid "Display Tagline beside site title."
 #~ msgstr "Zeige den Untertitel neben dem Seitentitel."
 
-#~ msgid "Footer Left"
-#~ msgstr "Footer Links"
-
 #~ msgid "Appears on footer on the left hand side."
 #~ msgstr "Erscheint im Footer auf der linken Seite."
 
@@ -1006,9 +1041,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Appears on footer on center right position."
 #~ msgstr "Erscheint im Footer auf der mittleren rechten Seite."
-
-#~ msgid "Footer Right"
-#~ msgstr "Footer Rechts"
 
 #~ msgid "Appears on footer on the right hand side."
 #~ msgstr "Erscheint im Footer auf der rechten Seite."
@@ -1582,9 +1614,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Post Date"
 #~ msgstr "Beitragsdatum"
-
-#~ msgid "Comment Count"
-#~ msgstr "Anzahl Kommentare"
 
 #~ msgid "Random"
 #~ msgstr "Zufällig"

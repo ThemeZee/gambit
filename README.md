@@ -1,4 +1,4 @@
-Gambit WordPress Theme, Copyright 2015 ThemeZee.com
+Gambit WordPress Theme, Copyright 2016 ThemeZee.com
 Gambit is distributed under the terms of the GNU GPL
 
 ===================================
@@ -59,7 +59,7 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-https://themezee.com/docs/Gambit-documentation/
+https://themezee.com/docs/gambit-documentation/
 
 ===================================
 E) Theme License
@@ -90,25 +90,33 @@ F) Licenses of bundled resources
 	
 	5. Roboto Font - https://www.google.com/fonts/specimen/Roboto
 	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
-	Copyright: 2013 Steve Matteson
+	Copyright: 2015 Christian Robertson
 	
-	6. Roboto Font - https://www.google.com/fonts/specimen/Open+Sans
-	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
-	Copyright: 2014 Steve Matteson
+	6. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 	
-	7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
-	
-	Image 1: https://pixabay.com/en/paris-architecture-france-674964/
+	Image 1: https://pixabay.com/en/flower-universe-plant-cosmos-single-1219360/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2015 Gerhard Boegner (https://pixabay.com/en/users/bogitw-851103/)
+	Copyright: 2013 简体中文 (https://pixabay.com/en/users/leon_0932-2107135/)
 	
-	Image 2: https://pixabay.com/en/popcorn-movie-party-entertainment-1085072/
+	Image 2: https://pixabay.com/en/valencia-spain-calatrava-sunset-1049389/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2015 Deborah Breen Whiting (https://pixabay.com/en/users/dbreen-1643989/)
+	Copyright: 2013 Luca (https://pixabay.com/en/users/papagnoc-1605484/)
 	
-	Image 3: https://pixabay.com/en/white-tree-nymph-1218884/
+	Image 3: https://pixabay.com/en/basketball-basket-sky-in-the-free-1263000/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2009 Jondolar Schnurr (https://pixabay.com/en/users/SHAWSHANK61-1931526/)
+	Copyright: 2016 Stefan Schweihofer (https://pixabay.com/en/users/stux-12364/)
+	
+	Image 4: https://pixabay.com/en/ice-cream-cone-melting-hot-1274894/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2016 Steve Buissinne (https://pixabay.com/en/users/stevepb-282134/)
+	
+	Image 5: https://pixabay.com/en/bell-south-spain-204389/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2013 Petra Söhner (https://pixabay.com/en/users/PhotoBook777-52422/)
+	
+	Image 6: https://pixabay.com/en/clock-time-hour-minutes-watches-782536/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2014 claudio losa (https://pixabay.com/en/users/closa-726076/)
 
 ===================================
 Enjoy!

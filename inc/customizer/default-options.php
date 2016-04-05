@@ -47,7 +47,7 @@ function gambit_default_options() {
 		'blog_title'						=> esc_html__( 'Latest Posts', 'gambit' ),
 		'post_layout'						=> 'small-image',
 		'post_content' 						=> 'excerpt',
-		'excerpt_length' 					=> 20,
+		'excerpt_length' 					=> 25,
 		'meta_date'							=> true,
 		'meta_author'						=> true,
 		'meta_category'						=> true,
