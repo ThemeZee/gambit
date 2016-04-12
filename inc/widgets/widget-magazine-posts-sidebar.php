@@ -227,7 +227,7 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 				
 				// Display Widget Title with link to category archive
 				echo '<div class="widget-header">';
-				echo '<h1 class="widget-title"><a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a></h1>';
+				echo '<h3 class="widget-title"><a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a></h3>';
 				echo '</div>';
 			
 			else:

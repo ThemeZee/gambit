@@ -48,7 +48,7 @@ $theme_options = gambit_theme_options();
 				
 				<header class="entry-header">
 		
-					<h1 class="page-title"><?php esc_html_e( 'No matches', 'gambit' ); ?></h1>
+					<h2 class="page-title"><?php esc_html_e( 'No matches', 'gambit' ); ?></h2>
 					
 				</header><!-- .entry-header -->
 				
