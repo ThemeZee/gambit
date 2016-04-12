@@ -33,6 +33,7 @@
 						
 				<div id="logo" class="site-branding clearfix">
 				
+					<?php gambit_site_logo(); ?>
 					<?php gambit_site_title(); ?>
 				
 				</div><!-- .site-branding -->

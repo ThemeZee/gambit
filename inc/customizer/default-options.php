@@ -40,6 +40,7 @@ function gambit_theme_options() {
 function gambit_default_options() {
 
 	$default_options = array(
+		'site_title'						=> true,
 		'custom_header_link'				=> '',
 		'custom_header_hide'				=> false,
 		'theme_width' 						=> 'boxed-layout',

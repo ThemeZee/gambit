@@ -7,8 +7,24 @@
  *
  * @package Gambit
  */
+
+ 
+if ( ! function_exists( 'gambit_site_logo' ) ): 
+/**
+ * Displays the site logo in the header area
+ */
+function gambit_site_logo() {
+
+	if ( function_exists( 'the_custom_logo' ) ) {
+		
+		the_custom_logo();
 	
+	} 
 	
+}
+endif;
+
+
 if ( ! function_exists( 'gambit_site_title' ) ):
 /**
  * Displays the site title in the header area
@@ -17,6 +33,11 @@ function gambit_site_title() {
 	
 	// Get Theme Options from Database
 	$theme_options = gambit_theme_options();
+	
+	// Return early if site title is deactivated
+	if( false == $theme_options['site_title'] ) {
+		return;
+	}
 
 	if ( ( is_home() and $theme_options['blog_title'] == '' ) or is_page_template( 'template-magazine.php' )  ) : ?>
 		
