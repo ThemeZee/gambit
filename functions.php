@@ -6,11 +6,11 @@
  */
 
 /**
- * Gambit only works in WordPress 4.2 or later.
+ * Gambit only works in WordPress 4.4 or later.
  */
-if ( version_compare( $GLOBALS['wp_version'], '4.2', '<' ) ) :
+if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
-endif;
+}
 
 
 if ( ! function_exists( 'gambit_setup' ) ) :

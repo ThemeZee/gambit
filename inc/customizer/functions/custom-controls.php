@@ -94,7 +94,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'gambit' ); ?></span>
 				
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'gambit' ), 'Anderson'); ?>
+					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'gambit' ), 'Gambit'); ?>
 				</span>
 				
 				<p>

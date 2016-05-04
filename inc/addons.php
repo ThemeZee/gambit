@@ -11,7 +11,7 @@ add_action( 'after_setup_theme', 'gambit_theme_addons_setup' );
 
 function gambit_theme_addons_setup() {
 
-	// Add Theme Support for Anderson Pro Plugin
+	// Add Theme Support for Gambit Pro Plugin
 	add_theme_support( 'gambit-pro' );
 	
 	// Add Theme Support for ThemeZee Plugins
