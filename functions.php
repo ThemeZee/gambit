@@ -68,6 +68,9 @@ function gambit_setup() {
 	// Add Theme Support for wooCommerce
 	add_theme_support( 'woocommerce' );
 	
+	// Add extra theme styling to the visual editor
+	add_editor_style( array( 'css/editor-style.css', gambit_google_fonts_url() ) );
+	
 }
 endif; // gambit_setup
 add_action( 'after_setup_theme', 'gambit_setup' );
@@ -80,7 +83,7 @@ add_action( 'after_setup_theme', 'gambit_setup' );
  * @global int $content_width
  */
 function gambit_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gambit_content_width', 740 );
+	$GLOBALS['content_width'] = apply_filters( 'gambit_content_width', 710 );
 }
 add_action( 'after_setup_theme', 'gambit_content_width', 0 );
 
