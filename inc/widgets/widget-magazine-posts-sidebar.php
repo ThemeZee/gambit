@@ -21,7 +21,8 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 			sprintf( esc_html__( 'Magazine Posts: Sidebar (%s)', 'gambit' ), wp_get_theme()->Name ), // Name
 			array( 
 				'classname' => 'gambit_magazine_posts_sidebar', 
-				'description' => esc_html__( 'Displays your posts from a selected category. You can use this widget in the Main Sidebar widget area.', 'gambit' ) 
+				'description' => esc_html__( 'Displays your posts from a selected category. You can use this widget in the Main Sidebar widget area.', 'gambit' ),
+				'customize_selective_refresh' => true, 
 			) // Args
 		);
 		
