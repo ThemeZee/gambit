@@ -58,40 +58,6 @@ function gambit_customize_register_options( $wp_customize ) {
 		)
 	);
 	
-	// Add Header Image Link
-	$wp_customize->add_setting( 'gambit_theme_options[custom_header_link]', array(
-        'default'           => '',
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'esc_url'
-		)
-	);
-    $wp_customize->add_control( 'gambit_control_custom_header_link', array(
-        'label'    => esc_html__( 'Header Image Link', 'gambit' ),
-        'section'  => 'header_image',
-        'settings' => 'gambit_theme_options[custom_header_link]',
-        'type'     => 'url',
-		'priority' => 10
-		)
-	);
-	
-	// Add Custom Header Hide Checkbox
-	$wp_customize->add_setting( 'gambit_theme_options[custom_header_hide]', array(
-        'default'           => false,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'gambit_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'gambit_control_custom_header_hide', array(
-        'label'    => esc_html__( 'Hide header image on front page', 'gambit' ),
-        'section'  => 'header_image',
-        'settings' => 'gambit_theme_options[custom_header_hide]',
-        'type'     => 'checkbox',
-		'priority' => 15
-		)
-	);
-	
 } // gambit_customize_register_options()
 add_action( 'customize_register', 'gambit_customize_register_options' );
 
