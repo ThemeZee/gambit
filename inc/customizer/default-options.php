@@ -7,28 +7,26 @@
  * @package Gambit
  */
 
-
 /**
  * Get saved user settings from database or theme defaults
  *
  * @return array
  */
 function gambit_theme_options() {
-    
-	// Merge Theme Options Array from Database with Default Options Array
-	$theme_options = wp_parse_args( 
-		
-		// Get saved theme options from WP database
-		get_option( 'gambit_theme_options', array() ), 
-		
-		// Merge with Default Options if setting was not saved yet
-		gambit_default_options() 
-		
+
+	// Merge Theme Options Array from Database with Default Options Array.
+	$theme_options = wp_parse_args(
+
+		// Get saved theme options from WP database.
+		get_option( 'gambit_theme_options', array() ),
+
+		// Merge with Default Options if setting was not saved yet.
+		gambit_default_options()
 	);
 
-	// Return theme options
+	// Return theme options.
 	return $theme_options;
-	
+
 }
 
 
@@ -60,6 +58,6 @@ function gambit_default_options() {
 		'slider_animation' 					=> 'slide',
 		'slider_speed' 						=> 7000,
 	);
-	
+
 	return $default_options;
 }
