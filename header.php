@@ -6,7 +6,7 @@
  *
  * @package Gambit
  */
- 
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -22,59 +22,60 @@
 <body <?php body_class(); ?>>
 
 	<div id="page" class="hfeed site">
-		
+
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gambit' ); ?></a>
-		
+
 		<div id="header-top" class="header-bar-wrap"><?php do_action( 'gambit_header_bar' ); ?></div>
-		
+
 		<header id="masthead" class="site-header clearfix" role="banner">
-			
+
 			<div class="header-main container clearfix">
-						
+
 				<div id="logo" class="site-branding clearfix">
-				
+
 					<?php gambit_site_logo(); ?>
 					<?php gambit_site_title(); ?>
-				
+
 				</div><!-- .site-branding -->
-				
+
 				<div class="header-widgets clearfix">
-					
-					<?php // Display Header Widgets
-					if( is_active_sidebar( 'header' ) ) : 
-			
+
+					<?php // Display Header Widgets.
+					if ( is_active_sidebar( 'header' ) ) :
+
 						dynamic_sidebar( 'header' );
-						
+
 					endif; ?>
-					
+
 				</div><!-- .header-widgets -->
 
-			
-			</div><!-- .header-main -->	
-		
+
+			</div><!-- .header-main -->
+
 		</header><!-- #masthead -->
-		
+
 		<div id="main-navigation-wrap" class="primary-navigation-wrap">
-			
+
 			<nav id="main-navigation" class="primary-navigation container navigation clearfix" role="navigation">
-				<?php 
-					// Display Main Navigation
+				<?php
+					// Display Main Navigation.
 					wp_nav_menu( array(
-						'theme_location' => 'primary', 
-						'container' => false, 
-						'menu_class' => 'main-navigation-menu', 
-						'echo' => true, 
-						'fallback_cb' => 'gambit_default_menu')
+						'theme_location' => 'primary',
+						'container' => false,
+						'menu_class' => 'main-navigation-menu',
+						'echo' => true,
+						'fallback_cb' => 'gambit_default_menu',
+						),
 					);
 				?>
 			</nav><!-- #main-navigation -->
-				
+
 		</div>
-		
+
 		<div id="content-wrap" class="site-content-wrap clearfix">
-		
+
 			<?php gambit_header_image(); ?>
-			
+
 			<?php gambit_breadcrumbs(); ?>
-			
+
 			<div id="content" class="site-content container clearfix">

@@ -6,7 +6,7 @@
  *
  * @package Gambit
  */
- 
+
 ?>
 	
 		</div><!-- #content -->
