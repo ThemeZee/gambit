@@ -14,15 +14,8 @@
  */
 function gambit_theme_options() {
 
-	// Merge Theme Options Array from Database with Default Options Array.
-	$theme_options = wp_parse_args(
-
-		// Get saved theme options from WP database.
-		get_option( 'gambit_theme_options', array() ),
-
-		// Merge with Default Options if setting was not saved yet.
-		gambit_default_options()
-	);
+	// Merge theme options array from database with default options array.
+	$theme_options = wp_parse_args( get_option( 'gambit_theme_options', array() ), gambit_default_options() );
 
 	// Return theme options.
 	return $theme_options;
