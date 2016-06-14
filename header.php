@@ -65,7 +65,7 @@
 						'menu_class' => 'main-navigation-menu',
 						'echo' => true,
 						'fallback_cb' => 'gambit_default_menu',
-						),
+						)
 					);
 				?>
 			</nav><!-- #main-navigation -->

@@ -25,10 +25,10 @@ function gambit_slider_scripts() {
 		wp_enqueue_style( 'gambit-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
 
 		// FlexSlider JS.
-		wp_enqueue_script( 'gambit-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
+		wp_enqueue_script( 'flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider setup.
-		wp_enqueue_script( 'gambit-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'gambit-flexslider' ) );
+		wp_enqueue_script( 'gambit-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'flexslider' ) );
 
 	endif;
 
