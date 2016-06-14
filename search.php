@@ -18,7 +18,7 @@ $theme_options = gambit_theme_options();
 
 			<header class="page-header">
 
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'gambit' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'gambit' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 
 			</header><!-- .page-header -->
 

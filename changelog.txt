@@ -5,7 +5,9 @@ Gambit Changelog
 Version 1.0.1
 -----------------------------------
 [added] support for new custom logo feature from WordPress 4.5
-[updated] flexlider to version 2.6.0
+[added] added alt and srcset attributes to custom header image
+[added] support for scroll method of Infinite Scroll
+[improved] code formatting and comments
 
 Version 1.0
 -----------------------------------

@@ -124,7 +124,7 @@ function gambit_customize_register_slider_settings( $wp_customize ) {
 			'slide' => esc_html__( 'Slide Effect', 'gambit' ),
 			'fade' => esc_html__( 'Fade Effect', 'gambit' ),
 			),
-		),
+		)
 	);
 
 	// Add Setting and Control for Slider Speed.
@@ -146,7 +146,7 @@ function gambit_customize_register_slider_settings( $wp_customize ) {
 			'min'   => 1000,
 			'step'  => 100,
 			),
-		),
+		)
 	);
 
 }
