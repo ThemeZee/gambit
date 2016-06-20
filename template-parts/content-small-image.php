@@ -9,9 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'small-archive-post clearfix' ); ?>>
 
-	<a href="<?php the_permalink(); ?>" rel="bookmark">
-		<?php the_post_thumbnail( 'gambit-thumbnail-archive' ); ?>
-	</a>
+	<?php gambit_post_image( 'gambit-thumbnail-archive' ); ?>
 
 	<header class="entry-header">
 

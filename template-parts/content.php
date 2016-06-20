@@ -9,9 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<a href="<?php the_permalink(); ?>" rel="bookmark">
-		<?php the_post_thumbnail(); ?>
-	</a>
+	<?php gambit_post_image(); ?>
 
 	<header class="entry-header">
 
