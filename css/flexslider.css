@@ -89,9 +89,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 .zeeflex-viewport {
 	max-height: 2000px;
 	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	-o-transition: all 1s ease;
 	transition: all 1s ease;
 }
 
@@ -107,8 +104,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 	padding: 1em 0 0;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -132,14 +127,11 @@ html[xmlns] .zeeflexslider .zeeslides {
 	height: 40px;
 	background: #25b5d5;
 	text-align: left;
-	color #fff;
+	color: #fff;
 	font-size: 0;
 	cursor: pointer;
 	z-index: 10;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -201,9 +193,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 	cursor: pointer;
 	text-indent: -9999px;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
