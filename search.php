@@ -16,15 +16,16 @@ $theme_options = gambit_theme_options();
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<?php
+		if ( have_posts() ) : ?>
+
 			<header class="page-header">
 
 				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'gambit' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 
 			</header><!-- .page-header -->
 
-		<?php
-		if ( have_posts() ) :
-
+			<?php
 			while ( have_posts() ) : the_post();
 
 				if ( 'post' === get_post_type() ) :
@@ -42,27 +43,11 @@ $theme_options = gambit_theme_options();
 			// Display Pagination.
 			gambit_pagination();
 
-		else : ?>
+		else :
 
-			<div class="no-matches type-page">
+			get_template_part( 'template-parts/content', 'none' );
 
-				<header class="entry-header">
-
-					<h2 class="page-title"><?php esc_html_e( 'No matches', 'gambit' ); ?></h2>
-
-				</header><!-- .entry-header -->
-
-				<div class="entry-content">
-
-					<p><?php esc_html_e( 'Please try again, or use the navigation menus to find what you search for.', 'gambit' ); ?></p>
-
-					<?php get_search_form(); ?>
-
-				</div>
-
-			</div>
-
-		<?php endif; ?>
+		endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
