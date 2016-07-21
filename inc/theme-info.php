@@ -45,7 +45,6 @@ function gambit_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'gambit' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/gambit/', 'gambit' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'gambit' ); ?></a>
-				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'gambit' ); ?></a>
 				<a href="<?php echo esc_url( 'http://preview.themezee.com/gambit/?utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=demo' ); ?>" target="_blank"><?php esc_html_e( 'Theme Demo', 'gambit' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/gambit-documentation/', 'gambit' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'gambit' ); ?></a>
 				<a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/gambit?filter=5' ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'gambit' ); ?></a>
