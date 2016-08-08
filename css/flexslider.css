@@ -95,8 +95,8 @@ html[xmlns] .zeeflexslider .zeeslides {
 .post-slider .zeeslide .slide-image {
 	width: 100%;
 	height: auto;
-	max-width: 740px;
-	max-height: 320px;
+	max-width: 750px;
+	max-height: 450px;
 }
 
 .post-slider .zeeslide .slide-post {
@@ -125,7 +125,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	margin: 0;
 	width: 40px;
 	height: 40px;
-	background: #25b5d5;
+	background: #1585b5;
 	text-align: left;
 	color: #fff;
 	font-size: 0;
@@ -137,7 +137,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider-controls .zeeflex-direction-nav a:hover {
 	text-decoration: none;
-	background: #154585;
+	background: #252525;
 }
 
 .post-slider-controls .zeeflex-direction-nav a:before {

@@ -26,6 +26,11 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.0.2 =
+* added content-none.php template file
+* improved accessibility of navigation menus
+* changed default colors and default font
+
 = 1.0.1 =
 * added support for new custom logo feature from WordPress 4.5
 * added added alt and srcset attributes to custom header image
@@ -70,7 +75,7 @@ Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2015 WooThemes, http://www.woothemes.com
 
-5. Roboto Font - https://www.google.com/fonts/specimen/Roboto
+5. Open Sans Font - https://www.google.com/fonts/specimen/Open Sans
 License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright: 2015 Christian Robertson
 

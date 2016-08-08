@@ -36,7 +36,7 @@ function gambit_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Set detfault Post Thumbnail size.
-	set_post_thumbnail_size( 740, 320, true );
+	set_post_thumbnail_size( 750, 450, true );
 
 	// Register Navigation Menu.
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'gambit' ) );
@@ -188,7 +188,7 @@ add_action( 'wp_enqueue_scripts', 'gambit_scripts' );
 function gambit_google_fonts_url() {
 
 	// Set default Fonts.
-	$font_families = array( 'Roboto:400,400italic,700,700italic' );
+	$font_families = array( 'Open Sans:400,400italic,700,700italic' );
 
 	// Build Fonts URL.
 	$query_args = array(
@@ -210,7 +210,7 @@ function gambit_add_image_sizes() {
 	add_image_size( 'gambit-header-image', 1340, 420, true );
 
 	// Add Image Size for Archives.
-	add_image_size( 'gambit-thumbnail-archive', 260, 220, true );
+	add_image_size( 'gambit-thumbnail-archive', 300, 240, true );
 
 	// Add different thumbnail sizes for widgets and post layouts.
 	add_image_size( 'gambit-thumbnail-small', 100, 75, true );

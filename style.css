@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/gambit/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Gambit is a complex and highly flexible WordPress theme perfectly suited for any news, magazine or blog website. It features several different layout options, two sidebars and a stunning featured post slider. The easy to use Magazine Homepage template allows you to create a powerful online magazine in just a few minutes.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gambit
@@ -288,7 +288,7 @@ input,
 select,
 textarea {
 	color: #333333;
-	font-family: 'Roboto', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.75;
@@ -465,19 +465,19 @@ td {
 }
 
 a {
-	color: #25b5d5;
+	color: #1585b5;
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #25b5d5;
+	color: #1585b5;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #154585;
+	color: #252525;
 }
 
 a:focus {
@@ -497,12 +497,12 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	padding: 0.5em 1em;
-	font-family: 'Roboto', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: bold;
 	color: #fff;
-	background: #25b5d5;
+	background: #1585b5;
 	border: none;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -512,7 +512,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #154585;
+	background: #252525;
 }
 
 button:focus,
@@ -717,8 +717,8 @@ textarea {
 	display: inline-block;
 	margin: 0 0.3em;
 	padding: 0;
-	color: #25b5d5;
-	font-family: 'Roboto', sans-serif;
+	color: #1585b5;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 32px;
 	font-size: 2rem;
 	font-weight: bold;
@@ -727,14 +727,14 @@ textarea {
 
 .site-title a:link,
 .site-title a:visited {
-	color: #25b5d5;
+	color: #1585b5;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
 .site-title a:hover,
 .site-title a:active {
-	color: #154585;
+	color: #252525;
 }
 
 .site-branding .custom-logo {
@@ -787,7 +787,7 @@ textarea {
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
 	color: #fff;
-	background: #154585;
+	background: #252525;
 }
 
 .main-navigation-toggle {
@@ -810,7 +810,7 @@ textarea {
 
 .main-navigation-menu a {
 	display: block;
-	font-family: 'Roboto', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: bold;
@@ -821,17 +821,17 @@ textarea {
 	transition: all 0.2s ease;
 }
 
-.main-navigation-menu > .menu-item-has-children > a:after {
+.main-navigation-menu > .menu-item-has-children > a:after,
+.main-navigation-menu ul .menu-item-has-children > a:after {
 	display: inline-block;
-	margin: 0.3em 0 0 0.2em;
+	margin: 0.15em 0 0 0.4em;
 	font-size: 16px;
 	line-height: 1;
-	font-family: 'Genericons';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-decoration: inherit;
 	vertical-align: top;
-	content: '\f431';
+	content: "\00BB";
 	color: #fff;
 }
 
@@ -843,7 +843,7 @@ textarea {
 
 .main-navigation-menu a:hover,
 .main-navigation-menu a:active {
-	background: #25b5d5;
+	background: #1585b5;
 }
 
 .main-navigation-menu ul {
@@ -854,7 +854,7 @@ textarea {
 	padding: 0;
 	list-style-type: none;
 	list-style-position: outside;
-	background: #154585;
+	background: #252525;
 	border-top: 1px solid #fff;
 }
 
@@ -878,24 +878,6 @@ textarea {
 	border-bottom: none;
 }
 
-.main-navigation-menu ul .menu-item-has-children > a:after {
-	display: inline-block;
-	margin: 0.3em 0 0 0.2em;
-	font-size: 14px;
-	line-height: 1;
-	font-family: 'Genericons';
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-decoration: inherit;
-	vertical-align: top;
-	content: '\f431';
-	color: #fff;
-	-webkit-transform:rotate(270deg);
-	-moz-transform:rotate(270deg);
-	-o-transform:rotate(270deg);
-	-ms-transform:rotate(270deg);
-}
-
 .main-navigation-menu li ul ul {
 	top: 0;
 	left: 100%;
@@ -909,7 +891,7 @@ textarea {
 }
 
 .main-navigation-menu li.current-menu-item > a {
-	background: #25b5d5;
+	background: #1585b5;
 }
 
 /* Mega Menu Styling */
@@ -935,7 +917,7 @@ textarea {
 
 .main-navigation-menu .mega-menu-content .mega-menu-widget ul li a:hover {
 	color: #fff;
-	background: #25b5d5;
+	background: #1585b5;
 }
 
 .mega-menu-content .mega-menu-widget .entry-meta,
@@ -1032,7 +1014,7 @@ textarea {
 
 .widget-header {
 	margin: 0 0 1.5em 0;
-	background: #154585;
+	background: #252525;
 }
 
 .widget-title {
@@ -1175,7 +1157,7 @@ textarea {
 }
 
 .widget-magazine-posts .medium-post .entry-title {
-	font-family: 'Roboto', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -1199,7 +1181,7 @@ textarea {
 }
 
 .widget-magazine-posts .small-post .entry-title {
-	font-family: 'Roboto', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1270,19 +1252,19 @@ textarea {
 .page-title,
 .entry-title {
 	display: inline;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 24px;
 	font-size: 1.5rem;
 	padding: 0;
 	margin: 0;
-	color: #154585;
+	color: #252525;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #154585;
+	color: #252525;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
@@ -1290,7 +1272,7 @@ textarea {
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #25b5d5;
+	color: #1585b5;
 }
 
 .type-post .wp-post-image {
@@ -1309,12 +1291,12 @@ textarea {
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 1em;
-	font-family: 'Roboto', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: bold;
 	color: #fff;
-	background: #25b5d5;
+	background: #1585b5;
 	text-transform: uppercase;
 	text-decoration: none;
 }
@@ -1322,11 +1304,13 @@ textarea {
 .more-link:link,
 .more-link:visited  {
 	color: #fff;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 .more-link:hover,
 .more-link:active {
-	background: #154585;
+	background: #252525;
 }
 
 /* Small Post Layout */
@@ -1337,7 +1321,7 @@ textarea {
 
 .small-archive-post .wp-post-image {
 	float: left;
-	max-width: 34%;
+	max-width: 45%;
 	margin: 0 1.5em 0 0;
 	padding: 0.5em 0;
 }
@@ -1440,7 +1424,7 @@ textarea {
 	padding: 0.15em 0.6em;
 	text-decoration: none;
 	color: #fff;
-	background: #25b5d5;
+	background: #1585b5;
 	border: none;
 	font-size: 12px !important;
 	font-size: 0.75rem !important;
@@ -1459,7 +1443,7 @@ textarea {
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	background: #154585;
+	background: #252525;
 }
 
 /* Post Navigation */
@@ -1505,7 +1489,7 @@ textarea {
 	font-size: 0.875rem;
 	font-weight: bold;
 	color: #fff;
-	background: #154585;
+	background: #252525;
 }
 
 .post-pagination a:link,
@@ -1517,7 +1501,7 @@ textarea {
 
 .post-pagination a:hover,
 .post-pagination .current {
-	background: #25b5d5;
+	background: #1585b5;
 }
 
 /* Infinite Scroll Pagination */
@@ -1529,23 +1513,23 @@ textarea {
 	display: inline-block;
 	margin: 0 0 2em;
 	padding: 0.3em 0.8em;
-	font-family: 'Roboto', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	color: #fff;
-	background: #25b5d5;
+	background: #1585b5;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	background-color: #154585;
+	background-color: #252525;
 }
 
 /* Archives and Search Heading */
 .page-header {
 	margin: 0 0 1.5em 0;
-	background: #154585;
+	background: #252525;
 }
 
 .page-header .archive-title {
@@ -1615,7 +1599,7 @@ textarea {
 .comments-header,
 .comment-reply-title {
 	margin: 0 0 1.5em 0;
-	background: #154585;
+	background: #252525;
 }
 
 .comments-header .comments-title,
@@ -1749,7 +1733,7 @@ textarea {
 # 12.0 - Footer
 --------------------------------------------------------------*/
 .site-footer-wrap {
-	background: #154585;
+	background: #252525;
 }
 
 .site-footer {
@@ -2042,7 +2026,7 @@ object {
 		font-size: 14px;
 		font-size: 0.875rem;
 		padding: 0.9em 1.5em;
-		background: #154585;
+		background: #252525;
 		text-align: left;
 	}
 
@@ -2050,7 +2034,7 @@ object {
 	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
 		cursor: pointer;
-		background: #25b5d5;
+		background: #1585b5;
 	}
 
 	.main-navigation-toggle:after {
@@ -2422,11 +2406,15 @@ object {
 }
 
 .wide-layout .site-content-wrap {
-	margin: 2em 0;
+	margin: 0;
 }
 
 .wide-layout .header-image {
 	margin: 0 0 2em;
+}
+
+.wide-layout .site-footer .site-info {
+	padding: 1em 0;
 }
 
 @media only screen and (max-width: 85em) {
