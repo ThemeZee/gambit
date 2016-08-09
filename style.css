@@ -288,7 +288,7 @@ input,
 select,
 textarea {
 	color: #333333;
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-family: 'Oxygen', Tahoma, Arial;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.75;
@@ -497,7 +497,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	padding: 0.5em 1em;
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-family: 'Oxygen', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: bold;
@@ -506,6 +506,8 @@ input[type="submit"] {
 	border: none;
 	text-transform: uppercase;
 	text-decoration: none;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 button:hover,
@@ -718,7 +720,7 @@ textarea {
 	margin: 0 0.3em;
 	padding: 0;
 	color: #1585b5;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Oxygen', sans-serif;
 	font-size: 32px;
 	font-size: 2rem;
 	font-weight: bold;
@@ -753,7 +755,7 @@ textarea {
 
 .header-widget {
 	float: right;
-	margin: 0.5em 0 0 1.5em;
+	margin: 0.4em 0 0 1.5em;
 }
 
 .header-widget ul {
@@ -810,7 +812,7 @@ textarea {
 
 .main-navigation-menu a {
 	display: block;
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-family: 'Oxygen', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: bold;
@@ -1077,7 +1079,7 @@ textarea {
 	display: inline-block;
 	margin: 0;
 	width: 100%;
-	padding: 0.3em 3em 0.3em 0.6em;
+	padding: 0.55em 3em 0.5em 1em;
 	box-sizing: border-box;
 	-webkit-appearance: none;
 }
@@ -1089,22 +1091,22 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	border: none;
-	padding: 0.4em 0.6em;
+	padding: 0.6em 0.8em;
 	cursor: pointer;
 }
 
 .search-form .search-submit .genericon-search {
 	display: inline-block;
-	margin-top: -0.3em;
+	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 1;
 	font-family: 'Genericons';
 	text-decoration: inherit;
 	font-weight: normal;
 	font-style: normal;
-	vertical-align: middle;
+	vertical-align: top;
 	color: #fff;
 	content: '\f400';
 }
@@ -1157,7 +1159,7 @@ textarea {
 }
 
 .widget-magazine-posts .medium-post .entry-title {
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-family: 'Oxygen', Tahoma, Arial;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -1181,7 +1183,7 @@ textarea {
 }
 
 .widget-magazine-posts .small-post .entry-title {
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-family: 'Oxygen', Tahoma, Arial;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1249,12 +1251,12 @@ textarea {
 	max-width: 100%;
 }
 
-.page-title,
 .entry-title {
 	display: inline;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 24px;
-	font-size: 1.5rem;
+	font-family: 'Oxygen', sans-serif;
+	font-size: 28px;
+	font-size: 1.75rem;
+	line-height: 1.4;
 	padding: 0;
 	margin: 0;
 	color: #252525;
@@ -1291,7 +1293,7 @@ textarea {
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 1em;
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-family: 'Oxygen', Tahoma, Arial;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: bold;
@@ -1323,12 +1325,12 @@ textarea {
 	float: left;
 	max-width: 45%;
 	margin: 0 1.5em 0 0;
-	padding: 0.5em 0;
+	padding: 0 0 0.5em;
 }
 
 .small-archive-post .entry-title {
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 22px;
+	font-size: 1.375rem;
 }
 
 .small-archive-post .entry-content {
@@ -1349,7 +1351,7 @@ textarea {
 
 /* Entry Meta */
 .entry-meta {
-	margin: 0;
+	margin: 0.4em 0 0;
 	color: #999;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1437,6 +1439,8 @@ textarea {
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
 	color: #fff;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 .widget_tag_cloud .tagcloud a:hover,
@@ -1513,7 +1517,7 @@ textarea {
 	display: inline-block;
 	margin: 0 0 2em;
 	padding: 0.3em 0.8em;
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-family: 'Oxygen', Tahoma, Arial;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	color: #fff;
@@ -2220,6 +2224,16 @@ object {
 		width: 100%;
 	}
 
+	.entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.small-archive-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts-grid .magazine-posts-grid-row {
 		margin-right: 0;
@@ -2301,7 +2315,6 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
 
-	.page-title,
 	.entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
@@ -2359,7 +2372,6 @@ object {
 		font-size: 1.75rem;
 	}
 
-	.page-title,
 	.entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
@@ -2409,22 +2421,15 @@ object {
 	margin: 0;
 }
 
-.wide-layout .header-image {
-	margin: 0 0 2em;
-}
+@media only screen and (min-width: 85em) {
 
-.wide-layout .site-footer .site-info {
-	padding: 1em 0;
-}
-
-@media only screen and (max-width: 85em) {
-
-	.wide-layout .site-content-wrap {
-		margin: 0;
+	.wide-layout .header-main {
+		padding-left: 0;
+		padding-right: 0;
 	}
 
-	.wide-layout .header-image {
-		margin: 0;
+	.wide-layout .site-footer .site-info {
+		padding: 1em 0;
 	}
 
 }

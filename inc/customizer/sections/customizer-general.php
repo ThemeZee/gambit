@@ -45,7 +45,7 @@ function gambit_customize_register_general_settings( $wp_customize ) {
 
 	// Add Settings and Controls for Theme Layout.
 	$wp_customize->add_setting( 'gambit_theme_options[theme_layout]', array(
-		'default'           => 'content-left',
+		'default'           => 'content-center',
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'gambit_sanitize_select',

@@ -188,7 +188,7 @@ add_action( 'wp_enqueue_scripts', 'gambit_scripts' );
 function gambit_google_fonts_url() {
 
 	// Set default Fonts.
-	$font_families = array( 'Open Sans:400,400italic,700,700italic' );
+	$font_families = array( 'Oxygen:400,400italic,700,700italic' );
 
 	// Build Fonts URL.
 	$query_args = array(

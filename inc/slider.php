@@ -43,7 +43,7 @@ add_action( 'wp_enqueue_scripts', 'gambit_slider_scripts' );
  * @return int
  */
 function gambit_slider_excerpt_length( $length ) {
-	return 25;
+	return 20;
 }
 
 
