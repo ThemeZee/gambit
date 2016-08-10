@@ -8,15 +8,17 @@
 
 ( function( $ ) {
 
-	/* Default WordPress Customizer settings */
+	// Site Title.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
-			$( '#logo .site-title' ).text( to );
+			$( '.site-title a' ).text( to );
 		} );
 	} );
+
+	// Tagline.
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
-			$( '#logo .site-description' ).text( to );
+			$( '.site-description' ).text( to );
 		} );
 	} );
 
