@@ -26,6 +26,10 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.0.3 =
+* added extra setting to display tagline
+* added selective refresh support for site title and tagline
+
 = 1.0.2 =
 * added content-none.php template file
 * improved accessibility of navigation menus
