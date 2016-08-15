@@ -35,6 +35,7 @@
 
 					<?php gambit_site_logo(); ?>
 					<?php gambit_site_title(); ?>
+					<?php gambit_site_description(); ?>
 
 				</div><!-- .site-branding -->
 

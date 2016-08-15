@@ -74,6 +74,23 @@ function gambit_customize_register_options( $wp_customize ) {
 		)
 	);
 
+	// Add Display Tagline Setting.
+	$wp_customize->add_setting( 'gambit_theme_options[site_description]', array(
+		'default'           => false,
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'gambit_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control( 'gambit_theme_options[site_description]', array(
+		'label'    => esc_html__( 'Display Tagline', 'gambit' ),
+		'section'  => 'title_tagline',
+		'settings' => 'gambit_theme_options[site_description]',
+		'type'     => 'checkbox',
+		'priority' => 11,
+		)
+	);
+
 } // gambit_customize_register_options()
 add_action( 'customize_register', 'gambit_customize_register_options' );
 

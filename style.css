@@ -717,7 +717,7 @@ textarea {
 
 .site-title {
 	display: inline-block;
-	margin: 0 0.3em;
+	margin: 0;
 	padding: 0;
 	color: #1585b5;
 	font-family: 'Oxygen', sans-serif;
@@ -740,12 +740,18 @@ textarea {
 }
 
 .site-branding .custom-logo {
-	margin: 0.4em 1em 0.4em 0;
+	margin: 0.4em 0.6em 0.4em 0;
 	padding: 0;
 	border: none;
 	vertical-align: top;
 	max-width: 100%;
 	height: auto;
+}
+
+.site-description {
+	margin: 0 0 0.5em;
+	font-size: 15px;
+	font-size: 0.9375rem;
 }
 
 /* Header Widgets */
@@ -1115,9 +1121,8 @@ textarea {
 /*--------------------------------------------------------------
 ## 11.2 - Magazine Posts Widgets
 --------------------------------------------------------------*/
-
 .widget-magazine-posts {
-	margin-bottom: -1em;
+	margin-bottom: -1.5em;
 }
 
 .widget-magazine-posts .type-post {

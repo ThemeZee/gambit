@@ -32,6 +32,7 @@ function gambit_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,
+		'site_description'					=> false,
 		'theme_width' 						=> 'boxed-layout',
 		'theme_layout' 						=> 'content-center',
 		'blog_title'						=> esc_html__( 'Latest Posts', 'gambit' ),
