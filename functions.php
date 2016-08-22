@@ -90,7 +90,7 @@ add_action( 'after_setup_theme', 'gambit_setup' );
  * @global int $content_width
  */
 function gambit_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gambit_content_width', 710 );
+	$GLOBALS['content_width'] = apply_filters( 'gambit_content_width', 750 );
 }
 add_action( 'after_setup_theme', 'gambit_content_width', 0 );
 
