@@ -26,6 +26,9 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.0.4 =
+* added Right-to-Left language support
+
 = 1.0.3 =
 * added extra setting to display tagline
 * added selective refresh support for site title and tagline
