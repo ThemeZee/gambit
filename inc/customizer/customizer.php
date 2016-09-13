@@ -15,6 +15,7 @@ require( get_template_directory() . '/inc/customizer/sections/customizer-general
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-links.php' );
 
 /**
  * Registers Theme Options panel and sets up some WordPress core settings
@@ -102,29 +103,6 @@ function gambit_customize_preview_js() {
 	wp_enqueue_script( 'gambit-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151202', true );
 }
 add_action( 'customize_preview_init', 'gambit_customize_preview_js' );
-
-
-/**
- * Embed JS file for Customizer Controls
- */
-function gambit_customize_controls_js() {
-
-	wp_enqueue_script( 'gambit-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
-
-	// Localize the script.
-	wp_localize_script( 'gambit-customizer-controls', 'gambit_theme_links', array(
-		'title'	=> esc_html__( 'Theme Links', 'gambit' ),
-		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/gambit/', 'gambit' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=gambit&utm_content=theme-page' ),
-		'themeLabel'	=> esc_html__( 'Theme Page', 'gambit' ),
-		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/gambit-documentation/', 'gambit' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=gambit&utm_content=documentation' ),
-		'docuLabel'	=> esc_html__( 'Theme Documentation', 'gambit' ),
-		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/gambit?filter=5' ),
-		'rateLabel'	=> esc_html__( 'Rate this theme', 'gambit' ),
-		)
-	);
-
-}
-add_action( 'customize_controls_enqueue_scripts', 'gambit_customize_controls_js' );
 
 
 /**

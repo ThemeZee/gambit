@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gambit\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-08-15 15:32+0100\n"
-"PO-Revision-Date: 2016-08-15 15:32+0100\n"
+"POT-Creation-Date: 2016-09-13 11:50+0100\n"
+"PO-Revision-Date: 2016-09-13 11:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -51,37 +51,37 @@ msgstr ""
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:106 sidebar-main.php:20
+#: functions.php:105 sidebar-main.php:20
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:108 functions.php:118
+#: functions.php:107 functions.php:117
 msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:116 sidebar-small.php:20
+#: functions.php:115 sidebar-small.php:20
 msgid "Small Sidebar"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:125
 msgid "Header"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:127
 msgid "Appears on header area. You can use a search or ad widget here."
 msgstr ""
 
-#: functions.php:136
+#: functions.php:135
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:137
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
 msgstr ""
 
-#: functions.php:171
+#: functions.php:170
 msgid "Menu"
 msgstr ""
 
@@ -162,24 +162,29 @@ msgstr ""
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
+#: inc/template-tags.php:416
+msgid "https://wordpress.org"
+msgstr ""
+
+#: inc/template-tags.php:417 inc/theme-info.php:47
+#: inc/customizer/functions/custom-controls.php:151
+msgid "https://themezee.com/themes/gambit/"
+msgstr ""
+
 #: inc/theme-info.php:19 inc/theme-info.php:40
 #, php-format
 msgid "Welcome to %1$s %2$s"
 msgstr ""
 
-#: inc/theme-info.php:20
+#: inc/theme-info.php:20 inc/customizer/sections/customizer-links.php:19
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:46 inc/customizer/customizer.php:116
+#: inc/theme-info.php:46 inc/customizer/functions/custom-controls.php:148
 msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:47 inc/customizer/customizer.php:117
-msgid "https://themezee.com/themes/gambit/"
-msgstr ""
-
-#: inc/theme-info.php:47 inc/customizer/customizer.php:118
+#: inc/theme-info.php:47 inc/customizer/functions/custom-controls.php:152
 msgid "Theme Page"
 msgstr ""
 
@@ -188,16 +193,21 @@ msgid "Theme Demo"
 msgstr ""
 
 #: inc/theme-info.php:49 inc/theme-info.php:70
-#: inc/customizer/customizer.php:119
+#: inc/customizer/functions/custom-controls.php:157
 msgid "https://themezee.com/docs/gambit-documentation/"
 msgstr ""
 
 #: inc/theme-info.php:49 inc/theme-info.php:64
-#: inc/customizer/customizer.php:120
+#: inc/customizer/functions/custom-controls.php:158
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/customizer/customizer.php:122
+#: inc/theme-info.php:50 inc/theme-info.php:155
+#: inc/customizer/functions/custom-controls.php:163
+msgid "https://wordpress.org/support/theme/gambit/reviews/?filter=5"
+msgstr ""
+
+#: inc/theme-info.php:50 inc/customizer/functions/custom-controls.php:164
 msgid "Rate this theme"
 msgstr ""
 
@@ -217,7 +227,7 @@ msgstr ""
 msgid "View %s Documentation"
 msgstr ""
 
-#: inc/theme-info.php:77 inc/customizer/customizer.php:31
+#: inc/theme-info.php:77 inc/customizer/customizer.php:32
 msgid "Theme Options"
 msgstr ""
 
@@ -288,18 +298,22 @@ msgid "https://themezee.com/"
 msgstr ""
 
 #: inc/theme-info.php:155
+msgid "Review Gambit"
+msgstr ""
+
+#: inc/theme-info.php:155
 msgid "rate it"
 msgstr ""
 
-#: inc/customizer/customizer.php:58
+#: inc/customizer/customizer.php:59
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:69
+#: inc/customizer/customizer.php:70
 msgid "Display Site Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:86
+#: inc/customizer/customizer.php:87
 msgid "Display Tagline"
 msgstr ""
 

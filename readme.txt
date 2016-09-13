@@ -26,6 +26,10 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.0.6 =
+* added new Theme Info section for displaying theme links
+* improved escaping and translation
+
 = 1.0.5 =
 * added Spanish translation files
 * updated tags in style.css
