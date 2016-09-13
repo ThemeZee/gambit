@@ -45,9 +45,9 @@ function gambit_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'gambit' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/gambit/', 'gambit' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'gambit' ); ?></a>
-				<a href="<?php echo esc_url( 'http://preview.themezee.com/gambit/?utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=demo' ); ?>" target="_blank"><?php esc_html_e( 'Theme Demo', 'gambit' ); ?></a>
+				<a href="http://preview.themezee.com/gambit/?utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'gambit' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/gambit-documentation/', 'gambit' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'gambit' ); ?></a>
-				<a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/gambit?filter=5' ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'gambit' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/gambit/reviews/?filter=5', 'gambit' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'gambit' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -152,7 +152,7 @@ function gambit_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'gambit' ),
 				$theme->get( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'gambit' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=gambit" title="ThemeZee">ThemeZee</a>',
-			'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/gambit?filter=5" title="Gambit Review">' . esc_html__( 'rate it', 'gambit' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/gambit/reviews/?filter=5', 'gambit' ) . '" title="' . esc_attr__( 'Review Gambit', 'gambit' ) . '">' . esc_html__( 'rate it', 'gambit' ) . '</a>'); ?>
 			</p>
 
 		</div>

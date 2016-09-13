@@ -43,7 +43,6 @@ function gambit_setup() {
 
 	// Switch default core markup for search form, comment form, and comments to output valid HTML5.
 	add_theme_support( 'html5', array(
-		'search-form',
 		'comment-form',
 		'comment-list',
 		'gallery',
@@ -187,12 +186,12 @@ add_action( 'wp_enqueue_scripts', 'gambit_scripts' );
  */
 function gambit_google_fonts_url() {
 
-	// Set default Fonts.
-	$font_families = array( 'Oxygen:400,400italic,700,700italic' );
+	// Set default Font.
+	$font_family = 'Oxygen:400,400italic,700,700italic';
 
-	// Build Fonts URL.
+	// Build Font URL.
 	$query_args = array(
-		'family' => urlencode( implode( '|', $font_families ) ),
+		'family' => urlencode( $font_family ),
 		'subset' => urlencode( 'latin,latin-ext' ),
 	);
 	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );

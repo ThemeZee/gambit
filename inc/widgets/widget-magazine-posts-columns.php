@@ -299,7 +299,7 @@ class Gambit_Magazine_Posts_Columns_Widget extends WP_Widget {
 			if ( $category_id > 0 ) :
 
 				// Set Link URL and Title for Category.
-				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'gambit' ), get_cat_name( $category_id ) );
+				$link_title = sprintf( esc_attr__( 'View all posts from category %s', 'gambit' ), get_cat_name( $category_id ) );
 				$link_url = esc_url( get_category_link( $category_id ) );
 
 				// Display Widget Title with link to category archive.
@@ -357,7 +357,7 @@ class Gambit_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category_one_title' ); ?>"><?php esc_html_e( 'Left Category Title:', 'gambit' ); ?>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'category_one_title' ); ?>" name="<?php echo $this->get_field_name( 'category_one_title' ); ?>" type="text" value="<?php echo $settings['category_one_title']; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'category_one_title' ); ?>" name="<?php echo $this->get_field_name( 'category_one_title' ); ?>" type="text" value="<?php echo esc_attr( $settings['category_one_title'] ); ?>" />
 			</label>
 		</p>
 
@@ -378,7 +378,7 @@ class Gambit_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				<p>
 			<label for="<?php echo $this->get_field_id( 'category_two_title' ); ?>"><?php esc_html_e( 'Right Category Title:', 'gambit' ); ?>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'category_two_title' ); ?>" name="<?php echo $this->get_field_name( 'category_two_title' ); ?>" type="text" value="<?php echo $settings['category_two_title']; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'category_two_title' ); ?>" name="<?php echo $this->get_field_name( 'category_two_title' ); ?>" type="text" value="<?php echo esc_attr( $settings['category_two_title'] ); ?>" />
 			</label>
 		</p>
 
@@ -386,12 +386,12 @@ class Gambit_Magazine_Posts_Columns_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'category_two' ); ?>"><?php esc_html_e( 'Right Category:', 'gambit' ); ?></label><br/>
 			<?php // Display Category One Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'gambit' ),
-					'show_count' 		 => true,
-					'hide_empty'		 => false,
-					'selected'           => $settings['category_two'],
-					'name'               => $this->get_field_name( 'category_two' ),
-					'id'                 => $this->get_field_id( 'category_two' ),
+					'show_option_all' => esc_html__( 'All Categories', 'gambit' ),
+					'show_count' 		  => true,
+					'hide_empty'		  => false,
+					'selected'        => $settings['category_two'],
+					'name'            => $this->get_field_name( 'category_two' ),
+					'id'              => $this->get_field_id( 'category_two' ),
 				);
 				wp_dropdown_categories( $args );
 			?>
