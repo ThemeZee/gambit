@@ -96,10 +96,10 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="upgrade-pro-version">
 
-				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'gambit' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'Pro Version Add-on', 'gambit' ); ?></span>
 
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'gambit' ), 'Gambit' ); ?>
+					<?php printf( esc_html__( 'Purchase the %s Pro Add-on and get additional features and advanced customization options.', 'gambit' ), 'Gambit' ); ?>
 				</span>
 
 				<p>
@@ -112,18 +112,15 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="upgrade-plugins">
 
-				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'gambit' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'Recommended Plugins', 'gambit' ); ?></span>
 
 				<span class="textfield">
-					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'gambit' ); ?>
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'gambit' ); ?>
 				</span>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'gambit' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=gambit&utm_content=plugins" target="_blank" class="button button-secondary">
-						<?php esc_html_e( 'Browse Plugins', 'gambit' ); ?>
-					</a>
-					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-						<?php esc_html_e( 'Install now', 'gambit' ); ?>
+					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+						<?php esc_html_e( 'Install Plugins', 'gambit' ); ?>
 					</a>
 				</p>
 

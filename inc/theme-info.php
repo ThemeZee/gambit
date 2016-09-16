@@ -107,10 +107,10 @@ function gambit_theme_info_page() {
 				<div class="column column-half clearfix">
 
 					<div class="section">
-						<h4><?php esc_html_e( 'Pro Version', 'gambit' ); ?></h4>
+						<h4><?php esc_html_e( 'Pro Version Add-on', 'gambit' ); ?></h4>
 
 						<p class="about">
-							<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'gambit' ), 'Gambit' ); ?>
+							<?php printf( esc_html__( 'Purchase the %s Pro Add-on and get additional features and advanced customization options.', 'gambit' ), 'Gambit' ); ?>
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://themezee.com/addons/gambit-pro/', 'gambit' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=gambit&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
@@ -124,17 +124,14 @@ function gambit_theme_info_page() {
 				<div class="column column-half clearfix">
 
 					<div class="section">
-						<h4><?php esc_html_e( 'ThemeZee Plugins', 'gambit' ); ?></h4>
+						<h4><?php esc_html_e( 'Recommended Plugins', 'gambit' ); ?></h4>
 
 						<p class="about">
-							<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'gambit' ); ?>
+							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'gambit' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'gambit' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=gambit&utm_content=plugins' ); ?>" target="_blank" class="button button-secondary">
-								<?php esc_html_e( 'Browse Plugins', 'gambit' ); ?>
-							</a>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-								<?php esc_html_e( 'Install now', 'gambit' ); ?>
+							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+								<?php esc_html_e( 'Install Plugins', 'gambit' ); ?>
 							</a>
 						</p>
 					</div>

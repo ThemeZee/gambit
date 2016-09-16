@@ -15,7 +15,6 @@ require( get_template_directory() . '/inc/customizer/sections/customizer-general
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-links.php' );
 
 /**
  * Registers Theme Options panel and sets up some WordPress core settings
@@ -30,7 +29,7 @@ function gambit_customize_register_options( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'gambit' ),
-		'description'    => '',
+		'description'    => gambit_customize_theme_links(),
 	) );
 
 	// Add postMessage support for site title and description.
@@ -109,7 +108,7 @@ add_action( 'customize_preview_init', 'gambit_customize_preview_js' );
  * Embed CSS styles for the theme options in the Customizer
  */
 function gambit_customize_preview_css() {
-	wp_enqueue_style( 'gambit-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
+	wp_enqueue_style( 'gambit-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
 }
 add_action( 'customize_controls_print_styles', 'gambit_customize_preview_css' );
 
@@ -129,4 +128,49 @@ function gambit_customize_partial_blogname() {
  */
 function gambit_customize_partial_blogdescription() {
 	bloginfo( 'description' );
+}
+
+/**
+ * Returns Theme Links
+ */
+function gambit_customize_theme_links() {
+
+	ob_start();
+	?>
+
+		<div class="theme-links">
+
+			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'gambit' ); ?></span>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/gambit/', 'gambit' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=gambit&utm_content=theme-page" target="_blank">
+					<?php esc_html_e( 'Theme Page', 'gambit' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="http://preview.themezee.com/gambit/?utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=demo" target="_blank">
+					<?php esc_html_e( 'Theme Demo', 'gambit' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/gambit-documentation/', 'gambit' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=gambit&utm_content=documentation" target="_blank">
+					<?php esc_html_e( 'Theme Documentation', 'gambit' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/gambit/reviews/?filter=5', 'gambit' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Rate this theme', 'gambit' ); ?>
+				</a>
+			</p>
+
+		</div>
+
+	<?php
+	$theme_links = ob_get_contents();
+	ob_end_clean();
+
+	return $theme_links;
 }
