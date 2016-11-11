@@ -26,6 +26,11 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.0.7 =
+* moved theme links to panel description in Customizer
+* updated Theme Info page
+* removed German language files to use wordpress.org language packs
+
 = 1.0.6 =
 * added new Theme Info section for displaying theme links
 * improved escaping and translation
