@@ -108,7 +108,7 @@ add_action( 'customize_preview_init', 'gambit_customize_preview_js' );
  * Embed CSS styles for the theme options in the Customizer
  */
 function gambit_customize_preview_css() {
-	wp_enqueue_style( 'gambit-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
+	wp_enqueue_style( 'gambit-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161214' );
 }
 add_action( 'customize_controls_print_styles', 'gambit_customize_preview_css' );
 
@@ -149,7 +149,7 @@ function gambit_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/gambit/?utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=gambit&utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=demo" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'gambit' ); ?>
 				</a>
 			</p>
