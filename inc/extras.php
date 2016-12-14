@@ -6,14 +6,14 @@
  */
 
 if ( ! function_exists( 'gambit_default_menu' ) ) :
-/**
- * Display default page as navigation if no custom menu was set
- */
-function gambit_default_menu() {
+	/**
+	 * Display default page as navigation if no custom menu was set
+	 */
+	function gambit_default_menu() {
 
-	echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">'. wp_list_pages( 'title_li=&echo=0' ) .'</ul>';
+		echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">' . wp_list_pages( 'title_li=&echo=0' ) . '</ul>';
 
-}
+	}
 endif;
 
 
@@ -43,6 +43,46 @@ function gambit_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'gambit_body_classes' );
+
+
+/**
+ * Hide Elements with CSS.
+ *
+ * @return void
+ */
+function gambit_hide_elements() {
+
+	// Get theme options from database.
+	$theme_options = gambit_theme_options();
+
+	$elements = array();
+
+	// Hide Site Title?
+	if ( false === $theme_options['site_title'] ) {
+		$elements[] = '.site-title';
+	}
+
+	// Hide Site Description?
+	if ( false === $theme_options['site_description'] ) {
+		$elements[] = '.site-description';
+	}
+
+	// Return early if no elements are hidden.
+	if ( empty( $elements ) ) {
+		return;
+	}
+
+	// Create CSS.
+	$classes = implode( ', ', $elements );
+	$custom_css = $classes . ' {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+}';
+
+	// Add Custom CSS.
+	wp_add_inline_style( 'gambit-stylesheet', $custom_css );
+}
+add_filter( 'wp_enqueue_scripts', 'gambit_hide_elements', 11 );
 
 
 /**

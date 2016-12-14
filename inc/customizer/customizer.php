@@ -32,36 +32,29 @@ function gambit_customize_register_options( $wp_customize ) {
 		'description'    => gambit_customize_theme_links(),
 	) );
 
-	// Add postMessage support for site title and description.
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-
-	// Add support for selective refresh.
-	if ( isset( $wp_customize->selective_refresh ) ) {
-
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
-			'selector' => '.site-title a',
-			'container_inclusive' => false,
-			'render_callback' => 'gambit_customize_partial_blogname',
-		) );
-
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-			'selector' => '.site-description',
-			'container_inclusive' => false,
-			'render_callback' => 'gambit_customize_partial_blogdescription',
-		) );
-
-	}
-
 	// Change default background section.
 	$wp_customize->get_control( 'background_color' )->section   = 'background_image';
 	$wp_customize->get_section( 'background_image' )->title     = esc_html__( 'Background', 'gambit' );
+
+	// Add postMessage support for site title and description.
+	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+
+	// Add selective refresh for site title and description.
+	$wp_customize->selective_refresh->add_partial( 'blogname', array(
+		'selector'        => '.site-title a',
+		'render_callback' => 'gambit_customize_partial_blogname',
+	) );
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector'        => '.site-description',
+		'render_callback' => 'gambit_customize_partial_blogdescription',
+	) );
 
 	// Add Display Site Title Setting.
 	$wp_customize->add_setting( 'gambit_theme_options[site_title]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'gambit_sanitize_checkbox',
 		)
 	);
@@ -78,7 +71,7 @@ function gambit_customize_register_options( $wp_customize ) {
 	$wp_customize->add_setting( 'gambit_theme_options[site_description]', array(
 		'default'           => false,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'gambit_sanitize_checkbox',
 		)
 	);
@@ -96,10 +89,26 @@ add_action( 'customize_register', 'gambit_customize_register_options' );
 
 
 /**
+ * Render the site title for the selective refresh partial.
+ */
+function gambit_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ */
+function gambit_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
+
+
+/**
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function gambit_customize_preview_js() {
-	wp_enqueue_script( 'gambit-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151202', true );
+	wp_enqueue_script( 'gambit-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20161214', true );
 }
 add_action( 'customize_preview_init', 'gambit_customize_preview_js' );
 
@@ -112,23 +121,6 @@ function gambit_customize_preview_css() {
 }
 add_action( 'customize_controls_print_styles', 'gambit_customize_preview_css' );
 
-/**
- * Render the site title for the selective refresh partial.
- *
- * @return void
- */
-function gambit_customize_partial_blogname() {
-	bloginfo( 'name' );
-}
-
-/**
- * Render the site tagline for the selective refresh partial.
- *
- * @return void
- */
-function gambit_customize_partial_blogdescription() {
-	bloginfo( 'description' );
-}
 
 /**
  * Returns Theme Links
