@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/gambit/
 Contributors: themezee
 Tags: three-columns, custom-background, custom-header, custom-menu, editor-style, rtl-language-support, grid-layout, blog, entertainment, news, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, two-columns
 Requires at least: 4.4
-Tested up to: 4.6
+Tested up to: 4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,12 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.0.8 =
+* added editor shortcuts and instant live preview for site title and tagline in Customizer
+* updated post pagination to use newer functions
+* improved implementation of post slider
+* changed demo links in Customizer and Theme Info
 
 = 1.0.7 =
 * moved theme links to panel description in Customizer

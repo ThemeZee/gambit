@@ -141,7 +141,7 @@ function gambit_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/?demo=gambit&utm_source=theme-info&utm_medium=textlink&utm_campaign=gambit&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=gambit&utm_source=customizer&utm_campaign=gambit" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'gambit' ); ?>
 				</a>
 			</p>
