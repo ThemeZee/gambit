@@ -154,13 +154,6 @@
 			maxWidth: '55em'
 		} );
 
-		/* Setup Footer Navigation */
-		$( '#footer-navigation' ).responsiveMenu( {
-			menuClass: 'footer-navigation-menu',
-			toggleClass: 'footer-navigation-toggle',
-			maxWidth: '40em'
-		} );
-
 	} );
 
 }(jQuery));
