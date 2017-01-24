@@ -676,7 +676,6 @@ textarea {
 /* Fullwidth Template */
 .site-content .fullwidth-content-area {
 	float: none;
-	padding: 0;
 	width: 100%;
 }
 
