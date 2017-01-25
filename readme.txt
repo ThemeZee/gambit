@@ -26,6 +26,9 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.0.9 =
+* added fullwidth page template for blog posts
+
 = 1.0.8 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
 * updated post pagination to use newer functions
