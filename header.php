@@ -25,7 +25,7 @@
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gambit' ); ?></a>
 
-		<div id="header-top" class="header-bar-wrap"><?php do_action( 'gambit_header_bar' ); ?></div>
+		<?php do_action( 'gambit_header_bar' ); ?>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 
