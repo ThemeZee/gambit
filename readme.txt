@@ -27,7 +27,9 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 == Changelog ==
 
 = 1.0.9 =
+* added Magazine Homepage widgets to blog index
 * added fullwidth page template for blog posts
+* removed empty sidebar notices
 
 = 1.0.8 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
