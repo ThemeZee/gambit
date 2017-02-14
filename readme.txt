@@ -26,6 +26,10 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.1.0 =
+* added template files for Magazine widgets to improve child theme compatibility
+* improved transient caching of Magazine widgets for increased performance
+
 = 1.0.9 =
 * added Magazine Homepage widgets to blog index
 * added fullwidth page template for blog posts

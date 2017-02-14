@@ -21,21 +21,14 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'gambit-magazine-posts-sidebar', // ID.
-			sprintf( esc_html__( 'Magazine Posts: Sidebar (%s)', 'gambit' ), wp_get_theme()->Name ), // Name.
+			esc_html__( 'Magazine (Sidebar)', 'gambit' ), // Name.
 			array(
-				'classname' => 'gambit_magazine_posts_sidebar',
+				'classname' => 'gambit-magazine-sidebar-widget',
 				'description' => esc_html__( 'Displays your posts from a selected category. You can use this widget in the Main Sidebar widget area.', 'gambit' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
-
-		// Delete Widget Cache on certain actions.
-		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'deleted_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'switch_theme', array( $this, 'delete_widget_cache' ) );
-
 	}
-
 
 	/**
 	 * Set default settings of the widget
@@ -47,14 +40,10 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 			'category'			=> 0,
 			'number'			=> 4,
 			'excerpt'			=> false,
-			'meta_date'			=> true,
-			'meta_author'		=> false,
 		);
 
 		return $defaults;
-
 	}
-
 
 	/**
 	 * Main Function to display the widget
@@ -65,22 +54,6 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 	 * @param array $instance / Settings for this widget instance.
 	 */
 	function widget( $args, $instance ) {
-
-		$cache = array();
-
-		// Get Widget Object Cache.
-		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_gambit_magazine_posts_sidebar', 'widget' );
-		}
-		if ( ! is_array( $cache ) ) {
-			$cache = array();
-		}
-
-		// Display Widget from Cache if exists.
-		if ( isset( $cache[ $this->id ] ) ) {
-			echo $cache[ $this->id ];
-			return;
-		}
 
 		// Start Output Buffering.
 		ob_start();
@@ -108,16 +81,9 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 		<?php
 		echo $args['after_widget'];
 
-		// Set Cache.
-		if ( ! $this->is_preview() ) {
-			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_gambit_magazine_posts_sidebar', $cache, 'widget' );
-		} else {
-			ob_end_flush();
-		}
-
-	} // widget()
-
+		// End Output Buffering.
+		ob_end_flush();
+	}
 
 	/**
 	 * Renders the Widget Content
@@ -131,14 +97,15 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 	 */
 	function render( $settings ) {
 
-		// Get latest posts from database.
+		// Get cached post ids.
+		$post_ids = gambit_get_magazine_post_ids( $this->id, $settings['category'], $settings['number'] );
+
+		// Fetch posts from database.
 		$query_arguments = array(
-			'posts_per_page' => (int) $settings['number'],
-			'ignore_sticky_posts' => true,
-			'cat' => (int) $settings['category'],
+			'post__in'            => $post_ids,
+			'no_found_rows'       => true,
 		);
 		$posts_query = new WP_Query( $query_arguments );
-		$i = 0;
 
 		// Check if there are posts.
 		if ( $posts_query->have_posts() ) :
@@ -146,33 +113,14 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 			// Limit the number of words for the excerpt.
 			add_filter( 'excerpt_length', 'gambit_magazine_posts_excerpt_length' );
 
+			// Pass Excerpt Setting to template file.
+			set_query_var( 'gambit_post_excerpt', (bool) $settings['excerpt'] );
+
 			// Display Posts.
-			while ( $posts_query->have_posts() ) : $posts_query->the_post(); ?>
+			while ( $posts_query->have_posts() ) : $posts_query->the_post();
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
+				get_template_part( 'template-parts/widgets/magazine-content', 'sidebar-post' );
 
-					<header class="entry-header">
-
-						<?php gambit_post_image( 'gambit-thumbnail-large' ); ?>
-
-						<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-						<?php $this->entry_meta( $settings ); ?>
-
-					</header><!-- .entry-header -->
-
-					<?php if ( true === $settings['excerpt'] ) : ?>
-
-					<div class="entry-content clearfix">
-						<?php the_excerpt(); ?>
-						<?php gambit_more_link(); ?>
-					</div><!-- .entry-content -->
-
-					<?php endif; ?>
-
-				</article>
-
-				<?php
 			endwhile;
 
 			// Remove excerpt filter.
@@ -182,39 +130,7 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 
 		// Reset Postdata.
 		wp_reset_postdata();
-
-	} // render()
-
-
-	/**
-	 * Displays Entry Meta of Posts
-	 *
-	 * @param array $settings / Settings for this widget instance.
-	 */
-	function entry_meta( $settings ) {
-
-		$postmeta = '';
-
-		if ( true === $settings['meta_date'] ) {
-
-			$postmeta .= gambit_meta_date();
-
-		}
-
-		if ( true === $settings['meta_author'] ) {
-
-			$postmeta .= gambit_meta_author();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
-
-	} // entry_meta()
-
+	}
 
 	/**
 	 * Displays Widget Title
@@ -238,7 +154,7 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 
 				// Display Widget Title with link to category archive.
 				echo '<div class="widget-header">';
-				echo '<h3 class="widget-title"><a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a></h3>';
+				echo '<h3 class="widget-title"><a class="category-archive-link" href="' . $link_url . '" title="' . $link_title . '">' . $widget_title . '</a></h3>';
 				echo '</div>';
 
 			else :
@@ -250,8 +166,7 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 
 		endif;
 
-	} // widget_title()
-
+	}
 
 	/**
 	 * Update Widget Settings
@@ -267,14 +182,11 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 		$instance['category'] = (int) $new_instance['category'];
 		$instance['number'] = (int) $new_instance['number'];
 		$instance['excerpt'] = ! empty( $new_instance['excerpt'] );
-		$instance['meta_date'] = ! empty( $new_instance['meta_date'] );
-		$instance['meta_author'] = ! empty( $new_instance['meta_author'] );
 
-		$this->delete_widget_cache();
+		gambit_flush_magazine_post_ids();
 
 		return $instance;
 	}
-
 
 	/**
 	 * Displays Widget Settings Form in the Backend
@@ -321,30 +233,7 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 			</label>
 		</p>
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ); ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
-				<?php esc_html_e( 'Display post date', 'gambit' ); ?>
-			</label>
-		</p>
-
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ); ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
-				<?php esc_html_e( 'Display post author', 'gambit' ); ?>
-			</label>
-		</p>
-<?php
-	} // form()
-
-
-	/**
-	 * Delete Widget Cache
-	 */
-	public function delete_widget_cache() {
-
-		wp_cache_delete( 'widget_gambit_magazine_posts_sidebar', 'widget' );
-
+		<?php
 	}
 }
 

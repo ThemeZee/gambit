@@ -203,6 +203,30 @@ if ( ! function_exists( 'gambit_entry_meta' ) ) :
 endif;
 
 
+if ( ! function_exists( 'gambit_magazine_entry_meta' ) ) :
+	/**
+	 * Displays the date and author of magazine posts
+	 */
+	function gambit_magazine_entry_meta() {
+
+		$postmeta = gambit_meta_date();
+		$postmeta .= gambit_meta_author();
+
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
+	}
+endif;
+
+
+if ( ! function_exists( 'gambit_magazine_entry_date' ) ) :
+	/**
+	 * Displays the date of magazine posts
+	 */
+	function gambit_magazine_entry_date() {
+		echo '<div class="entry-meta">' . gambit_meta_date() . '</div>';
+	}
+endif;
+
+
 if ( ! function_exists( 'gambit_meta_date' ) ) :
 	/**
 	 * Displays the post date
