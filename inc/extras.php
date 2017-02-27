@@ -40,6 +40,21 @@ function gambit_body_classes( $classes ) {
 		$classes[] = 'content-right';
 	}
 
+	// Hide Date?
+	if ( false === $theme_options['meta_date'] ) {
+		$classes[] = 'date-hidden';
+	}
+
+	// Hide Author?
+	if ( false === $theme_options['meta_author'] ) {
+		$classes[] = 'author-hidden';
+	}
+
+	// Hide Categories?
+	if ( false === $theme_options['meta_category'] ) {
+		$classes[] = 'categories-hidden';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'gambit_body_classes' );
@@ -67,6 +82,16 @@ function gambit_hide_elements() {
 		$elements[] = '.site-description';
 	}
 
+	// Hide Post Tags?
+	if ( false === $theme_options['meta_tags'] ) {
+		$elements[] = '.type-post .entry-footer .entry-tags';
+	}
+
+	// Hide Post Navigation?
+	if ( false === $theme_options['post_navigation'] ) {
+		$elements[] = '.type-post .entry-footer .post-navigation';
+	}
+
 	// Return early if no elements are hidden.
 	if ( empty( $elements ) ) {
 		return;
@@ -74,10 +99,7 @@ function gambit_hide_elements() {
 
 	// Create CSS.
 	$classes = implode( ', ', $elements );
-	$custom_css = $classes . ' {
-	position: absolute;
-	clip: rect(1px, 1px, 1px, 1px);
-}';
+	$custom_css = $classes . ' { position: absolute; clip: rect(1px, 1px, 1px, 1px); }';
 
 	// Add Custom CSS.
 	wp_add_inline_style( 'gambit-stylesheet', $custom_css );
