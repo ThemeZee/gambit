@@ -738,6 +738,10 @@ textarea {
 	color: #252525;
 }
 
+.site-branding .custom-logo-link {
+	display: block;
+}
+
 .site-branding .custom-logo {
 	margin: 0.4em 0.6em 0.4em 0;
 	padding: 0;
