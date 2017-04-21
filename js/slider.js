@@ -14,7 +14,7 @@ jQuery( document ).ready(function($) {
 		slideshowSpeed: gambit_slider_params.speed,
 		namespace: "zeeflex-",
 		selector: ".zeeslides > li",
-		smoothHeight: true,
+		smoothHeight: false,
 		pauseOnHover: true,
 		controlsContainer: ".post-slider-controls"
 	});
