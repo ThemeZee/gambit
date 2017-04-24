@@ -129,7 +129,6 @@
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
 	color: #fff;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -192,7 +191,6 @@
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.8em;
 	background: #1585b5;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
