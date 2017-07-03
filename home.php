@@ -25,16 +25,7 @@ $theme_options = gambit_theme_options();
 		endif;
 
 		// Display Magazine Homepage Widgets.
-		if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
-
-			<div id="magazine-homepage-widgets" class="widget-area clearfix">
-
-				<?php dynamic_sidebar( 'magazine-homepage' ); ?>
-
-			</div><!-- #magazine-homepage-widgets -->
-
-		<?php
-		endif;
+		gambit_magazine_widgets();
 
 		if ( have_posts() ) :
 
