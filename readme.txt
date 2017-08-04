@@ -26,6 +26,10 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.3.1 =
+* added new section for Blog settings
+* added new setting to deactivate Magazine widgets on blog index 
+
 = 1.3 =
 * added improved Magazine Widget Customizer Control
 * added default widget titles for Magazine widgets
