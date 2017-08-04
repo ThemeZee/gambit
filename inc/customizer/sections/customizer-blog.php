@@ -98,5 +98,31 @@ function gambit_customize_register_blog_settings( $wp_customize ) {
 		'active_callback' => 'gambit_control_post_content_callback',
 		'priority'        => 50,
 	) );
+
+	// Add Magazine Widgets Headline.
+	$wp_customize->add_control( new Gambit_Customize_Header_Control(
+		$wp_customize, 'gambit_theme_options[blog_magazine_widgets_title]', array(
+			'label' => esc_html__( 'Magazine Widgets', 'gambit' ),
+			'section' => 'gambit_section_blog',
+			'settings' => array(),
+			'priority' => 60,
+		)
+	) );
+
+	// Add Setting and Control for showing post date.
+	$wp_customize->add_setting( 'gambit_theme_options[blog_magazine_widgets]', array(
+		'default'           => true,
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'gambit_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'gambit_theme_options[blog_magazine_widgets]', array(
+		'label'    => esc_html__( 'Display Magazine widgets on blog index', 'gambit' ),
+		'section'  => 'gambit_section_blog',
+		'settings' => 'gambit_theme_options[blog_magazine_widgets]',
+		'type'     => 'checkbox',
+		'priority' => 70,
+	) );
 }
 add_action( 'customize_register', 'gambit_customize_register_blog_settings' );
