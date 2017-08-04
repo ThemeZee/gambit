@@ -22,66 +22,6 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
-	// Add Post Layout Settings for archive posts.
-	$wp_customize->add_setting( 'gambit_theme_options[post_layout]', array(
-		'default'           => 'small-image',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'gambit_sanitize_select',
-		)
-	);
-	$wp_customize->add_control( 'gambit_theme_options[post_layout]', array(
-		'label'    => esc_html__( 'Post Layout (archive pages)', 'gambit' ),
-		'section'  => 'gambit_section_post',
-		'settings' => 'gambit_theme_options[post_layout]',
-		'type'     => 'select',
-		'priority' => 1,
-		'choices'  => array(
-			'small-image' => esc_html__( 'Show featured image beside content', 'gambit' ),
-			'index' => esc_html__( 'Show featured image below title', 'gambit' ),
-			),
-		)
-	);
-
-	// Add Settings and Controls for post content.
-	$wp_customize->add_setting( 'gambit_theme_options[post_content]', array(
-		'default'           => 'excerpt',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'gambit_sanitize_select',
-		)
-	);
-	$wp_customize->add_control( 'gambit_theme_options[post_content]', array(
-		'label'    => esc_html__( 'Post Length (archive pages)', 'gambit' ),
-		'section'  => 'gambit_section_post',
-		'settings' => 'gambit_theme_options[post_content]',
-		'type'     => 'radio',
-		'priority' => 2,
-		'choices'  => array(
-			'full' => esc_html__( 'Show full posts', 'gambit' ),
-			'excerpt' => esc_html__( 'Show post excerpts', 'gambit' ),
-			),
-		)
-	);
-
-	// Add Setting and Control for Excerpt Length.
-	$wp_customize->add_setting( 'gambit_theme_options[excerpt_length]', array(
-		'default'           => 25,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'absint',
-		)
-	);
-	$wp_customize->add_control( 'gambit_theme_options[excerpt_length]', array(
-		'label'    => esc_html__( 'Excerpt Length', 'gambit' ),
-		'section'  => 'gambit_section_post',
-		'settings' => 'gambit_theme_options[excerpt_length]',
-		'type'     => 'text',
-		'active_callback' => 'gambit_control_post_content_callback',
-		'priority' => 3,
-		)
-	);
-
 	// Add Post Meta Settings.
 	$wp_customize->add_setting( 'gambit_theme_options[postmeta_headline]', array(
 		'default'           => '',
@@ -92,10 +32,10 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 	);
 	$wp_customize->add_control( new Gambit_Customize_Header_Control(
 		$wp_customize, 'gambit_theme_options[postmeta_headline]', array(
-			'label' => esc_html__( 'Post Meta', 'gambit' ),
+			'label' => esc_html__( 'Post Details', 'gambit' ),
 			'section' => 'gambit_section_post',
 			'settings' => 'gambit_theme_options[postmeta_headline]',
-			'priority' => 4,
+			'priority' => 40,
 		)
 	) );
 
@@ -107,11 +47,11 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'gambit_theme_options[meta_date]', array(
-		'label'    => esc_html__( 'Display post date', 'gambit' ),
+		'label'    => esc_html__( 'Display date', 'gambit' ),
 		'section'  => 'gambit_section_post',
 		'settings' => 'gambit_theme_options[meta_date]',
 		'type'     => 'checkbox',
-		'priority' => 5,
+		'priority' => 50,
 		)
 	);
 
@@ -123,11 +63,11 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'gambit_theme_options[meta_author]', array(
-		'label'    => esc_html__( 'Display post author', 'gambit' ),
+		'label'    => esc_html__( 'Display author', 'gambit' ),
 		'section'  => 'gambit_section_post',
 		'settings' => 'gambit_theme_options[meta_author]',
 		'type'     => 'checkbox',
-		'priority' => 6,
+		'priority' => 60,
 		)
 	);
 
@@ -139,11 +79,11 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'gambit_theme_options[meta_category]', array(
-		'label'    => esc_html__( 'Display post categories', 'gambit' ),
+		'label'    => esc_html__( 'Display categories', 'gambit' ),
 		'section'  => 'gambit_section_post',
 		'settings' => 'gambit_theme_options[meta_category]',
 		'type'     => 'checkbox',
-		'priority' => 7,
+		'priority' => 70,
 		)
 	);
 
@@ -160,7 +100,7 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 			'label' => esc_html__( 'Single Posts', 'gambit' ),
 			'section' => 'gambit_section_post',
 			'settings' => 'gambit_theme_options[single_posts_headline]',
-			'priority' => 8,
+			'priority' => 80,
 		)
 	) );
 
@@ -172,11 +112,11 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'gambit_theme_options[post_image]', array(
-		'label'    => esc_html__( 'Display featured image on single posts', 'gambit' ),
+		'label'    => esc_html__( 'Display featured image', 'gambit' ),
 		'section'  => 'gambit_section_post',
 		'settings' => 'gambit_theme_options[post_image]',
 		'type'     => 'checkbox',
-		'priority' => 9,
+		'priority' => 90,
 		)
 	);
 
@@ -188,11 +128,11 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'gambit_theme_options[meta_tags]', array(
-		'label'    => esc_html__( 'Display post tags on single posts', 'gambit' ),
+		'label'    => esc_html__( 'Display tags', 'gambit' ),
 		'section'  => 'gambit_section_post',
 		'settings' => 'gambit_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 10,
+		'priority' => 100,
 		)
 	);
 	$wp_customize->add_setting( 'gambit_theme_options[post_navigation]', array(
@@ -203,11 +143,11 @@ function gambit_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'gambit_theme_options[post_navigation]', array(
-		'label'    => esc_html__( 'Display post navigation on single posts', 'gambit' ),
+		'label'    => esc_html__( 'Display previous/next post navigation', 'gambit' ),
 		'section'  => 'gambit_section_post',
 		'settings' => 'gambit_theme_options[post_navigation]',
 		'type'     => 'checkbox',
-		'priority' => 11,
+		'priority' => 110,
 		)
 	);
 }

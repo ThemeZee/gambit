@@ -64,23 +64,5 @@ function gambit_customize_register_general_settings( $wp_customize ) {
 			),
 		)
 	);
-
-	// Add Title for latest posts setting.
-	$wp_customize->add_setting( 'gambit_theme_options[blog_title]', array(
-		'default'           => esc_html__( 'Latest Posts', 'gambit' ),
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_html',
-		)
-	);
-	$wp_customize->add_control( 'gambit_theme_options[blog_title]', array(
-		'label'    => esc_html__( 'Blog Title', 'gambit' ),
-		'section'  => 'gambit_section_general',
-		'settings' => 'gambit_theme_options[blog_title]',
-		'type'     => 'text',
-		'priority' => 3,
-		)
-	);
-
 }
 add_action( 'customize_register', 'gambit_customize_register_general_settings' );
