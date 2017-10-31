@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/gambit/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Gambit is a complex and highly flexible WordPress theme perfectly suited for any news, magazine or blog website. It features several different layout options, two sidebars and a stunning featured post slider. The easy to use Magazine Homepage template allows you to create a powerful online magazine in just a few minutes.
-Version: 1.3.1
+Version: 1.3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gambit
@@ -1792,6 +1792,8 @@ object {
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -1804,7 +1806,7 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	margin: 0.5em 0;
 }
 
 /*--------------------------------------------------------------
@@ -1858,8 +1860,8 @@ object {
 
 .gallery-caption {
 	display: block;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 /*--------------------------------------------------------------
@@ -2215,6 +2217,13 @@ object {
 		font-size: 1.25rem;
 	}
 
+	/* Gallery */
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 25%;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -2351,6 +2360,19 @@ object {
 		display: inline-block;
 	}
 
+	/* Gallery */
+	.gallery-item {
+		padding: 0.75em 1em 0 0;
+	}
+
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 50%;
+	}
 }
 
 /*--------------------------------------------------------------
