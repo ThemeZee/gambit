@@ -6,10 +6,11 @@
  */
 
 /**
- * Gambit only works in WordPress 4.4 or later.
+ * Gambit only works in WordPress 4.7 or later.
  */
-if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
+if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
+	return;
 }
 
 
@@ -54,17 +55,17 @@ if ( ! function_exists( 'gambit_setup' ) ) :
 
 		// Set up the WordPress core custom logo feature.
 		add_theme_support( 'custom-logo', apply_filters( 'gambit_custom_logo_args', array(
-			'height' => 40,
-			'width' => 250,
+			'height'      => 40,
+			'width'       => 250,
 			'flex-height' => true,
-			'flex-width' => true,
+			'flex-width'  => true,
 		) ) );
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support('custom-header', apply_filters( 'gambit_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'gambit_custom_header_args', array(
 			'header-text' => false,
-			'width'	=> 1340,
-			'height' => 420,
+			'width'       => 1340,
+			'height'      => 420,
 			'flex-height' => true,
 		) ) );
 
@@ -75,8 +76,38 @@ if ( ! function_exists( 'gambit_setup' ) ) :
 		add_editor_style( array( 'assets/css/editor-style.css', get_template_directory_uri() . '/assets/css/custom-fonts.css' ) );
 
 		// Add Theme Support for Selective Refresh in Customizer.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+		if ( ! get_option( 'link_manager_enabled' ) ) {
+			add_theme_support( 'customize-selective-refresh-widgets' );
+		}
 
+		// Add custom color palette for Gutenberg.
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'gambit' ),
+				'slug'  => 'primary',
+				'color' => apply_filters( 'gambit_primary_color', '#1585b5' ),
+			),
+			array(
+				'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'gambit' ),
+				'slug'  => 'white',
+				'color' => '#ffffff',
+			),
+			array(
+				'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'gambit' ),
+				'slug'  => 'light-gray',
+				'color' => '#f0f0f0',
+			),
+			array(
+				'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'gambit' ),
+				'slug'  => 'dark-gray',
+				'color' => '#777777',
+			),
+			array(
+				'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'gambit' ),
+				'slug'  => 'black',
+				'color' => '#303030',
+			),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'gambit_setup' );
@@ -102,45 +133,44 @@ add_action( 'after_setup_theme', 'gambit_content_width', 0 );
 function gambit_widgets_init() {
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Main Sidebar', 'gambit' ),
-		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'gambit' ),
+		'name'          => esc_html__( 'Main Sidebar', 'gambit' ),
+		'id'            => 'sidebar',
+		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'gambit' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget' => '</aside>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Small Sidebar', 'gambit' ),
-		'id' => 'sidebar-small',
-		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'gambit' ),
+		'name'          => esc_html__( 'Small Sidebar', 'gambit' ),
+		'id'            => 'sidebar-small',
+		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'gambit' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget' => '</aside>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Header', 'gambit' ),
-		'id' => 'header',
-		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'gambit' ),
+		'name'          => esc_html__( 'Header', 'gambit' ),
+		'id'            => 'header',
+		'description'   => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'gambit' ),
 		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="header-widget-title">',
-		'after_title' => '</h4>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="header-widget-title">',
+		'after_title'   => '</h4>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Magazine Homepage', 'gambit' ),
-		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'gambit' ),
+		'name'          => esc_html__( 'Magazine Homepage', 'gambit' ),
+		'id'            => 'magazine-homepage',
+		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'gambit' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
-
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 }
 add_action( 'widgets_init', 'gambit_widgets_init' );
 
@@ -173,7 +203,6 @@ function gambit_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'gambit_scripts' );
 
@@ -182,12 +211,19 @@ add_action( 'wp_enqueue_scripts', 'gambit_scripts' );
  * Enqueue custom fonts.
  */
 function gambit_custom_fonts() {
-
-	// Register and Enqueue Theme Fonts.
 	wp_enqueue_style( 'gambit-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
-
 }
 add_action( 'wp_enqueue_scripts', 'gambit_custom_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'gambit_custom_fonts', 1 );
+
+
+/**
+ * Enqueue editor styles for the new Gutenberg Editor.
+ */
+function gambit_block_editor_assets() {
+	wp_enqueue_style( 'gambit-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20181102', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'gambit_block_editor_assets' );
 
 
 /**
@@ -205,7 +241,6 @@ function gambit_add_image_sizes() {
 	add_image_size( 'gambit-thumbnail-small', 100, 75, true );
 	add_image_size( 'gambit-thumbnail-medium', 300, 200, true );
 	add_image_size( 'gambit-thumbnail-large', 420, 280, true );
-
 }
 add_action( 'after_setup_theme', 'gambit_add_image_sizes' );
 
