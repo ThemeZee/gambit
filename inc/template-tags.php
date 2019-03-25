@@ -343,10 +343,12 @@ function gambit_footer_text() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'gambit' ),
-			'<a href="' . esc_attr__( 'https://wordpress.org', 'gambit' ) . '">WordPress</a>',
-			'<a href="' . esc_attr__( 'https://themezee.com/themes/gambit/', 'gambit' ) . '">Gambit</a>'
-		); ?>
+		<?php
+		// translators: Theme Name
+		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'gambit' ),
+			'<a href="https://themezee.com/themes/gambit/" title="Gambit WordPress Theme">Gambit</a>'
+		);
+		?>
 	</span>
 
 	<?php

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gambit\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2017-08-04 18:41+0200\n"
+"POT-Creation-Date: 2019-03-25 14:13+0100\n"
 "PO-Revision-Date: 2016-09-16 12:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
@@ -48,41 +48,66 @@ msgstr ""
 msgid "Leave a Reply"
 msgstr ""
 
-#: functions.php:42
+#: functions.php:43
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:86
+msgctxt "Gutenberg Color Palette"
+msgid "Primary"
+msgstr ""
+
+#: functions.php:91
+msgctxt "Gutenberg Color Palette"
+msgid "White"
+msgstr ""
+
+#: functions.php:96
+msgctxt "Gutenberg Color Palette"
+msgid "Light Gray"
+msgstr ""
+
+#: functions.php:101
+msgctxt "Gutenberg Color Palette"
+msgid "Dark Gray"
+msgstr ""
+
+#: functions.php:106
+msgctxt "Gutenberg Color Palette"
+msgid "Black"
+msgstr ""
+
+#: functions.php:136
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:107 functions.php:117
+#: functions.php:138 functions.php:148
 msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:115
+#: functions.php:146
 msgid "Small Sidebar"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:156
 msgid "Header"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:158
 msgid "Appears on header area. You can use a search or ad widget here."
 msgstr ""
 
-#: functions.php:135
+#: functions.php:166
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:168
 msgid ""
 "Appears on blog index and Magazine Homepage template. You can use the "
 "Magazine widgets here."
 msgstr ""
 
-#: functions.php:170
+#: functions.php:200
 msgid "Menu"
 msgstr ""
 
@@ -119,8 +144,7 @@ msgid "Theme Links"
 msgstr ""
 
 #: inc/customizer/customizer.php:141
-#: inc/customizer/functions/custom-controls.php:148 inc/template-tags.php:348
-#: inc/theme-info.php:47
+#: inc/customizer/functions/custom-controls.php:148 inc/theme-info.php:47
 msgid "https://themezee.com/themes/gambit/"
 msgstr ""
 
@@ -403,13 +427,9 @@ msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:346
+#: inc/template-tags.php:348
 #, php-format
-msgid "Powered by %1$s and %2$s."
-msgstr ""
-
-#: inc/template-tags.php:347
-msgid "https://wordpress.org"
+msgid "WordPress Theme: %s by ThemeZee."
 msgstr ""
 
 #: inc/theme-info.php:19 inc/theme-info.php:40
