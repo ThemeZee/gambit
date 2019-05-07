@@ -26,6 +26,9 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.5.3 =
+* added support for responsive embed blocks
+
 = 1.5.2 =
 * adjusted footer credit link with clearer wording
 
