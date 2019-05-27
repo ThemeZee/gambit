@@ -344,9 +344,10 @@ function gambit_footer_text() {
 
 	<span class="credit-link">
 		<?php
-		// translators: Theme Name
-		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'gambit' ),
-			'<a href="https://themezee.com/themes/gambit/" title="Gambit WordPress Theme">Gambit</a>'
+		// translators: Theme Name and Link to ThemeZee.
+		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'gambit' ),
+			esc_html__( 'Gambit', 'gambit' ),
+			'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
 		);
 		?>
 	</span>
