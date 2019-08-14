@@ -249,6 +249,19 @@ add_action( 'after_setup_theme', 'gambit_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function gambit_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'         => esc_html__( 'Gambit Single Post', 'gambit' ),
+		'gambit-thumbnail-large' => esc_html__( 'Gambit Magazine Post', 'gambit' ),
+		'gambit-thumbnail-small' => esc_html__( 'Gambit Thumbnail', 'gambit' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'gambit_add_image_size_names' );
+
+
+/**
  * Include Files
  */
 
