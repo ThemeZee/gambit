@@ -26,6 +26,9 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 1.6.1 =
+* fixed styling of excerpt in post slider
+
 = 1.6 =
 * added custom styling for ThemeZee Magazine Blocks
 * added custom image sizes to select fields in Gutenberg Editor and Media Library

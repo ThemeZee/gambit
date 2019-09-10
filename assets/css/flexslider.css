@@ -129,6 +129,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 .post-slider .zeeslide .slide-post .entry-content a:hover,
 .post-slider .zeeslide .slide-post .entry-content a:active {
 	color: #fff;
+	text-decoration: none;
 }
 
 .post-slider .zeeslide .slide-post .entry-title a:hover,
