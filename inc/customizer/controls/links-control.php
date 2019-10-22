@@ -43,13 +43,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/gambit/', 'gambit' ) ); ?>" target="_blank">
-						<?php esc_html_e( 'Support Forum', 'gambit' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=gambit/', 'gambit' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Theme Changelog', 'gambit' ); ?>
 					</a>
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/gambit/reviews/?filter=5', 'gambit' ) ); ?>" target="_blank">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/gambit/reviews/', 'gambit' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Rate this theme', 'gambit' ); ?>
 					</a>
 				</p>
