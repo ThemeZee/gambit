@@ -1,0 +1,199 @@
+@media only screen and (max-width: 85em) {
+	body {
+		padding: 1.5em;
+	}
+
+	.site {
+		margin: 0;
+	}
+
+	.header-main {
+		padding: 2em;
+	}
+
+	.content-area,
+	.sidebar {
+		padding: 2em 2em 0;
+	}
+
+	.widget,
+	.page-header,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination,
+	.comments-area {
+		margin-bottom: 2em;
+	}
+
+	/* Multiple Post Columns */
+	.post-layout-columns .post-wrapper {
+		margin-right: -2em;
+	}
+
+	.post-layout-columns .post-wrapper .post-column {
+		padding-right: 2em;
+	}
+}
+
+@media only screen and (max-width: 70em) {
+	body {
+		padding: 0;
+	}
+
+	.header-widget {
+		max-width: 70%;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.site-content {
+		display: block;
+	}
+
+	.content-area {
+		width: 100%;
+	}
+
+	.sidebar {
+		width: 100%;
+		border-top: 1px solid #ddd;
+		border-left: none;
+	}
+
+	.header-main {
+		padding-top: 1.5em;
+	}
+
+	.site-branding {
+		float: none;
+		margin: 0;
+		text-align: center;
+	}
+
+	.header-widgets {
+		display: block;
+		text-align: center;
+	}
+
+	.header-widget {
+		display: inline-block;
+		float: none;
+		margin: 1em 0 0;
+		max-width: 100%;
+		vertical-align: top;
+
+	}
+
+	.header-widget .search-form {
+		max-width: 300px;
+	}
+
+	/* Three Column Layout */
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 50%;
+	}
+
+	/* Footer */
+	.site-footer .site-info {
+		float: none;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+	.header-main {
+		padding: 1em 1.5em 1.5em;
+	}
+
+	.content-area,
+	.sidebar {
+		padding: 1.5em 1.5em 0;
+	}
+
+	.widget,
+	.page-header,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination,
+	.comments-area {
+		margin-bottom: 1.5em;
+	}
+
+	/* Multiple Post Columns */
+	.post-layout-columns .post-wrapper {
+		margin-right: -1.5em;
+	}
+
+	.post-layout-columns .post-wrapper .post-column {
+		padding-right: 1.5em;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.type-post .wp-post-image,
+	.type-page .wp-post-image {
+		margin: 0;
+	}
+
+	/* One Column Layout */
+	.post-layout-one-column .post-wrapper .type-post .wp-post-image {
+		float: none;
+		margin: 0;
+		max-width: 100%;
+	}
+
+	/* Multiple Columns Layout */
+	.post-layout-columns .post-wrapper {
+		display: block;
+		margin-right: 0;
+	}
+
+	.post-layout-columns .post-wrapper .post-column {
+		display: block;
+		float: none;
+		padding-right: 0;
+	}
+
+	.post-layout-two-columns .post-wrapper .post-column,
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+	.header-main {
+		padding: 0.75em 1.25em 1.25em;
+	}
+
+	.content-area,
+	.sidebar {
+		padding: 1.25em 1.25em 0;
+	}
+
+	.widget,
+	.page-header,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination,
+	.comments-area {
+		margin-bottom: 1.25em;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.site-branding .custom-logo {
+		margin: 0.5em 0 0 0;
+	}
+
+	.entry-meta .meta-date,
+	.entry-meta .meta-category {
+		display: block;
+	}
+
+	.entry-meta span::after {
+		display: none;
+	}
+}

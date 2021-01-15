@@ -1,0 +1,65 @@
+.type-post,
+.type-page,
+.type-attachment,
+.comments-area {
+	margin: 0 0 3em 0;
+	padding: 0;
+	max-width: 100%;
+}
+
+.page-title,
+.entry-title {
+	margin: 0.15em 0 0.2em;
+	padding: 0;
+	color: #303030;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	@include font-size(36);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
+}
+
+.entry-title a:link,
+.entry-title a:visited {
+	color: #303030;
+	text-decoration: none;
+}
+
+.entry-title a:hover,
+.entry-title a:active {
+	color: #ee3333;
+}
+
+.type-post .wp-post-image,
+.type-page .wp-post-image {
+	margin: 0 0 0.5em;
+}
+
+.entry-content {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.entry-content p:first-child {
+	margin-top: 0.5em;
+}
+
+.entry-content a {
+	text-decoration: underline;
+}
+
+.sticky {
+	background: none;
+}
+
+/* Page Links | wp_link_pages() */
+.page-links {
+	clear: both;
+	margin: 0 0 2em;
+	word-spacing: 0.5em;
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1rem;
+}
