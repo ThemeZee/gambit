@@ -1,46 +1,102 @@
 .widget {
-	margin: 0 0 1.25rem;
+	margin: 0 0 2em 0;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.widget-header {
+	margin: 0 0 1.5em 0;
+	background: #252525;
+}
+
+.widget-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0.4em 0.8em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.widget ul {
+	margin: 0;
+	padding: 0 0.3em;
+	list-style: circle inside;
+}
+
+.widget ul .children,
+.widget ul .sub-menu {
+	margin: 0.5em 0 0.5em 1em;
 	padding: 0;
+}
 
-	.widget-title {
-		margin: 0 0 1rem;
-		padding: 0;
-		@include color(--widget-title-color);
-		-ms-word-wrap: break-word;
-		word-wrap: break-word;
-		@include font-size(20);
-		@include font-family(--widget-title-font);
-		@include font-weight(--widget-title-font-weight);
-		@include text-transform(--widget-title-text-transform);
-		@include line-height(--title-line-height);
-	}
+.widget-title a:link,
+.widget-title a:visited  {
+	color: #fff;
+}
 
-	ul a:link,
-	ul a:visited,
-	ol a:link,
-	ol a:visited,
-	.tagcloud a:link,
-	.tagcloud a:visited,
-	.menu-navigation-container > ul a:link,
-	.menu-navigation-container > ul a:visited {
-		text-decoration: none;
-	}
+.widget-title a:hover,
+.widget-title a:active  {
+	color: #fff;
+	text-decoration: underline;
+}
 
-	ul a:hover,
-	ul a:active,
-	ol a:hover,
-	ol a:active,
-	.tagcloud a:hover,
-	.tagcloud a:active,
-	.menu-navigation-container > ul a:hover,
-	.menu-navigation-container > ul a:active {
-		text-decoration: underline;
-	}
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
 
-	.textwidget > *:last-child,
-	.menu-navigation-container > ul,
-	ul:last-child,
-	ol:last-child {
-		margin-bottom: 0;
-	}
+/*--------------------------------------------------------------
+## 11.1 - Default Widgets
+--------------------------------------------------------------*/
+
+/* Theme Search Widget */
+.search-form {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form .search-field {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.55em 3em 0.5em 1em;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+.search-form .search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.6em 0.8em;
+	border: none;
+	font-size: 16px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.search-form .search-submit .genericon-search {
+	display: inline-block;
+	margin: 0;
+	color: #fff;
+	content: '\f400';
+	vertical-align: top;
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	font-family: 'Genericons';
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }

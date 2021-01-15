@@ -1,56 +1,67 @@
-/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
 *,
-*::before,
-*::after {
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
 body {
-	margin: 0;
-	background: #ededef; /* Fallback for when there is no custom background color defined. */
+	background: #e5e5e5; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote {
-	margin: 1.75rem 0;
-	padding-left: 1.5rem;
-	border-left: 5px solid;
-	@include border-color(--light-border-color);
-	@include color(--light-text-color);
-	font-family: Georgia, "Times New Roman", Times, serif;
+	margin: 0 0 1.5em;
+	padding-left: 1.25em;
+	border-left: 3px solid #ddd;
+	color: #777;
+	font-style: italic;
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
-blockquote p {
-	margin-bottom: 1rem;
-}
-
-blockquote cite {
+blockquote cite,
+blockquote small {
 	display: block;
-	@include color(--text-color);
-	@include font-family(--text-font);
-	@include font-size(16);
-	font-style: normal;
+	margin-top: 1em;
+	color: #404040;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
 }
 
-blockquote cite::before {
+blockquote cite:before,
+blockquote small:before {
 	content: "\2014\00a0";
 }
 
+blockquote em,
+blockquote i,
+blockquote cite {
+	font-style: normal;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0.5em;
+}
+
 hr {
-	margin: 1.75rem 0;
+	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	@include background(--light-border-color);
-	box-sizing: content-box;
+	background-color: #ddd;
 }
 
 ul,
 ol {
-	margin: 1.75rem 0;
-	padding: 0 0 0 1.5rem;
+	margin: 0 0 1.5em;
+	padding: 0 0 0 1.25em;
 }
 
 ul {
-	list-style: square;
+	list-style: disc;
 }
 
 ol {
@@ -59,8 +70,7 @@ ol {
 
 li > ul,
 li > ol {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	margin-bottom: 0;
 	margin-left: 1.5em;
 }
 
@@ -73,48 +83,37 @@ dd {
 }
 
 img {
-	border: 0;
 	max-width: 100%; /* Adhere to container width. */
 	height: auto; /* Make sure images are scaled correctly. */
 }
 
 table {
-	margin: 1.75rem 0;
+	margin: 0 0 1.5em;
 	width: 100%;
 	border: none;
 	table-layout: fixed;
-	border-spacing: 0;
-	border-collapse: collapse;
 }
 
 th,
 td {
-	padding: 0.4em 0.6em;
-	border: 1px solid;
-	@include border-color(--light-border-color);
-}
-
-th {
-	font-weight: normal;
-	text-align: initial;
-	background: rgba(0, 0, 0, 0.05);
-}
-
-tfoot td {
-	background: rgba(0, 0, 0, 0.05);
+	padding: 0.3em 0.6em;
+	border: 1px solid #ddd;
 }
 
 a {
-	@include color(--link-color);
-	text-decoration: underline;
-	background-color: transparent;
+	color: #1585b5;
+	text-decoration: none;
+}
+
+a:link,
+a:visited {
+	color: #1585b5;
 }
 
 a:hover,
 a:focus,
 a:active {
-	@include color(--link-hover-color);
-	text-decoration: none;
+	color: #252525;
 }
 
 a:focus {

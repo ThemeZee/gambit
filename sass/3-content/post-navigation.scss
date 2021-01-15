@@ -1,49 +1,33 @@
+/* Page Links | wp_link_pages() */
+.page-links {
+	margin: 0;
+	word-spacing: 1em;
+	font-weight: bold;
+}
+
+
 /* Post Navigation */
 .post-navigation {
-	margin: 0 0 1.5rem;
+	margin: 1em 0 0;
+	padding: 0.5em 0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 }
 
-.post-navigation .nav-links .nav-previous,
+.post-navigation .nav-links .nav-previous {
+	float: left;
+}
+
 .post-navigation .nav-links .nav-next {
-	word-wrap: break-word;
+	float: right;
 }
 
-.post-navigation .nav-links .nav-next {
-	margin-top: 1.25rem;
-	text-align: right;
-}
-
-/* Post Navigation Link Styling */
-.post-navigation .nav-links a:link,
-.post-navigation .nav-links a:visited {
-	@include color(--light-text-color);
-	text-decoration: none;
-}
-
-.post-navigation .nav-links .entry-title {
-	@include font-size(20);
-}
-
-.post-navigation .nav-links a:link .entry-title,
-.post-navigation .nav-links a:visited .entry-title {
-	@include color(--title-color);
-}
-
-.post-navigation .nav-links a:hover .entry-title,
-.post-navigation .nav-links a:active .entry-title {
-	@include color(--title-hover-color);
-}
-
-.post-navigation .nav-links .nav-link-text {
-	display: block;
-}
-
-.post-navigation .nav-links .nav-previous .nav-link-text::before {
-	margin-right: 5px;
+.post-navigation .nav-links .nav-previous a:before {
+	margin-right: 3px;
 	content: "\00AB";
 }
 
-.post-navigation .nav-links .nav-next .nav-link-text::after {
-	margin-left: 5px;
+.post-navigation .nav-links .nav-next a:after {
+	margin-left: 4px;
 	content: "\00BB";
 }

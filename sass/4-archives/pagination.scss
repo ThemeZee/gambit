@@ -1,30 +1,52 @@
 /* Theme Pagination */
 .pagination {
-	margin: 0 0 1.5rem;
+	display: block;
+	margin: 0 0 2em;
 }
 
-.pagination .page-numbers,
+.pagination a,
 .pagination .current {
 	display: inline-block;
-	margin: 0 0.5rem 0 0;
-	padding: 0.4rem 1rem;
+	margin: 0;
+	padding: 0.5em 1em;
+	background: #252525;
+	color: #fff;
 	text-align: center;
 	text-decoration: none;
-	@include background(--post-meta-background-color);
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
-.pagination .page-numbers.dots {
-	padding: 0.4rem;
-	background: none;
+.pagination a:link,
+.pagination a:visited {
+	color: #fff;
+	transition: all 0.2s ease;
 }
 
 .pagination a:hover,
-.pagination a:active {
-	@include color(--link-hover-color);
-	text-decoration: underline;
+.pagination .current {
+	background: #1585b5;
 }
 
-.pagination .current {
-	@include color(--button-text-color);
-	@include background(--button-color);
+/* Infinite Scroll Pagination */
+.infinite-scroll .pagination {
+	display: none;
+}
+
+.infinite-scroll #infinite-handle span {
+	display: inline-block;
+	margin: 0 0 2em;
+	padding: 0.3em 0.8em;
+	background: #1585b5;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-family: 'Oxygen', Tahoma, Arial;
+}
+
+.infinite-scroll #infinite-handle span:hover {
+	background-color: #252525;
 }

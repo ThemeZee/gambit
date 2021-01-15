@@ -1,18 +1,19 @@
-/* Search & Archive Header */
-.archive-header .archive-title,
-.search-header .search-title {
-	@include font-size(20);
-	@include font-family(--title-font);
-	@include font-weight(--title-font-weight);
-	@include text-transform(--title-text-transform);
-	line-height: 1.4;
+/* Archives and Search Heading */
+.page-header {
+	margin: 0 0 1.5em 0;
+	background: #252525;
 }
 
-.archive-header .archive-description,
-.search-header .search-form {
-	margin-top: 1rem;
+.page-header .archive-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0.4em 0.8em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
-.archive-header .archive-description {
-	@include font-size(16);
+.archive-description {
+	color: #666;
 }

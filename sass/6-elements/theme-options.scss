@@ -1,25 +1,106 @@
-/* Wide Theme layout */
-body.wide-theme-layout .site {
+/* Theme Width */
+.wide-layout .site {
+	margin: 0;
 	max-width: 100%;
-
-	.header-main,
-	.site-content,
-	.site-footer {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.header-main {
-		max-width: $contentFullwidth;
-	}
-
-	.site-content,
-	.site-footer {
-		max-width: $themeWidth;
-	}
 }
 
-/* Hide Elements in Customizer for instant live preview */
-.credit-link-hidden .site-info .credit-link {
-	display: none;
+.wide-layout .container {
+	margin: 0 auto;
+	max-width: 1340px;
+}
+
+.wide-layout .site-content-wrap {
+	margin: 0;
+}
+
+@media only screen and (min-width: 85em) {
+	.wide-layout .header-main {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.wide-layout .site-footer .site-info {
+		padding: 1em 0;
+	}
+
+}
+
+/* Theme Layout */
+@media only screen and (min-width: 50em) {
+	/* Content Center */
+	.content-center .content-area {
+		order: 2;
+		-webkit-box-ordinal-group: 3;
+		-ms-flex-order: 2;
+	}
+
+	.content-center .main-sidebar {
+		order: 1;
+		-webkit-box-ordinal-group: 2;
+		-ms-flex-order: 1;
+	}
+
+	/* Content Right */
+	.content-right .content-area {
+		order: 2;
+		-webkit-box-ordinal-group: 3;
+		-ms-flex-order: 2;
+	}
+
+	.content-right .main-sidebar {
+		order: 1;
+		-webkit-box-ordinal-group: 2;
+		-ms-flex-order: 1;
+	}
+
+	.content-right .small-sidebar {
+		order: 3;
+		-webkit-box-ordinal-group: 4;
+		-ms-flex-order: 3;
+	}
+
+}
+
+@media only screen and (min-width: 70em) {
+	/* Content Right */
+	.content-right .content-area {
+		order: 3;
+		-webkit-box-ordinal-group: 4;
+		-ms-flex-order: 3;
+	}
+
+	.content-right .main-sidebar {
+		order: 2;
+		-webkit-box-ordinal-group: 3;
+		-ms-flex-order: 2;
+	}
+
+	.content-right .small-sidebar {
+		order: 1;
+		-webkit-box-ordinal-group: 2;
+		-ms-flex-order: 1;
+	}
+
+}
+
+.magazine-widgets-placeholder {
+	position: relative;
+}
+
+.magazine-widgets-placeholder .magazine-widgets-placeholder-title {
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 1em 1em 1em 55px;
+	color: #0085ba;
+	border: 2px dashed #0085ba;
+}
+
+/* Add some space around the visual edit shortcut buttons. */
+.magazine-widgets-placeholder .customize-partial-edit-shortcut button {
+	left: 15px;
+	top: 14px;
 }

@@ -1,29 +1,48 @@
 .site {
-	box-sizing: border-box;
 	margin: 0 auto;
-	padding: 0;
+	max-width: 1340px;
 	width: 100%;
-	overflow: hidden;
-	max-width: $themeWidth;
-}
-
-.site-header,
-.site-container {
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
 }
 
 .site-content {
-	padding: 1.25rem 1.25rem 1px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
+	padding: 2em 0 0 2em;
 	background: #fff;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
 }
 
-.site-main {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: $contentWidth;
+.content-area {
+	order: 1;
+	box-sizing: border-box;
+	padding-right: 2em;
+	width: 56%;
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
 }
 
-.site-footer {
-	padding: 1.25rem;
+.main-sidebar {
+	order: 2;
+	padding-right: 2em;
+	width: 22%;
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+}
+
+.small-sidebar {
+	order: 3;
+	padding-right: 2em;
+	width: 22%;
+	-webkit-box-ordinal-group: 4;
+	-ms-flex-order: 3;
+}
+
+/* Fullwidth Template */
+.site-content .fullwidth-content-area {
+	float: none;
+	width: 100%;
 }

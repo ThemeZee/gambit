@@ -47,7 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "_mixins";
 @import "_variables";
-@import "_root";
+//@import "_root";
 
 /*--------------------------------------------------------------
 # - Normalize
@@ -80,6 +80,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "1-setup/alignments";
 
 /*--------------------------------------------------------------
+# - Clearings
+--------------------------------------------------------------*/
+@import "1-setup/clearings";
+
+/*--------------------------------------------------------------
 # - Site Layout
 --------------------------------------------------------------*/
 @import "2-layout/site";
@@ -95,15 +100,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "2-layout/navigation";
 
 /*--------------------------------------------------------------
-# - Sidebar
+# - Social Icons
 --------------------------------------------------------------*/
-@import "2-layout/sidebar";
+@import "6-elements/social-icons";
 
 /*--------------------------------------------------------------
 # - Single Posts and pages
 --------------------------------------------------------------*/
 @import "3-content/content";
-@import "3-content/post-image";
 @import "3-content/entry-meta";
 @import "3-content/more-link";
 @import "3-content/post-navigation";
@@ -132,6 +136,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "6-elements/widgets";
 
 /*--------------------------------------------------------------
+# - Magazine Widgets
+--------------------------------------------------------------*/
+@import "6-elements/magazine";
+
+/*--------------------------------------------------------------
 # - Comments
 --------------------------------------------------------------*/
 @import "6-elements/comments";
@@ -149,6 +158,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # - Plugins
 --------------------------------------------------------------*/
+@import "9-plugins/breadcrumbs";
 @import "9-plugins/magazine-blocks";
 @import "9-plugins/widget-bundle";
 
@@ -172,9 +182,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "7-media-queries/mq-navigation";
 
 /*--------------------------------------------------------------
-## - Media Queries for Blocks
+# - Media Queries for Magazine widgets
 --------------------------------------------------------------*/
-@import "7-media-queries/mq-blocks";
+@import "7-media-queries/mq-magazine";
 
 /*--------------------------------------------------------------
 ## - Media Queries for Media

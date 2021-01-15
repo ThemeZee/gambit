@@ -1,47 +1,48 @@
 .type-post,
 .type-page,
-.type-attachment {
-	margin: 0 0 1.25rem;
-	padding: 0;
-}
-
-.sticky {
-	padding-left: 2rem;
-	border-left: 5px solid;
-	@include border-color(--title-color);
-}
-
-/* Entry Header */
-.entry-header {
-	margin-bottom: 0.5rem;
+.type-attachment  {
+	margin: 0 0 2em;
+	max-width: 100%;
 }
 
 .entry-title {
+	display: inline;
 	margin: 0;
 	padding: 0;
-	@include color(--title-color);
+	color: #252525;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	@include font-size(24);
-	@include font-family(--title-font);
-	@include font-weight(--title-font-weight);
-	@include text-transform(--title-text-transform);
-	@include line-height(--title-line-height);
+	font-size: 28px;
+	font-size: 1.75rem;
+	font-family: 'Oxygen', sans-serif;
+	line-height: 1.4;
 }
 
 .entry-title a:link,
 .entry-title a:visited {
-	@include color(--title-color);
+	color: #252525;
 	text-decoration: none;
-	transition: all 0.15s ease;
+	transition: all 0.2s ease;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
-	@include color(--title-hover-color);
+	color: #1585b5;
 }
 
-/* Entry Content */
+.type-post .wp-post-image {
+	margin: 0 0 0.5em;
+}
+
 .entry-content {
-	@include font-size(17);
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.entry-content a {
+	text-decoration: underline;
+}
+
+.sticky {
+	margin-top: 0;
 }

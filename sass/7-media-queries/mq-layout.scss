@@ -1,177 +1,132 @@
-@media only screen and (min-width: 480px) {
-	.site-header,
-	.site-container {
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
+@media only screen and (max-width: 80em) {
+	.site-content {
+		padding: 1.5em 0 0 1.5em;
+	}
+
+	.content-area,
+	.main-sidebar,
+	.small-sidebar {
+		padding-right: 1.5em;
 	}
 
 	.header-main {
-		padding-top: 1.25rem;
-		padding-bottom: 1.25rem;
+		padding: 1.5em;
 	}
 
-	.site-content {
-		padding: 1.5rem 1.5rem 1px;
-	}
-
-	.site-footer {
-		padding: 1.5rem;
-	}
-
+	.widget,
+	.widget-magazine-posts .type-post,
 	.type-post,
 	.type-page,
 	.type-attachment,
-	.post-navigation,
 	.pagination,
-	.widget,
-	.comments-area {
-		margin-bottom: 1.5rem;
+	.infinite-scroll #infinite-handle span {
+		margin: 0 0 1.5em;
+	}
+}
+
+@media only screen and (max-width: 70em) {
+	.content-area {
+		width: 70%;
 	}
 
-	.entry-header,
-	.post-image {
-		margin-bottom: 0.75rem;
+	.main-sidebar {
+		width: 30%;
 	}
 
-	.entry-tags {
-		margin-top: 1.5rem;
-	}
-
-	.post-navigation .nav-links {
+	.small-sidebar {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-ms-flex-flow: row wrap;
+		        flex-flow: row wrap;
+		padding: 0;
+		width: 100%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
 	}
 
-	.post-navigation .nav-links .nav-previous,
-	.post-navigation .nav-links .nav-next {
-		margin: 0;
+	.small-sidebar .widget {
+		padding-right: 1.5em;
+		width: 33.333%;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.small-sidebar .widget {
 		width: 50%;
 	}
+}
 
-	.post-navigation .nav-links .nav-previous {
-		padding-right: 1rem;
+@media only screen and (max-width: 55em) {
+	.site-branding {
+		float: none;
+		margin: 0;
+		text-align: center;
 	}
 
-	.post-navigation .nav-links .nav-next {
-		padding-left: 1rem;
+	.site-branding .custom-logo {
+		margin: 0.4em 0;
+	}
+
+	.header-widget {
+		float: none;
+		margin: 0.5em 0 0;
+		text-align: center;
 	}
 }
 
-@media only screen and (min-width: 640px) {
-	.site-header,
-	.site-container {
-		padding-left: 1.75rem;
-		padding-right: 1.75rem;
+@media only screen and (max-width: 50em) {
+	.content-area {
+		order: 1;
+		width: 100%;
+		-webkit-box-ordinal-group: 2;
+		-ms-flex-order: 1;
 	}
 
-	.header-main {
-		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
+	.main-sidebar {
+		order: 2;
+		width: 50%;
+		-webkit-box-ordinal-group: 3;
+		-ms-flex-order: 2;
 	}
 
-	.site-content {
-		padding: 1.75rem 1.75rem 1px;
+	.small-sidebar {
+		display: block;
+		order: 3;
+		width: 50%;
+		-webkit-box-ordinal-group: 4;
+		-ms-flex-order: 3;
 	}
 
-	.site-footer {
-		padding: 1.75rem;
-	}
-
-	.type-post,
-	.type-page,
-	.type-attachment,
-	.post-navigation,
-	.pagination,
-	.widget,
-	.comments-area {
-		margin-bottom: 1.75rem;
-	}
-
-	.entry-header,
-	.post-image {
-		margin-bottom: 1rem;
-	}
-
-	.entry-tags {
-		margin-top: 1.75rem;
+	.small-sidebar .widget {
+		width: 100%;
 	}
 }
 
-@media only screen and (min-width: 960px) {
-	.site-header,
-	.site-container {
-		padding-left: 2rem;
-		padding-right: 2rem;
+@media only screen and (max-width: 40em) {
+	.main-sidebar {
+		width: 100%;
 	}
 
-	.header-main {
-		padding-top: 1.75rem;
-		padding-bottom: 1.75rem;
-	}
-
-	.site-content {
-		padding: 2rem 2rem 1px;
-	}
-
-	.site-footer {
-		padding: 2rem;
-	}
-
-	.type-post,
-	.type-page,
-	.type-attachment,
-	.post-navigation,
-	.pagination,
-	.widget,
-	.comments-area {
-		margin-bottom: 2rem;
-	}
-
-	.entry-header,
-	.post-image {
-		margin-bottom: 1.25rem;
-	}
-
-	.entry-tags {
-		margin-top: 2rem;
+	.small-sidebar {
+		width: 100%;
 	}
 }
 
-@media only screen and (min-width: 1280px) {
-	.site-header,
-	.site-container {
-		padding-left: 2.5rem;
-		padding-right: 2.5rem;
+@media only screen and (max-width: 35em) {
+	.small-archive-post .entry-content {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.entry-meta .meta-date,
+	.entry-meta .meta-author,
+	.entry-meta .meta-category {
+		display: block;
 	}
 
-	.header-main {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-	}
-
-	.site-content {
-		padding: 2.5rem 2.5rem 1px;
-	}
-
-	.site-footer {
-		padding: 2.5rem;
-	}
-
-	.type-post,
-	.type-page,
-	.type-attachment,
-	.post-navigation,
-	.pagination,
-	.widget,
-	.comments-area {
-		margin-bottom: 2.5rem;
-	}
-
-	.entry-header,
-	.post-image {
-		margin-bottom: 1.5rem;
-	}
-
-	.entry-tags {
-		margin-top: 2.5rem;
+	.small-archive-post .entry-meta {
+		display: none;
 	}
 }

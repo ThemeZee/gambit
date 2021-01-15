@@ -1,8 +1,11 @@
 html {
-	box-sizing: border-box;
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
 }
 
 article,
@@ -36,6 +39,15 @@ audio:not([controls]) {
 [hidden],
 template {
 	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
 }
 
 abbr[title] {
@@ -76,12 +88,21 @@ sub {
 	bottom: -0.25em;
 }
 
+img {
+	border: 0;
+}
+
 svg:not(:root) {
 	overflow: hidden;
 }
 
 figure {
-	margin: 0;
+	margin: 1em 0;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
 }
 
 code,
@@ -89,7 +110,7 @@ kbd,
 pre,
 samp {
 	font-size: 1em;
-	font-family: monospace;
+	font-family: monospace, monospace;
 }
 
 button,
@@ -166,6 +187,20 @@ legend {
 	border: 0;
 }
 
+textarea {
+	overflow: auto;
+}
+
 optgroup {
 	font-weight: bold;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+td,
+th {
+	padding: 0;
 }

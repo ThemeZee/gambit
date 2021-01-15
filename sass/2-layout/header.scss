@@ -1,21 +1,50 @@
 .site-header {
-	@include background(--header-background-color);
+	background: #fff;
 }
 
 .header-main {
-	display: flex;
-	flex-wrap: wrap;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding: 2em;
 }
 
-/* Site Logo */
-.site-logo {
-	margin-right: 1.25rem;
-}
-
-.site-logo .custom-logo {
+.site-branding {
+	float: left;
 	margin: 0;
+	max-width: 100%;
+}
+
+.site-branding a:link,
+.site-branding a:visited,
+.site-branding a:hover {
+	border: none;
+	text-decoration: none;
+}
+
+.site-title {
+	display: inline-block;
+	margin: 0.15em 0;
+	padding: 0;
+	color: #1585b5;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 32px;
+	font-size: 2rem;
+	font-family: 'Oxygen', sans-serif;
+	line-height: 1.4;
+}
+
+.site-title a:link,
+.site-title a:visited {
+	color: #1585b5;
+	transition: all 0.2s ease;
+}
+
+.site-title a:hover,
+.site-title a:active {
+	color: #252525;
+}
+
+.site-branding .custom-logo {
+	margin: 0.4em 0.6em 0.4em 0;
 	padding: 0;
 	max-width: 100%;
 	height: auto;
@@ -23,72 +52,40 @@
 	vertical-align: top;
 }
 
-/* Site Branding */
-.site-branding {
-	display: flex;
-	margin: 0;
-	padding: 0;
-	max-width: 100%;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.site-branding a:link,
-.site-branding a:visited,
-.site-branding a:hover {
-	text-decoration: none;
-}
-
-.site-title {
-	margin: 0;
-	padding: 0;
-	@include color(--header-text-color);
-	text-decoration: none;
-	@include font-size(24);
-	@include font-family(--title-font);
-	@include font-weight(--title-font-weight);
-	@include text-transform(--title-text-transform);
-	@include line-height(--title-line-height);
-}
-
-.site-title a:link,
-.site-title a:visited {
-	@include color(--header-text-color);
-	transition: all 0.15s ease;
-}
-
-.site-title a:hover,
-.site-title a:active {
-	@include color(--header-text-hover-color);
-}
-
 .site-description {
-	display: block;
+	margin: 0 0 0.5em;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+/* Header Widgets */
+.header-widgets {
+	display: inline;
+}
+
+.header-widget {
+	float: right;
+	margin: 0.4em 0 0 1.5em;
+}
+
+.header-widget ul {
 	margin: 0;
 	padding: 0;
-	@include color(--header-text-color);
-	@include font-size(14);
+}
+
+.header-widget-title {
+	margin: 0 0 0.5em;
 }
 
 /* Custom Header Image */
 .header-image {
-	margin-top: 1px;
+	margin: 1px 0 0;
+	text-align: center;
 }
 
-.header-image img,
-.header-image .wp-post-image {
-	margin: 0;
+.header-image img {
+	max-width: 1340px;
 	width: 100%;
 	height: auto;
 	vertical-align: top;
-}
-
-/* Hide site branding if deactivated in settings */
-body.site-title-hidden .site-header .site-title,
-body.site-description-hidden .site-header .site-description {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	width: 1px;
-	height: 1px;
 }
