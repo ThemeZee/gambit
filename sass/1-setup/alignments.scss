@@ -1,17 +1,11 @@
-.alignleft {
-	float: left;
-	margin-right: 1.5em;
-}
-
-.alignright {
-	float: right;
-	margin-left: 1.5em;
+.alignleft,
+.alignright,
+.aligncenter {
+	display: block;
 }
 
 .aligncenter {
-	display: block;
 	clear: both;
 	margin-right: auto;
 	margin-left: auto;
-	text-align: center;
 }

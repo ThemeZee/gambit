@@ -1,47 +1,25 @@
-/* Sidebar Left Layout */
-.sidebar-left .content-area {
-	order: 2;
-	-webkit-box-ordinal-group: 3;
-	-ms-flex-order: 2;
-}
+/* Wide Theme layout */
+body.wide-theme-layout .site {
+	max-width: 100%;
 
-.sidebar-left .sidebar {
-	order: 1;
-	border-right: 1px solid #ddd;
-	border-left: none;
-	-webkit-box-ordinal-group: 2;
-	-ms-flex-order: 1;
-}
+	.header-main,
+	.site-content,
+	.site-footer {
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-@media only screen and (max-width: 60em) {
-	.sidebar-left .sidebar {
-		border-right: none;
+	.header-main {
+		max-width: $contentFullwidth;
+	}
+
+	.site-content,
+	.site-footer {
+		max-width: $themeWidth;
 	}
 }
 
-/* Customizer Preview */
-.magazine-widgets-placeholder {
-	position: relative;
-}
-
-.magazine-widgets-placeholder .magazine-widgets-placeholder-title {
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 0;
-	padding: 1em 1em 1em 55px;
-	color: #0085ba;
-	border: 2px dashed #0085ba;
-}
-
-/* Add some styling for visual edit shortcut buttons. */
-.magazine-widgets-placeholder .customize-partial-edit-shortcut button {
-	left: 15px;
-	top: 14px;
-}
-
-.customize-partial-edit-shortcut-wellington_blog_layout_partial button {
-	top: 50px;
+/* Hide Elements in Customizer for instant live preview */
+.credit-link-hidden .site-info .credit-link {
+	display: none;
 }

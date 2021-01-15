@@ -1,97 +1,97 @@
-@media only screen and (max-width: 70em) {
+@media only screen and (min-width: 640px) {
 	.site-title {
-		font-size: 40px;
-		font-size: 2.5rem;
+		@include font-size(28);
 	}
 
-	.page-title,
+	.site-description {
+		@include font-size(15);
+	}
+
 	.entry-title {
-		font-size: 32px;
-		font-size: 2rem;
-	}
-
-	.post-wrapper .type-post .entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
-	}
-
-	/* One Column Layout */
-	.post-layout-one-column .post-wrapper .type-post .entry-content {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-}
-
-@media only screen and (max-width: 60em) {
-	.page-title,
-	.entry-title {
-		font-size: 36px;
-		font-size: 2.25rem;
-	}
-
-	.post-wrapper .type-post .entry-title {
-		font-size: 28px;
-		font-size: 1.75rem;
-	}
-
-	/* One Column Layout */
-	.post-layout-one-column .post-wrapper .type-post .entry-content {
-		font-size: 17px;
-		font-size: 1.0625rem;
-	}
-}
-
-@media only screen and (max-width: 50em) {
-	.page-title,
-	.entry-title {
-		font-size: 32px;
-		font-size: 2rem;
-	}
-
-	.post-wrapper .type-post .entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
-	}
-}
-
-@media only screen and (max-width: 40em) {
-	.page-title,
-	.entry-title,
-	.post-wrapper .type-post .entry-title {
-		font-size: 28px;
-		font-size: 1.75rem;
+		@include font-size(28);
 	}
 
 	.entry-content {
-		font-size: 17px;
-		font-size: 1.0625rem;
+		@include font-size(17);
+	}
+
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.entry-meta,
+	.more-link,
+	.pagination {
+		@include font-size(16);
+	}
+
+	.entry-tags,
+	.comment-meta .comment-metadata,
+	.comment .reply,
+	.comment-form .logged-in-as,
+	.comment-reply-title small a,
+	.site-footer {
+		@include font-size(15);
 	}
 }
 
-@media only screen and (max-width: 30em) {
-	.site-branding .site-title {
-		font-size: 36px;
-		font-size: 2.25rem;
+@media only screen and (min-width: 960px) {
+	.site-title {
+		@include font-size(32);
 	}
 
-	.page-title,
-	.entry-title,
-	.post-wrapper .type-post .entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
+	.site-description {
+		@include font-size(16);
+	}
+
+	.entry-title {
+		@include font-size(32);
+	}
+
+	.entry-content {
+		@include font-size(18);
+	}
+
+	.archive-header .archive-title,
+	.search-header .search-title {
+		@include font-size(22);
+	}
+
+	.archive-header .archive-description,
+	.comment {
+		@include font-size(17);
+	}
+
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.entry-meta,
+	.more-link,
+	.pagination {
+		@include font-size(17);
+	}
+
+	.entry-tags,
+	.comment-meta .comment-metadata,
+	.comment .reply,
+	.comment-form .logged-in-as,
+	.comment-reply-title small a,
+	.site-footer {
+		@include font-size(16);
 	}
 }
 
-@media only screen and (max-width: 20em) {
-	.site-branding .site-title {
-		font-size: 32px;
-		font-size: 2rem;
+@media only screen and (min-width: 1280px) {
+	.site-title {
+		@include font-size(36);
 	}
 
-	.page-title,
-	.entry-title,
-	.post-wrapper .type-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+	.entry-title {
+		@include font-size(36);
+	}
+
+	.entry-content {
+		@include font-size(19);
 	}
 }

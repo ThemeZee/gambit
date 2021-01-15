@@ -1,20 +1,28 @@
 .type-post,
 .type-page,
-.type-attachment,
-.comments-area {
-	margin: 0 0 3em 0;
+.type-attachment {
+	margin: 0 0 1.25rem;
 	padding: 0;
-	max-width: 100%;
 }
 
-.page-title,
+.sticky {
+	padding-left: 2rem;
+	border-left: 5px solid;
+	@include border-color(--title-color);
+}
+
+/* Entry Header */
+.entry-header {
+	margin-bottom: 0.5rem;
+}
+
 .entry-title {
-	margin: 0.15em 0 0.2em;
+	margin: 0;
 	padding: 0;
-	color: #303030;
+	@include color(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	@include font-size(36);
+	@include font-size(24);
 	@include font-family(--title-font);
 	@include font-weight(--title-font-weight);
 	@include text-transform(--title-text-transform);
@@ -23,43 +31,17 @@
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #303030;
+	@include color(--title-color);
 	text-decoration: none;
+	transition: all 0.15s ease;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #ee3333;
+	@include color(--title-hover-color);
 }
 
-.type-post .wp-post-image,
-.type-page .wp-post-image {
-	margin: 0 0 0.5em;
-}
-
+/* Entry Content */
 .entry-content {
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-
-.entry-content p:first-child {
-	margin-top: 0.5em;
-}
-
-.entry-content a {
-	text-decoration: underline;
-}
-
-.sticky {
-	background: none;
-}
-
-/* Page Links | wp_link_pages() */
-.page-links {
-	clear: both;
-	margin: 0 0 2em;
-	word-spacing: 0.5em;
-	font-weight: bold;
-	font-size: 16px;
-	font-size: 1rem;
+	@include font-size(17);
 }

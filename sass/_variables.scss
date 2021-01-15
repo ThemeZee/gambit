@@ -1,70 +1,85 @@
 // Theme Width.
-$themeWidth: 1440px;
+$themeWidth: 1240px;
 
 // Content Width.
-$contentWidth: 880px;
-$wideBlockWidth: 1120px;
+$contentWidth: 800px;
+$wideBlockWidth: 960px;
 
 // Fullwidth Template.
-$contentFullwidth: 1280px;
-$wideBlockFullwidth: 1440px;
+$contentFullwidth: 1160px;
+$wideBlockFullwidth: 1320px;
 
 // Text Color
 $textColor: rgba(0, 0, 0, 0.9);
 
 // Theme Colors
 $themeColors: (
-	--primary-color                  : #c9493b,
-	--secondary-color                : #e36355,
-	--accent-color                   : #078896,
-	--highlight-color                : #5bb021,
-	--light-gray-color               : #e4e4e4,
-	--gray-color                     : #848484,
-	--dark-gray-color                : #242424,
+
+	// Block Editor Colors
+	--primary-color                  : #2a4861,
+	--secondary-color                : #5d7b94,
+	--tertiary-color                 : #90aec7,
+	--accent-color                   : #60945d,
+	--contrast-color                 : #e63e4c,
+	--highlight-color                : #915d94,
+	--light-gray-color               : #ededef,
+	--gray-color                     : #84848f,
+	--dark-gray-color                : #24242f,
+
+	// Text Colors
 	--text-color                     : rgba(0, 0, 0, 0.9),
 	--medium-text-color              : rgba(0, 0, 0, 0.7),
 	--light-text-color               : rgba(0, 0, 0, 0.5),
-	--link-color                     : #c9493b,
-	--link-hover-color               : #e36355,
-	--button-color                   : #c9493b,
+	--medium-border-color            : rgba(0, 0, 0, 0.3),
+	--light-border-color             : rgba(0, 0, 0, 0.1),
+
+	// Links and Buttons
+	--link-color                     : #5d7b94,
+	--link-hover-color               : #2a4861,
+	--button-color                   : #2a4861,
 	--button-text-color              : #fff,
-	--button-hover-color             : #e36355,
+	--button-hover-color             : #5d7b94,
 	--button-hover-text-color        : #fff,
-	--page-background-color          : #fff,
-	--page-border-color              : rgba(0, 0, 0, 0.1),
-	--page-light-bg-color            : rgba(0, 0, 0, 0.05),
-	--header-background-color        : #fff,
-	--header-text-color              : rgba(0, 0, 0, 0.9),
-	--header-text-hover-color        : #e36355,
-	--header-border-color            : rgba(0, 0, 0, 0.1),
-	--title-color                    : #202020,
-	--title-hover-color              : #e36355,
-	--footer-widgets-background-color: #252525,
-	--footer-widgets-text-color      : rgba(255, 255, 255, 0.5),
-	--footer-widgets-link-color      : rgba(255, 255, 255, 0.95),
-	--footer-widgets-link-hover-color: rgba(255, 255, 255, 0.5),
-	--footer-widgets-border-color    : rgba(255, 255, 255, 0.1),
-	--footer-background-color        : #202020,
-	--footer-text-color              : rgba(255, 255, 255, 0.5),
-	--footer-link-color              : rgba(255, 255, 255, 0.95),
-	--footer-link-hover-color        : rgba(255, 255, 255, 0.5),
+
+	// Header
+	--header-background-color        : #2a4861,
+	--header-text-color              : #fff,
+	--header-text-hover-color        : rgba(255, 255, 255, 0.5),
+	--header-border-color            : rgba(255, 255, 255, 0.1),
+
+	// Posts
+	--title-color                    : #2a4861,
+	--title-hover-color              : #5d7b94,
+	--post-meta-background-color     : #ededef,
+	--comments-background-color      : #ededef,
+
+	// Widgets
+	--widget-title-color             : #2a4861,
+	--widget-title-hover-color       : #5d7b94,
+	--widget-background-color        : #ededef,
+
+	// Footer
+	--footer-background-color        : #2a4861,
+	--footer-text-color              : rgba(255, 255, 255, 0.6),
+	--footer-link-color              : #fff,
+	--footer-link-hover-color        : rgba(255, 255, 255, 0.6),
 	--footer-border-color            : rgba(255, 255, 255, 0.1),
 );
 
 // Theme Fonts
-$baseFont: "Gudea", arial, helvetica, sans-serif;
-$titleFont: "Magra", arial, helvetica, sans-serif;
+$baseFont: "Barlow", arial, helvetica, sans-serif;
+$titleFont: "Barlow", arial, helvetica, sans-serif;
 $themeFonts: (
-	--text-font        : $baseFont,
-	--title-font       : $titleFont,
-	--navi-font        : $baseFont,
+	--text-font: $baseFont,
+	--title-font: $titleFont,
+	--navi-font: $titleFont,
 	--widget-title-font: $titleFont,
 );
 
 // Font Weight.
 $fontWeight: (
 	--title-font-weight: bold,
-	--navi-font-weight : normal,
+	--navi-font-weight: normal,
 	--widget-title-font-weight: bold,
 );
 
