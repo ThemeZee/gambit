@@ -161,7 +161,7 @@ kbd,
 pre,
 samp {
 	font-size: 1em;
-	font-family: monospace, monospace;
+	font-family: monospace;
 }
 
 button,
@@ -376,9 +376,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -406,8 +405,8 @@ blockquote small {
 	line-height: 1.75;
 }
 
-blockquote cite:before,
-blockquote small:before {
+blockquote cite::before,
+blockquote small::before {
 	content: "\2014\00a0";
 }
 
@@ -622,19 +621,19 @@ textarea {
 /*--------------------------------------------------------------
 # - Clearings
 --------------------------------------------------------------*/
-.clearfix:before,
-.clearfix:after,
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after,
-.comment-navigation:before,
-.comment-navigation:after {
+.clearfix::before,
+.clearfix::after,
+.post-navigation .nav-links::before,
+.post-navigation .nav-links::after,
+.comment-navigation::before,
+.comment-navigation::after {
 	display: table;
 	content: "";
 }
 
-.clearfix:after,
-.post-navigation .nav-links:after,
-.comment-navigation:after {
+.clearfix::after,
+.post-navigation .nav-links::after,
+.comment-navigation::after {
 	clear: both;
 }
 
@@ -651,7 +650,6 @@ textarea {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
 	padding: 2em 0 0 2em;
 	background: #fff;
@@ -955,7 +953,7 @@ textarea {
 }
 
 /* Add Genericons */
-.social-icons-menu li a:before {
+.social-icons-menu li a::before {
 	display: inline-block;
 	color: #fff;
 	vertical-align: top;
@@ -1153,7 +1151,7 @@ textarea {
 	margin-right: 1em;
 }
 
-.entry-meta span:before {
+.entry-meta span::before {
 	display: inline-block;
 	margin-right: 0.2em;
 	color: #666;
@@ -1162,15 +1160,15 @@ textarea {
 	-webkit-font-smoothing: antialiased;
 }
 
-.entry-meta .meta-date:before {
+.entry-meta .meta-date::before {
 	content: '\f307';
 }
 
-.entry-meta .meta-author:before {
+.entry-meta .meta-author::before {
 	content: '\f304';
 }
 
-.entry-meta .meta-category:before {
+.entry-meta .meta-category::before {
 	content: '\f301';
 }
 
@@ -1199,16 +1197,16 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 	font-size: 0.875rem;
 }
 
-.widget_tag_cloud .tagcloud:before,
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:before,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::before,
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::before,
+.entry-tags .meta-tags::after {
 	display: table;
 	content: "";
 }
 
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::after {
 	clear: both;
 }
 
@@ -2279,7 +2277,6 @@ object {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-flow: row wrap;
 		flex-flow: row wrap;
 		padding: 0;
 		width: 100%;
@@ -2404,8 +2401,8 @@ object {
 		margin: 0;
 	}
 
-	.main-navigation-menu > .menu-item-has-children > a:after,
-	.main-navigation-menu ul .menu-item-has-children > a:after {
+	.main-navigation-menu > .menu-item-has-children > a::after,
+	.main-navigation-menu ul .menu-item-has-children > a::after {
 		display: none;
 	}
 
@@ -2427,7 +2424,7 @@ object {
 		cursor: pointer;
 	}
 
-	.main-navigation-toggle:after {
+	.main-navigation-toggle::after {
 		display: inline-block;
 		float: left;
 		margin: 0 0.75em 0 0;

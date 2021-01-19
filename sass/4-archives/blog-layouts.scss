@@ -12,13 +12,11 @@
 }
 
 .small-archive-post .entry-title {
-	font-size: 22px;
-	font-size: 1.375rem;
+	@include font-size(22);
 }
 
 .small-archive-post .entry-content {
-	font-size: 15px;
-	font-size: 0.9375rem;
+	@include font-size(15);
 }
 
 .small-archive-post .entry-excerpt p {

@@ -10,8 +10,7 @@
 	padding: 0.4em 0.8em;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .archive-description {

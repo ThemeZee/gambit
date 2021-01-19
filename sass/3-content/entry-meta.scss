@@ -2,8 +2,7 @@
 .entry-meta {
 	margin: 0.4em 0 0;
 	color: #999;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .entry-meta a:link,
@@ -21,7 +20,7 @@
 	margin-right: 1em;
 }
 
-.entry-meta span:before {
+.entry-meta span::before {
 	display: inline-block;
 	margin-right: 0.2em;
 	color: #666;
@@ -30,15 +29,15 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-.entry-meta .meta-date:before{
+.entry-meta .meta-date::before {
 	content: '\f307';
 }
 
-.entry-meta .meta-author:before{
+.entry-meta .meta-author::before {
 	content: '\f304';
 }
 
-.entry-meta .meta-category:before{
+.entry-meta .meta-category::before {
 	content: '\f301';
 }
 
@@ -46,8 +45,8 @@
 body.date-hidden .type-post .entry-meta .meta-date,
 body.author-hidden .type-post .entry-meta .meta-author,
 body.categories-hidden .type-post .entry-meta .meta-category {
-	 position: absolute;
-	 clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
 }
 
 body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry-meta,
@@ -67,16 +66,16 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 	font-size: 0.875rem;
 }
 
-.widget_tag_cloud .tagcloud:before,
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:before,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::before,
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::before,
+.entry-tags .meta-tags::after {
 	display: table;
 	content: "";
 }
 
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::after {
 	clear: both;
 }
 

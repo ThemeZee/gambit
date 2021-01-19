@@ -3,8 +3,7 @@
 	padding: 0.5em 1em;
 	border-bottom: 1px solid #eee;
 	background: #fff;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	@include font-size(13);
 }
 
 .breadcrumbs .trail-browse,
@@ -18,8 +17,7 @@
 .breadcrumbs .trail-browse {
 	margin-right: 0.5em;
 	font-weight: normal;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	@include font-size(13);
 }
 
 .breadcrumbs .trail-items {

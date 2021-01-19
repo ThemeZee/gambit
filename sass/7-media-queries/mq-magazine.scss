@@ -17,29 +17,25 @@
 	}
 
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		@include font-size(18);
 	}
 }
 
 @media only screen and (max-width: 70em) {
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+		@include font-size(20);
 	}
 }
 
 @media only screen and (max-width: 60em) {
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		@include font-size(18);
 	}
 }
 
 @media only screen and (max-width: 50em) {
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+		@include font-size(20);
 	}
 }
 
@@ -110,8 +106,7 @@
 	}
 
 	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 14px;
-		font-size: 0.875rem;
+		@include font-size(14);
 	}
 
 	.widget-magazine-posts .large-post .wp-post-image,
@@ -129,7 +124,6 @@
 
 @media only screen and (max-width: 20em) {
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+		@include font-size(20);
 	}
 }

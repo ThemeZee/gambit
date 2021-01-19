@@ -26,8 +26,7 @@
 	color: #1585b5;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 32px;
-	font-size: 2rem;
+	@include font-size(32);
 	font-family: 'Oxygen', sans-serif;
 	line-height: 1.4;
 }
@@ -54,8 +53,7 @@
 
 .site-description {
 	margin: 0 0 0.5em;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	@include font-size(15);
 }
 
 /* Header Widgets */

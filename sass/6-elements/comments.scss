@@ -12,8 +12,7 @@
 	padding: 0.4em 0.8em;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 /* Comment List */
@@ -53,8 +52,7 @@
 
 .comment-meta .comment-metadata {
 	margin-top: 0.3em;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .comment-meta .comment-metadata a {
@@ -87,8 +85,7 @@
 	padding: 0.5em 0;
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }
 
 .comment-navigation .nav-previous {
@@ -133,6 +130,5 @@
 	margin-left: 1em;
 	text-decoration: underline;
 	font-weight: normal;
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 }

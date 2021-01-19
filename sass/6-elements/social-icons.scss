@@ -24,7 +24,7 @@
 }
 
 /* Add Genericons */
-.social-icons-menu li a:before {
+.social-icons-menu li a::before {
 	display: inline-block;
 	color: #fff;
 	vertical-align: top;

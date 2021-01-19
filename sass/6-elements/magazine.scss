@@ -15,8 +15,7 @@
 }
 
 .widget-magazine-posts .type-post .entry-content {
-	font-size: 16px;
-	font-size: 1rem;
+	@include font-size(16);
 }
 
 .widget-magazine-posts .type-post .entry-content p {
@@ -28,8 +27,7 @@
 }
 
 .widget-magazine-posts .large-post .entry-title {
-	font-size: 20px;
-	font-size: 1.25rem;
+	@include font-size(20);
 }
 
 .widget-magazine-posts .medium-post {
@@ -41,14 +39,12 @@
 }
 
 .widget-magazine-posts .medium-post .entry-title {
-	font-size: 15px;
-	font-size: 0.9375rem;
+	@include font-size(15);
 	font-family: 'Oxygen', Tahoma, Arial;
 }
 
 .widget-magazine-posts .medium-post .entry-content {
-	font-size: 15px;
-	font-size: 0.9375rem;
+	@include font-size(15);
 }
 
 .widget-magazine-posts .small-post {
@@ -65,15 +61,13 @@
 }
 
 .widget-magazine-posts .small-post .entry-title {
-	font-size: 14px;
-	font-size: 0.875rem;
+	@include font-size(14);
 	font-family: 'Oxygen', Tahoma, Arial;
 }
 
 .widget-magazine-posts .medium-post .entry-meta,
 .widget-magazine-posts .small-post .entry-meta {
-	font-size: 12px;
-	font-size: 0.75rem;
+	@include font-size(12);
 }
 
 /* Magazine Posts Grid Widget */

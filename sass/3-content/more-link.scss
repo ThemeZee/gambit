@@ -8,8 +8,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	@include font-size(13);
 	font-family: 'Oxygen', Tahoma, Arial;
 }
 

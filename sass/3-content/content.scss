@@ -12,8 +12,7 @@
 	color: #252525;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: 28px;
-	font-size: 1.75rem;
+	@include font-size(28);
 	font-family: 'Oxygen', sans-serif;
 	line-height: 1.4;
 }
@@ -35,8 +34,7 @@
 }
 
 .entry-content {
-	font-size: 16px;
-	font-size: 1rem;
+	@include font-size(16);
 }
 
 .entry-content a {
