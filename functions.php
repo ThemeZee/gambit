@@ -199,8 +199,16 @@ function gambit_scripts() {
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.3' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
-	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'gambit-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20160719' );
+	// Register and enqueue navigation.min.js.
+	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! gambit_is_amp() ) {
+		wp_enqueue_script( 'gambit-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20200822', true );
+		$gambit_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'gambit' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'gambit' ),
+			'icon'     => gambit_get_svg( 'expand' ),
+		);
+		wp_localize_script( 'gambit-navigation', 'gambitScreenReaderText', $gambit_l10n );
+	}
 
 	// Passing Parameters to Navigation.js Javascript.
 	wp_localize_script( 'gambit-jquery-navigation', 'gambit_menu_title', esc_html__( 'Menu', 'gambit' ) );
@@ -274,6 +282,9 @@ require get_template_directory() . '/inc/theme-info.php';
 // Include Theme Customizer Options.
 require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/customizer/default-options.php';
+
+// Include SVG Icon Functions.
+require get_template_directory() . '/inc/icons.php';
 
 // Include Extra Functions.
 require get_template_directory() . '/inc/extras.php';

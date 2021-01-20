@@ -55,6 +55,11 @@ function gambit_body_classes( $classes ) {
 		$classes[] = 'categories-hidden';
 	}
 
+	// Check for AMP pages.
+	if ( gambit_is_amp() ) {
+		$classes[] = 'is-amp-page';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'gambit_body_classes' );
