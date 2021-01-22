@@ -210,8 +210,10 @@ function gambit_scripts() {
 		wp_localize_script( 'gambit-navigation', 'gambitScreenReaderText', $gambit_l10n );
 	}
 
-	// Passing Parameters to Navigation.js Javascript.
-	wp_localize_script( 'gambit-jquery-navigation', 'gambit_menu_title', esc_html__( 'Menu', 'gambit' ) );
+	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
+	if ( ! gambit_is_amp() ) {
+		wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.6' );
+	}
 
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

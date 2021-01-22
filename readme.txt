@@ -200,11 +200,15 @@ Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2015 WooThemes, http://www.woothemes.com
 
-5. Oxygen Font - https://www.google.com/fonts/specimen/Oxygen
+5. svgxuse - https://github.com/Keyamoon/svgxuse
+License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
+Copyright: 2017 IcoMoon.io
+
+6. Oxygen Font - https://www.google.com/fonts/specimen/Oxygen
 License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright: 2015 Christian Robertson
 
-6. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/flower-universe-plant-cosmos-single-1219360/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
