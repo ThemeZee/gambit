@@ -12,9 +12,9 @@ get_header();
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-				
-			<?php get_template_part( 'template-parts/post-slider' ); ?>
-			
+
+			<?php gambit_slider(); ?>
+
 			<?php while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
@@ -22,10 +22,10 @@ get_header();
 				comments_template();
 
 			endwhile; ?>
-		
+
 		</main><!-- #main -->
 	</section><!-- #primary -->
-	
+
 	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

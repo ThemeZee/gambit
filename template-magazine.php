@@ -18,11 +18,7 @@ $theme_options = gambit_theme_options();
 
 		<?php
 		// Display Slider.
-		if ( true === $theme_options['slider_magazine'] ) :
-
-			get_template_part( 'template-parts/post-slider' );
-
-		endif;
+		gambit_slider();
 
 		// Display Magazine Homepage Widgets.
 		gambit_magazine_widgets();
