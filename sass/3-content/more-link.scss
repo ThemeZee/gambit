@@ -3,24 +3,25 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 1em;
-	background: #1585b5;
-	color: #fff;
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	@include font-size(13);
-	font-family: 'Oxygen', Tahoma, Arial;
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
 }
 
 .more-link:link,
-.more-link:visited  {
-	color: #fff;
+.more-link:visited {
+	@include color(--button-text-color);
 	transition: all 0.2s ease;
 }
 
 .more-link:hover,
 .more-link:active {
-	background: #252525;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 }
 
 .entry-content > .more-link {

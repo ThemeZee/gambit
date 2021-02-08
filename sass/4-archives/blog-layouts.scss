@@ -1,7 +1,8 @@
 /* Small Post Layout */
 .small-archive-post {
 	padding: 0 0 1.5em;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .small-archive-post .wp-post-image {

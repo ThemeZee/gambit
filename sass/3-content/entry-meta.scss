@@ -1,18 +1,18 @@
 /* Entry Meta */
 .entry-meta {
 	margin: 0.4em 0 0;
-	color: #999;
+	@include color(--light-text-color);
 	@include font-size(14);
 }
 
 .entry-meta a:link,
 .entry-meta a:visited {
-	color: #999;
+	@include color(--light-text-color);
 }
 
 .entry-meta a:hover,
 .entry-meta a:active {
-	color: #666;
+	@include color(--medium-text-color);
 }
 
 .entry-meta .meta-date,
@@ -23,7 +23,7 @@
 .entry-meta span::before {
 	display: inline-block;
 	margin-right: 0.2em;
-	color: #666;
+	@include color(--medium-text-color);
 	vertical-align: middle;
 	font: normal 16px 'Genericons';
 	-webkit-font-smoothing: antialiased;
@@ -86,8 +86,8 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 	margin: 0 0.3em 0.3em 0;
 	padding: 0.15em 0.6em;
 	border: none;
-	background: #1585b5;
-	color: #fff;
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -99,7 +99,7 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 .widget_tag_cloud .tagcloud a:visited,
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
-	color: #fff;
+	@include color(--button-text-color);
 	transition: all 0.2s ease;
 }
 
@@ -107,5 +107,6 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	background: #252525;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 }

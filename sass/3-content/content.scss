@@ -1,6 +1,6 @@
 .type-post,
 .type-page,
-.type-attachment  {
+.type-attachment {
 	margin: 0 0 2em;
 	max-width: 100%;
 }
@@ -9,24 +9,26 @@
 	display: inline;
 	margin: 0;
 	padding: 0;
-	color: #252525;
+	@include color(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(28);
-	font-family: 'Oxygen', sans-serif;
-	line-height: 1.4;
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #252525;
+	@include color(--title-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #1585b5;
+	@include color(--title-hover-color);
 }
 
 .type-post .wp-post-image {

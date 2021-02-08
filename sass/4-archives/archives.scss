@@ -1,18 +1,18 @@
 /* Archives and Search Heading */
 .page-header {
 	margin: 0 0 1.5em 0;
-	background: #252525;
+	@include background(--widget-title-color);
 }
 
 .page-header .archive-title {
 	display: inline-block;
 	margin: 0;
 	padding: 0.4em 0.8em;
-	color: #fff;
+	@include color(--widget-title-text-color);
 	text-transform: uppercase;
 	@include font-size(14);
 }
 
 .archive-description {
-	color: #666;
+	@include color(--medium-text-color);
 }
