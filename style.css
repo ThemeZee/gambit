@@ -47,6 +47,28 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
+	--text-color: #333;
+	--medium-text-color: #666;
+	--light-text-color: #999;
+	--dark-border-color: #404040;
+	--medium-border-color: #ccc;
+	--light-border-color: #ddd;
+	--link-color: #1585b5;
+	--link-hover-color: #252525;
+	--button-color: #1585b5;
+	--button-text-color: #fff;
+	--button-hover-color: #252525;
+	--button-hover-text-color: #fff;
+	--navi-color: #303030;
+	--navi-hover-color: #cc5555;
+	--navi-submenu-color: #cc5555;
+	--navi-submenu-text-color: #fff;
+	--navi-submenu-hover-color: rgba(255, 255, 255, 0.5);
+	--navi-submenu-border-color: rgba(255, 255, 255, 0.1);
+	--title-color: #303030;
+	--title-hover-color: #cc5555;
+	--widget-title-color: #303030;
+	--widget-title-hover-color: #cc5555;
 	--text-font: "Oxygen", arial, helvetica, sans-serif;
 	--title-font: "Oxygen", arial, helvetica, sans-serif;
 	--navi-font: "Oxygen", arial, helvetica, sans-serif;
@@ -279,11 +301,14 @@ button,
 input,
 select,
 textarea {
-	color: #333333;
+	color: #333;
+	color: var(--text-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
-	font-family: 'Oxygen', Tahoma, Arial;
+	font-family: "Oxygen", arial, helvetica, sans-serif;
+	font-family: var(--text-font);
 	line-height: 1.75;
+	line-height: var(--text-line-height);
 }
 
 h1,
@@ -293,7 +318,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-	margin: 0.75em 0;
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
 	line-height: 1.4;
 }
 
@@ -403,8 +429,11 @@ body {
 blockquote {
 	margin: 0 0 1.5em;
 	padding-left: 1.25em;
-	border-left: 3px solid #ddd;
-	color: #777;
+	border-left: 3px solid;
+	border-color: #ddd;
+	border-color: var(--light-border-color);
+	color: #666;
+	color: var(--medium-text-color);
 	font-style: italic;
 	font-size: 18px;
 	font-size: 1.125rem;
@@ -414,7 +443,8 @@ blockquote cite,
 blockquote small {
 	display: block;
 	margin-top: 1em;
-	color: #404040;
+	color: #333;
+	color: var(--text-color);
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
@@ -440,6 +470,7 @@ hr {
 	height: 1px;
 	border: 0;
 	background-color: #ddd;
+	background-color: var(--light-border-color);
 }
 
 ul,
@@ -485,23 +516,28 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid #ddd;
+	border: 1px solid;
+	border-color: #ddd;
+	border-color: var(--light-border-color);
 }
 
 a {
 	color: #1585b5;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
 	color: #1585b5;
+	color: var(--link-color);
 }
 
 a:hover,
 a:focus,
 a:active {
 	color: #252525;
+	color: var(--link-hover-color);
 }
 
 a:focus {
@@ -522,24 +558,26 @@ input[type="reset"],
 input[type="submit"] {
 	padding: 0.5em 1em;
 	border: none;
-	background: #1585b5;
+	background-color: #1585b5;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: 'Oxygen', Tahoma, Arial;
+	font-family: "Oxygen", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
 	transition: all 0.2s ease;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
-	background: #252525;
-}
-
+input[type="submit"]:hover,
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -548,7 +586,10 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background: #444;
+	background-color: #252525;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 input[type="text"],
@@ -559,8 +600,11 @@ input[type="search"],
 textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
-	border: 1px solid #ddd;
+	border: 1px solid;
+	border-color: #ddd;
+	border-color: var(--light-border-color);
 	color: #666;
+	color: var(--medium-text-color);
 }
 
 input[type="text"]:focus,
@@ -569,8 +613,11 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 1px solid #ccc;
-	color: #111;
+	border: 1px solid;
+	border-color: #ccc;
+	border-color: var(--medium-border-color);
+	color: #333;
+	color: var(--text-color);
 }
 
 textarea {

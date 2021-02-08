@@ -9,9 +9,6 @@ $wideBlockWidth: 960px;
 $contentFullwidth: 1160px;
 $wideBlockFullwidth: 1320px;
 
-// Text Color
-$textColor: rgba(0, 0, 0, 0.9);
-
 // Theme Colors
 $themeColors: (
 
@@ -27,36 +24,34 @@ $themeColors: (
 	--dark-gray-color                : #24242f,
 
 	// Text Colors
-	--text-color                     : rgba(0, 0, 0, 0.9),
-	--medium-text-color              : rgba(0, 0, 0, 0.7),
-	--light-text-color               : rgba(0, 0, 0, 0.5),
-	--medium-border-color            : rgba(0, 0, 0, 0.3),
-	--light-border-color             : rgba(0, 0, 0, 0.1),
+	--text-color                     : #333,
+	--medium-text-color              : #666,
+	--light-text-color               : #999,
+	--dark-border-color              : #404040,
+	--medium-border-color            : #ccc,
+	--light-border-color             : #ddd,
 
 	// Links and Buttons
-	--link-color                     : #5d7b94,
-	--link-hover-color               : #2a4861,
-	--button-color                   : #2a4861,
+	--link-color                     : #1585b5,
+	--link-hover-color               : #252525,
+	--button-color                   : #1585b5,
 	--button-text-color              : #fff,
-	--button-hover-color             : #5d7b94,
+	--button-hover-color             : #252525,
 	--button-hover-text-color        : #fff,
 
-	// Header
-	--header-background-color        : #2a4861,
-	--header-text-color              : #fff,
-	--header-text-hover-color        : rgba(255, 255, 255, 0.5),
-	--header-border-color            : rgba(255, 255, 255, 0.1),
+	// Navigation
+	--navi-color                     : #303030,
+	--navi-hover-color               : #cc5555,
+	--navi-submenu-color             : #cc5555,
+	--navi-submenu-text-color        : #fff,
+	--navi-submenu-hover-color       : rgba(255, 255, 255, 0.5),
+	--navi-submenu-border-color      : rgba(255, 255, 255, 0.1),
 
-	// Posts
-	--title-color                    : #2a4861,
-	--title-hover-color              : #5d7b94,
-	--post-meta-background-color     : #ededef,
-	--comments-background-color      : #ededef,
-
-	// Widgets
-	--widget-title-color             : #2a4861,
-	--widget-title-hover-color       : #5d7b94,
-	--widget-background-color        : #ededef,
+	// Titles
+	--title-color                    : #303030,
+	--title-hover-color              : #cc5555,
+	--widget-title-color             : #303030,
+	--widget-title-hover-color       : #cc5555,
 
 	// Footer
 	--footer-background-color        : #2a4861,
