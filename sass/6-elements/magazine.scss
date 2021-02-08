@@ -40,7 +40,6 @@
 
 .widget-magazine-posts .medium-post .entry-title {
 	@include font-size(15);
-	font-family: 'Oxygen', Tahoma, Arial;
 }
 
 .widget-magazine-posts .medium-post .entry-content {
@@ -62,7 +61,6 @@
 
 .widget-magazine-posts .small-post .entry-title {
 	@include font-size(14);
-	font-family: 'Oxygen', Tahoma, Arial;
 }
 
 .widget-magazine-posts .medium-post .entry-meta,

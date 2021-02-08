@@ -6,16 +6,18 @@
 
 .widget-header {
 	margin: 0 0 1.5em 0;
-	background: #252525;
+	@include background(--widget-title-color);
 }
 
 .widget-title {
 	display: inline-block;
 	margin: 0;
 	padding: 0.4em 0.8em;
-	color: #fff;
-	text-transform: uppercase;
+	@include color(--widget-title-text-color);
 	@include font-size(14);
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
 }
 
 .widget ul {
@@ -31,13 +33,13 @@
 }
 
 .widget-title a:link,
-.widget-title a:visited  {
-	color: #fff;
+.widget-title a:visited {
+	@include color(--widget-title-text-color);
 }
 
 .widget-title a:hover,
-.widget-title a:active  {
-	color: #fff;
+.widget-title a:active {
+	@include color(--widget-title-text-color);
 	text-decoration: underline;
 }
 

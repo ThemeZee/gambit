@@ -37,7 +37,7 @@
 
 	.main-navigation ul li.current-menu-item > a {
 		text-decoration: none;
-		background: #1585b5;
+		@include background(--navi-primary-color);
 	}
 
 	/* Dropdown Menus */
@@ -46,8 +46,9 @@
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		border-top: 1px solid #fff;
-		background: #252525;
+		border-top: 1px solid;
+		@include border-color(--page-background-color);
+		@include background(--navi-secondary-color);
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -82,7 +83,7 @@
 	.main-navigation .menu-item-has-children > a::after {
 		display: inline-block;
 		margin: 0.15em 0 0 0.4em;
-		color: #fff;
+		@include color(--navi-secondary-text-color);
 		content: "\00BB";
 		vertical-align: top;
 		text-decoration: inherit;

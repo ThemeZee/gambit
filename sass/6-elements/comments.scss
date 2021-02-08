@@ -2,7 +2,7 @@
 .comments-header,
 .comment-reply-title {
 	margin: 0 0 1.5em 0;
-	background: #252525;
+	@include background(--widget-title-color);
 }
 
 .comments-header .comments-title,
@@ -10,9 +10,11 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0.4em 0.8em;
-	color: #fff;
-	text-transform: uppercase;
+	@include color(--widget-title-text-color);
 	@include font-size(14);
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
 }
 
 /* Comment List */
@@ -25,7 +27,8 @@
 .comment {
 	margin: 0 0 1.5em;
 	padding: 0.5em 1em 1.5em;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -71,7 +74,8 @@
 .comment ol.children {
 	margin-top: 1.5em;
 	padding-top: 1em;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 	list-style: none;
 }
 
@@ -83,8 +87,9 @@
 .comment-navigation {
 	margin: 0 0 1.5em;
 	padding: 0.5em 0;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 	@include font-size(14);
 }
 

@@ -1,8 +1,9 @@
 /* Breadcrumbs */
 .breadcrumbs-container {
 	padding: 0.5em 1em;
-	border-bottom: 1px solid #eee;
-	background: #fff;
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
+	@include background(--page-background-color);
 	@include font-size(13);
 }
 

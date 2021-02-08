@@ -9,8 +9,10 @@
 	margin: 0;
 	padding: 0.4em 0.8em;
 	@include color(--widget-title-text-color);
-	text-transform: uppercase;
 	@include font-size(14);
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
 }
 
 .archive-description {
