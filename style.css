@@ -59,16 +59,23 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--button-text-color: #fff;
 	--button-hover-color: #252525;
 	--button-hover-text-color: #fff;
-	--navi-color: #303030;
-	--navi-hover-color: #cc5555;
-	--navi-submenu-color: #cc5555;
-	--navi-submenu-text-color: #fff;
-	--navi-submenu-hover-color: rgba(255, 255, 255, 0.5);
-	--navi-submenu-border-color: rgba(255, 255, 255, 0.1);
+	--header-background-color: #fff;
+	--site-title-color: #1585b5;
+	--site-title-hover-color: #252525;
+	--navi-primary-color: #1585b5;
+	--navi-primary-text-color: #fff;
+	--navi-secondary-color: #252525;
+	--navi-secondary-text-color: #fff;
+	--navi-secondary-text-hover-color: rgba(255, 255, 255, 0.5);
+	--navi-border-color: rgba(255, 255, 255, 0.1);
 	--title-color: #303030;
 	--title-hover-color: #cc5555;
 	--widget-title-color: #303030;
 	--widget-title-hover-color: #cc5555;
+	--footer-background-color: #252525;
+	--footer-text-color: #fff;
+	--footer-link-color: #fff;
+	--footer-link-hover-color: rgba(255, 255, 255, 0.5);
 	--text-font: "Oxygen", arial, helvetica, sans-serif;
 	--title-font: "Oxygen", arial, helvetica, sans-serif;
 	--navi-font: "Oxygen", arial, helvetica, sans-serif;
@@ -754,7 +761,8 @@ textarea {
 # - Header
 --------------------------------------------------------------*/
 .site-header {
-	background: #fff;
+	background-color: #fff;
+	background-color: var(--header-background-color);
 }
 
 .header-main {
@@ -779,23 +787,31 @@ textarea {
 	margin: 0.15em 0;
 	padding: 0;
 	color: #1585b5;
+	color: var(--site-title-color);
 	text-decoration: none;
-	font-weight: bold;
 	font-size: 32px;
 	font-size: 2rem;
-	font-family: 'Oxygen', sans-serif;
+	font-family: "Oxygen", arial, helvetica, sans-serif;
+	font-family: var(--title-font);
+	font-weight: bold;
+	font-weight: var(--title-font-weight);
+	text-transform: none;
+	text-transform: var(--title-text-transform);
 	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 .site-title a:link,
 .site-title a:visited {
 	color: #1585b5;
+	color: var(--site-title-color);
 	transition: all 0.2s ease;
 }
 
 .site-title a:hover,
 .site-title a:active {
 	color: #252525;
+	color: var(--site-title-hover-color);
 }
 
 .site-branding .custom-logo {
@@ -850,7 +866,8 @@ textarea {
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
 	position: relative;
-	background: #252525;
+	background-color: #252525;
+	background-color: var(--navi-secondary-color);
 }
 
 .primary-navigation {
@@ -862,6 +879,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
+	color: var(--navi-secondary-text-color);
 	list-style: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -874,7 +892,9 @@ textarea {
 }
 
 .main-navigation > ul {
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid;
+	border-color: rgba(255, 255, 255, 0.1);
+	border-color: var(--navi-border-color);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -898,7 +918,9 @@ textarea {
 	display: block;
 	margin: 0;
 	padding: 1em 1.5em;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid;
+	border-color: rgba(255, 255, 255, 0.1);
+	border-color: var(--navi-border-color);
 	text-decoration: none;
 }
 
@@ -906,6 +928,7 @@ textarea {
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
 	color: #fff;
+	color: var(--navi-secondary-text-color);
 	text-decoration: none;
 	transition: all 0.15s ease;
 }
@@ -913,7 +936,10 @@ textarea {
 .main-navigation ul a:hover,
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
-	background: #1585b5;
+	color: #fff;
+	color: var(--navi-primary-text-color);
+	background-color: #1585b5;
+	background-color: var(--navi-primary-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -952,6 +978,7 @@ textarea {
 	border: none;
 	background: none;
 	color: #fff;
+	color: var(--navi-secondary-text-color);
 	text-decoration: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -969,12 +996,16 @@ textarea {
 .primary-menu-toggle:focus {
 	outline: thin dotted;
 	color: #fff;
+	color: var(--navi-secondary-text-color);
 	background: none;
 }
 
 .primary-menu-toggle:hover,
 .primary-menu-toggle:active {
-	background: #1585b5;
+	color: #fff;
+	color: var(--navi-primary-text-color);
+	background-color: #1585b5;
+	background-color: var(--navi-primary-color);
 	cursor: pointer;
 }
 
@@ -984,6 +1015,7 @@ textarea {
 	height: 24px;
 	vertical-align: top;
 	fill: #fff;
+	fill: var(--navi-secondary-text-color);
 	transition: fill 0.15s ease;
 }
 
@@ -1010,6 +1042,7 @@ textarea {
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
 	color: #fff;
+	color: var(--navi-secondary-text-color);
 	background: none;
 }
 
@@ -1024,6 +1057,7 @@ textarea {
 	height: 24px;
 	vertical-align: top;
 	fill: #fff;
+	fill: var(--navi-secondary-text-color);
 	transition: fill 0.15s ease;
 }
 
@@ -1031,6 +1065,7 @@ textarea {
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
 	fill: rgba(255, 255, 255, 0.5);
+	fill: var(--navi-secondary-text-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {
@@ -2156,11 +2191,13 @@ object {
 # - Footer
 --------------------------------------------------------------*/
 .site-footer-wrap {
-	background: #252525;
+	background-color: #252525;
+	background-color: var(--footer-background-color);
 }
 
 .site-footer {
 	color: #fff;
+	color: var(--footer-text-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -2173,6 +2210,7 @@ object {
 .site-footer a:link,
 .site-footer a:visited {
 	color: #fff;
+	color: var(--footer-link-color);
 	text-decoration: underline;
 }
 

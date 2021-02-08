@@ -1,9 +1,9 @@
 .site-footer-wrap {
-	background: #252525;
+	@include background(--footer-background-color);
 }
 
 .site-footer {
-	color: #fff;
+	@include color(--footer-text-color);
 	@include font-size(14);
 }
 
@@ -14,7 +14,7 @@
 
 .site-footer a:link,
 .site-footer a:visited {
-	color: #fff;
+	@include color(--footer-link-color);
 	text-decoration: underline;
 }
 

@@ -39,13 +39,18 @@ $themeColors: (
 	--button-hover-color             : #252525,
 	--button-hover-text-color        : #fff,
 
+	// Header
+	--header-background-color        : #fff,
+	--site-title-color               : #1585b5,
+	--site-title-hover-color         : #252525,
+
 	// Navigation
-	--navi-color                     : #303030,
-	--navi-hover-color               : #cc5555,
-	--navi-submenu-color             : #cc5555,
-	--navi-submenu-text-color        : #fff,
-	--navi-submenu-hover-color       : rgba(255, 255, 255, 0.5),
-	--navi-submenu-border-color      : rgba(255, 255, 255, 0.1),
+	--navi-primary-color             : #1585b5,
+	--navi-primary-text-color        : #fff,
+	--navi-secondary-color           : #252525,
+	--navi-secondary-text-color      : #fff,
+	--navi-secondary-text-hover-color: rgba(255, 255, 255, 0.5),
+	--navi-border-color              : rgba(255, 255, 255, 0.1),
 
 	// Titles
 	--title-color                    : #303030,
@@ -54,11 +59,10 @@ $themeColors: (
 	--widget-title-hover-color       : #cc5555,
 
 	// Footer
-	--footer-background-color        : #2a4861,
-	--footer-text-color              : rgba(255, 255, 255, 0.6),
+	--footer-background-color        : #252525,
+	--footer-text-color              : #fff,
 	--footer-link-color              : #fff,
-	--footer-link-hover-color        : rgba(255, 255, 255, 0.6),
-	--footer-border-color            : rgba(255, 255, 255, 0.1),
+	--footer-link-hover-color        : rgba(255, 255, 255, 0.5),
 );
 
 // Theme Fonts

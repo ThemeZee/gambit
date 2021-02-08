@@ -1,5 +1,5 @@
 .site-header {
-	background: #fff;
+	@include background(--header-background-color);
 }
 
 .header-main {
@@ -23,23 +23,24 @@
 	display: inline-block;
 	margin: 0.15em 0;
 	padding: 0;
-	color: #1585b5;
+	@include color(--site-title-color);
 	text-decoration: none;
-	font-weight: bold;
 	@include font-size(32);
-	font-family: 'Oxygen', sans-serif;
-	line-height: 1.4;
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .site-title a:link,
 .site-title a:visited {
-	color: #1585b5;
+	@include color(--site-title-color);
 	transition: all 0.2s ease;
 }
 
 .site-title a:hover,
 .site-title a:active {
-	color: #252525;
+	@include color(--site-title-hover-color);
 }
 
 .site-branding .custom-logo {
