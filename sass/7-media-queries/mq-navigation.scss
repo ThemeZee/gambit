@@ -37,6 +37,7 @@
 
 	.main-navigation ul li.current-menu-item > a {
 		text-decoration: none;
+		@include color(--navi-primary-text-color);
 		@include background(--navi-primary-color);
 	}
 
@@ -91,5 +92,11 @@
 		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.main-navigation .menu-item-has-children > a:hover::after,
+	.main-navigation .menu-item-has-children > a:active::after,
+	.main-navigation .menu-item-has-children > a:focus::after {
+		@include color(--navi-primary-text-color);
 	}
 }

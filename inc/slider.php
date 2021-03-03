@@ -28,7 +28,7 @@ function gambit_slider_scripts() {
 		wp_enqueue_script( 'gambit-slider', get_template_directory_uri() . '/assets/js/slider.js', array( 'jquery-flexslider' ), '20190910' );
 
 		// Register and enqueue slider CSS.
-		wp_enqueue_style( 'gambit-slider', get_template_directory_uri() . '/assets/css/flexslider.css', array(), '20190910' );
+		wp_enqueue_style( 'gambit-slider', get_template_directory_uri() . '/assets/css/flexslider.css', array(), '20210303' );
 
 	endif;
 

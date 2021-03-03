@@ -1016,8 +1016,7 @@ textarea {
 	width: 24px;
 	height: 24px;
 	vertical-align: top;
-	fill: #fff;
-	fill: var(--navi-secondary-text-color);
+	fill: currentColor;
 	transition: fill 0.15s ease;
 }
 
@@ -1867,7 +1866,7 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 .search-form .search-submit .genericon-search {
 	display: inline-block;
 	margin: 0;
-	color: #fff;
+	color: currentColor;
 	content: '\f400';
 	vertical-align: top;
 	text-decoration: inherit;
@@ -2654,6 +2653,8 @@ object {
 
 	.main-navigation ul li.current-menu-item > a {
 		text-decoration: none;
+		color: #fff;
+		color: var(--navi-primary-text-color);
 		background-color: #1585b5;
 		background-color: var(--navi-primary-color);
 	}
@@ -2713,6 +2714,13 @@ object {
 		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.main-navigation .menu-item-has-children > a:hover::after,
+	.main-navigation .menu-item-has-children > a:active::after,
+	.main-navigation .menu-item-has-children > a:focus::after {
+		color: #fff;
+		color: var(--navi-primary-text-color);
 	}
 }
 

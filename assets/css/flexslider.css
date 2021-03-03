@@ -180,8 +180,10 @@ html[xmlns] .zeeflexslider .zeeslides {
 	margin: 0;
 	width: 40px;
 	height: 40px;
-	background: #1585b5;
+	background-color: #1585b5;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 	text-align: left;
 	font-size: 0;
 	cursor: pointer;
@@ -189,14 +191,17 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider-controls .zeeflex-direction-nav a:hover {
-	background: #252525;
+	background-color: #252525;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 }
 
 .post-slider-controls .zeeflex-direction-nav a:before {
 	display: inline-block;
 	margin: 0.35em;
-	color: #fff;
+	color: currentColor;
 	vertical-align: text-bottom;
 	text-decoration: inherit;
 	font: normal 24px/1 Genericons;

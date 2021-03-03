@@ -128,7 +128,7 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: top;
-	@include fill(--navi-secondary-text-color);
+	fill: currentColor;
 	transition: fill 0.15s ease;
 }
 
