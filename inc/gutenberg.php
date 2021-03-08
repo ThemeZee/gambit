@@ -18,14 +18,14 @@ function gambit_gutenberg_support() {
 
 	// Define block color palette.
 	$color_palette = apply_filters( 'gambit_color_palette', array(
-		'primary_color'    => '#cc5555',
-		'secondary_color'  => '#5d7b94',
-		'tertiary_color'   => '#90aec7',
-		'accent_color'     => '#60945d',
-		'highlight_color'  => '#915d94',
-		'light_gray_color' => '#f0f0f0',
+		'primary_color'    => '#1585b5',
+		'secondary_color'  => '#006c9c',
+		'tertiary_color'   => '#005282',
+		'accent_color'     => '#b52315',
+		'highlight_color'  => '#15b545',
+		'light_gray_color' => '#e5e5e5',
 		'gray_color'       => '#999999',
-		'dark_gray_color'  => '#303030',
+		'dark_gray_color'  => '#252525',
 	) );
 
 	// Add theme support for block color palette.

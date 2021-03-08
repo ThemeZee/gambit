@@ -47,14 +47,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #cc5555;
-	--secondary-color: #5d7b94;
-	--tertiary-color: #90aec7;
-	--accent-color: #60945d;
-	--highlight-color: #915d94;
-	--light-gray-color: #f0f0f0;
+	--primary-color: #1585b5;
+	--secondary-color: #006c9c;
+	--tertiary-color: #005282;
+	--accent-color: #b52315;
+	--highlight-color: #15b545;
+	--light-gray-color: #e5e5e5;
 	--gray-color: #999;
-	--dark-gray-color: #303030;
+	--dark-gray-color: #252525;
 	--text-color: #333;
 	--medium-text-color: #666;
 	--light-text-color: #999;
@@ -1733,31 +1733,31 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 /* Block Text Colors */
 .has-primary-color,
 .wp-block-button__link.has-primary-color {
-	color: #cc5555;
+	color: #1585b5;
 	color: var(--primary-color);
 }
 
 .has-secondary-color,
 .wp-block-button__link.has-secondary-color {
-	color: #5d7b94;
+	color: #006c9c;
 	color: var(--secondary-color);
 }
 
 .has-tertiary-color,
 .wp-block-button__link.has-tertiary-color {
-	color: #90aec7;
+	color: #005282;
 	color: var(--tertiary-color);
 }
 
 .has-accent-color,
 .wp-block-button__link.has-accent-color {
-	color: #60945d;
+	color: #b52315;
 	color: var(--accent-color);
 }
 
 .has-highlight-color,
 .wp-block-button__link.has-highlight-color {
-	color: #915d94;
+	color: #15b545;
 	color: var(--highlight-color);
 }
 
@@ -1768,7 +1768,7 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 
 .has-light-gray-color,
 .wp-block-button__link.has-light-gray-color {
-	color: #f0f0f0;
+	color: #e5e5e5;
 	color: var(--light-gray-color);
 }
 
@@ -1780,7 +1780,7 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 
 .has-dark-gray-color,
 .wp-block-button__link.has-dark-gray-color {
-	color: #303030;
+	color: #252525;
 	color: var(--dark-gray-color);
 }
 
@@ -1792,31 +1792,31 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 /* Block Background Colors */
 .has-primary-background-color,
 .has-primary-background-color[class] {
-	background-color: #cc5555;
+	background-color: #1585b5;
 	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color,
 .has-secondary-background-color[class] {
-	background-color: #5d7b94;
+	background-color: #006c9c;
 	background-color: var(--secondary-color);
 }
 
 .has-tertiary-background-color,
 .has-tertiary-background-color[class] {
-	background-color: #90aec7;
+	background-color: #005282;
 	background-color: var(--tertiary-color);
 }
 
 .has-accent-background-color,
 .has-accent-background-color[class] {
-	background-color: #60945d;
+	background-color: #b52315;
 	background-color: var(--accent-color);
 }
 
 .has-highlight-background-color,
 .has-highlight-background-color[class] {
-	background-color: #915d94;
+	background-color: #15b545;
 	background-color: var(--highlight-color);
 }
 
@@ -1827,7 +1827,7 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 
 .has-light-gray-background-color,
 .has-light-gray-background-color[class] {
-	background-color: #f0f0f0;
+	background-color: #e5e5e5;
 	background-color: var(--light-gray-color);
 }
 
@@ -1839,7 +1839,7 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 
 .has-dark-gray-background-color,
 .has-dark-gray-background-color[class] {
-	background-color: #303030;
+	background-color: #252525;
 	background-color: var(--dark-gray-color);
 }
 
