@@ -50,7 +50,7 @@
 
 .tzwb-comments-list .tzwb-comment-date {
 	margin: 0.2em 0 0.8em;
-	color: #999;
+	@include color(--light-text-color);
 	font-size: 12px;
 	font-size: 0.75rem;
 }
@@ -80,8 +80,8 @@
 	display: block;
 	margin: 0 0.3em 0.3em 0;
 	padding: 0.3em 0.8em;
-	background: #252525;
-	color: #fff;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 13px;
@@ -90,19 +90,20 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited {
-	color: #fff;
+	@include color(--button-hover-text-color);
 	transition: all 0.2s ease;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #1585b5;
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	background: #1585b5;
-	color: #fff;
+	@include background(--button-color);
+	@include color(--button-text-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -149,7 +150,8 @@
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.8em;
-	background: #1585b5;
+	@include background(--button-color);
+	@include color(--button-text-color);
 	transition: all 0.2s ease;
 }
 
@@ -158,6 +160,7 @@
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
-	background: #252525;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 	text-decoration: none;
 }
