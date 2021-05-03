@@ -328,7 +328,7 @@ if ( ! function_exists( 'gambit_pagination' ) ) :
 
 		the_posts_pagination( array(
 			'mid_size'  => 2,
-			'prev_text' => '&laquo<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'gambit' ) . '</span>',
+			'prev_text' => '&laquo;<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'gambit' ) . '</span>',
 			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'gambit' ) . '</span>&raquo;',
 		) );
 
