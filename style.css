@@ -640,6 +640,45 @@ textarea {
 	width: 100%;
 }
 
+/* Search Form */
+.search-form {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.search-form label {
+	flex-grow: 1;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form .search-field {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.7rem 0.9rem;
+	min-width: 100px;
+	width: 100%;
+	-webkit-appearance: none;
+	line-height: 1;
+}
+
+.search-form .search-submit {
+	display: flex;
+	margin-left: -1px;
+	padding: 0.7rem 0.9rem;
+	align-items: center;
+}
+
+.search-form .search-submit .icon-search {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+
 /*--------------------------------------------------------------
 # - Accessibility
 --------------------------------------------------------------*/
@@ -1907,60 +1946,6 @@ body.date-hidden.author-hidden .widget-magazine-posts .type-post .entry-meta {
 /* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
-}
-
-/*--------------------------------------------------------------
-## 11.1 - Default Widgets
---------------------------------------------------------------*/
-
-/* Theme Search Widget */
-.search-form {
-	position: relative;
-	display: block;
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
-.search-form .screen-reader-text {
-	display: none;
-}
-
-.search-form .search-field {
-	display: inline-block;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0.55em 3em 0.5em 1em;
-	width: 100%;
-	-webkit-appearance: none;
-}
-
-.search-form .search-submit {
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 0.6em 0.8em;
-	border: none;
-	font-size: 16px;
-	font-size: 1rem;
-	cursor: pointer;
-}
-
-.search-form .search-submit .genericon-search {
-	display: inline-block;
-	margin: 0;
-	color: currentColor;
-	content: '\f400';
-	vertical-align: top;
-	text-decoration: inherit;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 24px;
-	font-family: 'Genericons';
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 /*--------------------------------------------------------------
