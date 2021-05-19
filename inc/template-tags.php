@@ -190,7 +190,9 @@ if ( ! function_exists( 'gambit_meta_date' ) ) :
 			esc_html( get_the_date() )
 		);
 
-		return '<span class="meta-date">' . $time_string . '</span>';
+		$posted_on = gambit_get_svg( 'standard' ) . $time_string;
+
+		return '<span class="meta-date">' . $posted_on . '</span>';
 	}
 endif;
 
@@ -207,7 +209,9 @@ if ( ! function_exists( 'gambit_meta_author' ) ) :
 			esc_html( get_the_author() )
 		);
 
-		return '<span class="meta-author"> ' . $author_string . '</span>';
+		$posted_by = gambit_get_svg( 'user' ) . $author_string;
+
+		return '<span class="meta-author"> ' . $posted_by . '</span>';
 	}
 endif;
 
@@ -218,7 +222,14 @@ if ( ! function_exists( 'gambit_meta_category' ) ) :
 	 */
 	function gambit_meta_category() {
 
-		return '<span class="meta-category"> ' . get_the_category_list( ', ' ) . '</span>';
+		// Return early if post has no category.
+		if ( ! has_category() ) {
+			return;
+		}
+
+		$posted_in = gambit_get_svg( 'category' ) . get_the_category_list( ', ' );
+
+		return '<span class="meta-category"> ' . $posted_in . '</span>';
 
 	}
 endif;
