@@ -11,15 +11,14 @@
  * @package Gambit
  */
 
-/* ====================================================================================================================
- * RESETS
- * ====================================================================================================================*/
+/* RESETS */
 .zeeflex-container a:hover,
 .zeeflex-slider a:hover,
 .zeeflex-container a:focus,
 .zeeflex-slider a:focus {
 	outline: none;
 }
+
 .zeeslides,
 .zeeslides > li,
 .zeeflex-control-nav,
@@ -28,26 +27,27 @@
 	padding: 0;
 	list-style: none;
 }
+
 .zeeflex-pauseplay span {
 	text-transform: capitalize;
 }
 
-/* ====================================================================================================================
- * BASE STYLES
- * ====================================================================================================================*/
+/* BASE STYLES */
 .zeeflexslider {
 	margin: 0;
 	padding: 0;
 }
+
 .zeeflexslider .zeeslides > li {
 	display: none;
-	-webkit-backface-visibility: hidden;
 }
+
 .zeeflexslider .zeeslides img {
 	display: block;
 	width: 100%;
 }
-.zeeflexslider .zeeslides:after {
+
+.zeeflexslider .zeeslides::after {
 	display: block;
 	visibility: hidden;
 	clear: both;
@@ -55,20 +55,20 @@
 	content: "\0020";
 	line-height: 0;
 }
+
 html[xmlns] .zeeflexslider .zeeslides {
 	display: block;
 }
+
 * html .zeeflexslider .zeeslides {
 	height: 1%;
 }
+
 .no-js .zeeflexslider .zeeslides > li:first-child {
 	display: block;
 }
 
-/* ====================================================================================================================
- * Gambit Slider Theme
- * ====================================================================================================================*/
-
+/* Gambit Slider Theme */
 .post-slider-container {
 	overflow: hidden;
 	margin: 0 0 2em;
@@ -79,7 +79,8 @@ html[xmlns] .zeeflexslider .zeeslides {
 	position: relative;
 }
 
-.post-slider, .zeeflexslider .zeeslides {
+.post-slider,
+.zeeflexslider .zeeslides {
 	zoom: 1;
 }
 
@@ -176,14 +177,14 @@ html[xmlns] .zeeflexslider .zeeslides {
 .post-slider-controls .zeeflex-direction-nav a {
 	position: absolute;
 	z-index: 10;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 0;
 	width: 40px;
 	height: 40px;
-	background-color: #1585b5;
-	background-color: var(--button-color);
-	color: #fff;
-	color: var(--button-text-color);
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-align: left;
 	font-size: 0;
 	cursor: pointer;
@@ -191,10 +192,8 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider-controls .zeeflex-direction-nav a:hover {
-	background-color: #252525;
-	background-color: var(--button-hover-color);
-	color: #fff;
-	color: var(--button-hover-text-color);
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 	text-decoration: none;
 }
 
@@ -202,26 +201,18 @@ html[xmlns] .zeeflexslider .zeeslides {
 	display: inline-block;
 	margin: 0.35em;
 	color: currentColor;
-	vertical-align: text-bottom;
+	vertical-align: top;
 	text-decoration: inherit;
-	font: normal 24px/1 Genericons;
-	-webkit-font-smoothing: antialiased;
+	font-size: 22px;
+	font-weight: bold;
 }
 
-.post-slider-controls .zeeflex-direction-nav a.zeeflex-next:before {
-	content: '\f431';
-	-webkit-transform:rotate(270deg);
-	-moz-transform:rotate(270deg);
-	-o-transform:rotate(270deg);
-	-ms-transform:rotate(270deg);
+.post-slider-controls .zeeflex-direction-nav a.zeeflex-next::before {
+	content: '\003e';
 }
 
-.post-slider-controls .zeeflex-direction-nav a.zeeflex-prev:before {
-	content: '\f431';
-	-webkit-transform:rotate(90deg);
-	-moz-transform:rotate(90deg);
-	-o-transform:rotate(90deg);
-	-ms-transform:rotate(90deg);
+.post-slider-controls .zeeflex-direction-nav a.zeeflex-prev::before {
+	content: '\003c';
 }
 
 .post-slider-controls .zeeflex-direction-nav .zeeflex-next {
@@ -248,7 +239,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	display: block;
 	width: 14px;
 	height: 14px;
-	background: rgba(255,255,255,0.7);
+	background: rgba(255, 255, 255, 0.7);
 	text-indent: -9999px;
 	cursor: pointer;
 	transition: all 0.2s ease;
@@ -263,16 +254,12 @@ html[xmlns] .zeeflexslider .zeeslides {
 	cursor: default;
 }
 
-/*--------------------------------------------------------------
-# Media Queries
---------------------------------------------------------------*/
-
+/* Media Queries */
 @media only screen and (max-width: 80em) {
 	.post-slider .zeeslide .slide-post .entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
-
 }
 
 @media only screen and (max-width: 70em) {
@@ -280,7 +267,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 28px;
 		font-size: 1.75rem;
 	}
-
 }
 
 @media only screen and (max-width: 60em) {
@@ -288,7 +274,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
-
 }
 
 @media only screen and (max-width: 50em) {
@@ -296,7 +281,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 28px;
 		font-size: 1.75rem;
 	}
-
 }
 
 @media only screen and (max-width: 40em) {
@@ -313,7 +297,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
-
 }
 
 @media only screen and (max-width: 30em) {
@@ -321,7 +304,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-
 }
 
 @media only screen and (max-width: 20em) {
@@ -329,5 +311,4 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
-
 }
