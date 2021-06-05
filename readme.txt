@@ -26,6 +26,10 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 2.0 - 2021-06-05 =
+* added SVG icons for all theme icons
+* removed Genericons icon font
+
 = 1.9.2 - 2021-03-11 =
 * added CSS variables for Widget Bundle and Related Posts plugin styling
 
