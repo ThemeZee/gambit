@@ -23,6 +23,8 @@ $theme_options = gambit_theme_options();
 		// Display Magazine Homepage Widgets.
 		gambit_magazine_widgets();
 
+		do_action( 'gambit_before_blog' );
+
 		if ( have_posts() ) :
 
 			// Display Latest Posts Title.
