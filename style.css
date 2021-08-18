@@ -448,7 +448,6 @@ blockquote {
 	border-color: var(--light-border-color);
 	color: #666;
 	color: var(--medium-text-color);
-	font-style: italic;
 	font-size: 18px;
 	font-size: 1.125rem;
 }
@@ -462,17 +461,12 @@ blockquote small {
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
+	font-style: normal;
 }
 
 blockquote cite::before,
 blockquote small::before {
 	content: "\2014\00a0";
-}
-
-blockquote em,
-blockquote i,
-blockquote cite {
-	font-style: normal;
 }
 
 blockquote > :last-child {
@@ -1607,19 +1601,29 @@ p.has-background {
 }
 
 /* Button Block */
+.wp-block-button {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
 .wp-block-button.aligncenter {
 	text-align: center;
 }
 
 .wp-block-button__link {
 	margin: 0;
-	padding: 0.6rem 1rem;
+	padding: 0.5em 1em;
 	border: none;
 	border-radius: 0;
 	color: inherit;
 	text-decoration: none;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-family: "Oxygen", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: bold;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
+	transition: all 0.2s ease;
 }
 
 .wp-block-button__link:link,
@@ -1655,7 +1659,7 @@ p.has-background {
 
 /* Outline Style */
 .wp-block-button.is-style-outline .wp-block-button__link {
-	padding: calc(0.6em - 2px) calc(1em - 2px);
+	padding: calc(0.5em - 2px) calc(1em - 2px);
 	background-color: transparent !important;
 }
 
@@ -1684,14 +1688,13 @@ p.has-background {
 }
 
 .wp-block-quote.has-text-align-right:not(.is-style-large) {
-	padding-right: 1.5rem;
-	border-right: 5px solid;
+	padding-right: 1.25em;
+	border-right: 3px solid;
 	border-color: #ddd;
 	border-color: var(--light-border-color);
 }
 
 .wp-block-quote.is-style-large {
-	margin: 1.75rem 0;
 	padding: 0;
 	border: none;
 	font-size: 28px;
@@ -1712,10 +1715,11 @@ p.has-background {
 
 /* Pullquote Block */
 .wp-block-pullquote {
-	margin: 1.75rem 0;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	padding: 0;
-	border-bottom: 5px solid;
-	border-top: 5px solid;
+	border-bottom: 3px solid;
+	border-top: 3px solid;
 	border-color: #ddd;
 	border-color: var(--light-border-color);
 }
@@ -1730,6 +1734,15 @@ p.has-background {
 .wp-block-pullquote p {
 	font-size: inherit;
 	line-height: inherit;
+}
+
+.wp-block-pullquote blockquote > p:last-of-type {
+	margin-bottom: 0;
+}
+
+.wp-block-pullquote.alignleft p,
+.wp-block-pullquote.alignright p {
+	font-size: 0.75em;
 }
 
 .wp-block-pullquote blockquote cite {
@@ -1748,7 +1761,6 @@ p.has-background {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote p {
-	margin: 1.75rem 0 1rem;
 	font-size: inherit;
 }
 

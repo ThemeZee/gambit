@@ -18,7 +18,6 @@ blockquote {
 	border-left: 3px solid;
 	@include border-color(--light-border-color);
 	@include color(--medium-text-color);
-	font-style: italic;
 	@include font-size(18);
 }
 
@@ -29,17 +28,12 @@ blockquote small {
 	@include color(--text-color);
 	@include font-size(16);
 	line-height: 1.75;
+	font-style: normal;
 }
 
 blockquote cite::before,
 blockquote small::before {
 	content: "\2014\00a0";
-}
-
-blockquote em,
-blockquote i,
-blockquote cite {
-	font-style: normal;
 }
 
 blockquote > :last-child {

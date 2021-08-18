@@ -112,15 +112,15 @@
 .wp-block-quote {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
-	padding: 1.5em;
-	border-left: 4px solid;
-	@include border-color(--dark-border-color);
-	@include color(--medium-text-color );
+	padding: 1.25em;
+	border-left: 3px solid;
+	@include border-color(--light-border-color);
+	@include color(--medium-text-color);
 	@include font-size(18);
 }
 
 .editor-styles-wrapper blockquote p {
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 }
 
 .editor-styles-wrapper blockquote cite,
@@ -132,6 +132,7 @@
 	@include color(--text-color);
 	@include font-family(--text-font);
 	@include font-size(16);
+	font-style: normal;
 }
 
 .wp-block-quote cite::before,
@@ -205,10 +206,11 @@
 .wp-block-image figcaption,
 .wp-block-audio figcaption,
 .wp-block-table figcaption {
-	margin-top: 0.5em;
-	margin-bottom: 1.5em;
-	@include font-size(16);
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+	@include font-size(14);
 	@include color(--medium-text-color);
+	text-align: center;
 }
 
 .wp-block-image figcaption {
