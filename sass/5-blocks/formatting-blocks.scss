@@ -97,6 +97,7 @@ p.has-background {
 	border: none;
 	border-radius: 0;
 	color: inherit;
+	font-size: inherit;
 	text-decoration: none;
 	@include font-family(--widget-title-font);
 	@include font-weight(--widget-title-font-weight);

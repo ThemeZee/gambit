@@ -515,6 +515,7 @@ p.has-background {
 	border: none;
 	border-radius: 0;
 	color: inherit;
+	font-size: inherit;
 	text-decoration: none;
 	font-family: "Oxygen", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
@@ -752,20 +753,20 @@ p.has-background {
 
 /* Editor Block Styles */
 .editor-styles-wrapper .wp-block-heading.is-style-widget-title {
-	padding: 0.5rem 0.75rem;
+	margin-top: 0;
+	padding: 0.4em 0.8em;
 	color: #fff;
 	color: var(--widget-title-text-color);
-	background-color: var(--widget-title-background-color);
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 	font-family: "Oxygen", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
 	font-weight: bold;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--widget-title-text-transform);
-	line-height: 1.4;
-	line-height: var(--title-line-height);
+	background-color: #252525;
+	background-color: var(--widget-title-color);
 }
 
 /*--------------------------------------------------------------
