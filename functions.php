@@ -169,7 +169,7 @@ function gambit_scripts() {
 
 	// Register and enqueue navigation.min.js.
 	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! gambit_is_amp() ) {
-		wp_enqueue_script( 'gambit-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20200822', true );
+		wp_enqueue_script( 'gambit-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array(), '20211104', true );
 		$gambit_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'gambit' ),
 			'collapse' => esc_html__( 'Collapse child menu', 'gambit' ),
