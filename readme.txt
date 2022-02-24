@@ -26,6 +26,9 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 2.0.6 - 2022-02-24 =
+* fixed keyboard navigation of dropdown menus
+
 = 2.0.5 - 2021-11-04 =
 * updated navigation.js to use vanilla js instead of jQuery
 
