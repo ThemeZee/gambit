@@ -36,6 +36,7 @@
 }
 
 .entry-content {
+	margin-top: 1em;
 	@include font-size(16);
 }
 
@@ -43,8 +44,8 @@
 	text-decoration: underline;
 }
 
-.entry-content > p:first-child {
-	margin-top: 1em;
+.entry-content > *:first-child {
+	margin-top: 0;
 }
 
 .sticky {

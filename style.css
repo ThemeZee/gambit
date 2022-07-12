@@ -4,9 +4,9 @@ Theme URI: https://themezee.com/themes/gambit/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Gambit is a complex and highly flexible WordPress theme perfectly suited for any news, magazine or blog website. It features several different layout options, two sidebars and a stunning featured post slider. The easy to use Magazine Homepage template allows you to create a powerful online magazine in just a few minutes.
-Version: 2.0.6
+Version: 2.0.7
 Requires at least: 5.2
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 5.6
 AMP: true
 License: GNU General Public License v2 or later
@@ -1184,6 +1184,7 @@ textarea {
 }
 
 .entry-content {
+	margin-top: 1em;
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -1192,8 +1193,8 @@ textarea {
 	text-decoration: underline;
 }
 
-.entry-content > p:first-child {
-	margin-top: 1em;
+.entry-content > *:first-child {
+	margin-top: 0;
 }
 
 .sticky {
