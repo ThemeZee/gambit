@@ -358,7 +358,7 @@ function gambit_footer_text() {
 		// translators: Theme Name and Link to ThemeZee.
 		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'gambit' ),
 			esc_html__( 'Gambit', 'gambit' ),
-			'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
+			'ThemeZee'
 		);
 		?>
 	</span>

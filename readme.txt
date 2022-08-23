@@ -26,6 +26,10 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 
 == Changelog ==
 
+= 2.0.8 - 2022-08-23 =
+* fixed duplicated h1 with blog title enabled
+* updated footer credit link
+
 = 2.0.7 - 2022-07-12 =
 * added block support for custom spacing and line heights
 * improved styling of columns block
