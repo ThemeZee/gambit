@@ -32,7 +32,7 @@ if ( ! function_exists( 'gambit_site_title' ) ) :
 		// Get theme options from database.
 		$theme_options = gambit_theme_options();
 
-		if ( ( is_home() and '' !== $theme_options['blog_title'] ) or is_page_template( 'template-magazine.php' )  ) : ?>
+		if ( ( is_home() and '' === $theme_options['blog_title'] ) or is_page_template( 'template-magazine.php' )  ) : ?>
 
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
