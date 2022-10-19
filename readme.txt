@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/gambit/
 Contributors: themezee
 Tags: three-columns, custom-background, custom-header, custom-menu, editor-style, rtl-language-support, grid-layout, blog, entertainment, news, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, two-columns
 Requires at least: 5.2
-Tested up to: 6.0
+Tested up to: 6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ For more information about Gambit please go to https://themezee.com/themes/gambi
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 2.0.9 - 2022-10-19 =
+* improved accessibility of search form
 
 = 2.0.8 - 2022-08-23 =
 * fixed duplicated h1 with blog title enabled
