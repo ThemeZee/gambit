@@ -18,21 +18,30 @@ function gambit_theme_addons_setup() {
 	add_theme_support( 'themezee-mega-menu', array( 'primary', 'secondary' ) );
 
 	// Add theme support for Widget Bundle.
-	add_theme_support( 'themezee-widget-bundle', array(
-		'thumbnail_size' => array( 80, 64 ),
-	) );
+	add_theme_support(
+		'themezee-widget-bundle',
+		array(
+			'thumbnail_size' => array( 80, 64 ),
+		)
+	);
 
 	// Add theme support for Related Posts.
-	add_theme_support( 'themezee-related-posts', array(
-		'thumbnail_size' => array( 420, 300 ),
-	) );
+	add_theme_support(
+		'themezee-related-posts',
+		array(
+			'thumbnail_size' => array( 420, 300 ),
+		)
+	);
 
 	// Add theme support for Infinite Scroll.
-	add_theme_support( 'infinite-scroll', array(
-		'container'      => 'main',
-		'footer_widgets' => array( 'footer-left', 'footer-center-left', 'footer-center-right', 'footer-right' ),
-		'render'         => 'gambit_infinite_scroll_render',
-	) );
+	add_theme_support(
+		'infinite-scroll',
+		array(
+			'container'      => 'main',
+			'footer_widgets' => array( 'footer-left', 'footer-center-left', 'footer-center-right', 'footer-right' ),
+			'render'         => 'gambit_infinite_scroll_render',
+		)
+	);
 
 	// Add theme support for AMP.
 	add_theme_support( 'amp' );

@@ -48,9 +48,13 @@ function gambit_upgrade_notice() {
  * @global string $wp_version WordPress version.
  */
 function gambit_customize() {
-	wp_die( sprintf( esc_html__( '%1$s requires at least WordPress version %2$s. You are running version %3$s. Please upgrade and try again.', 'gambit' ), 'Gambit', '4.7', $GLOBALS['wp_version'] ), '', array(
-		'back_link' => true,
-	) );
+	wp_die(
+		sprintf( esc_html__( '%1$s requires at least WordPress version %2$s. You are running version %3$s. Please upgrade and try again.', 'gambit' ), 'Gambit', '4.7', $GLOBALS['wp_version'] ),
+		'',
+		array(
+			'back_link' => true,
+		)
+	);
 }
 add_action( 'load-customize.php', 'gambit_customize' );
 

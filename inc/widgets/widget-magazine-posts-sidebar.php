@@ -23,8 +23,8 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 			'gambit-magazine-posts-sidebar', // ID.
 			esc_html__( 'Magazine (Sidebar)', 'gambit' ), // Name.
 			array(
-				'classname' => 'gambit-magazine-sidebar-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category. You can use this widget in the Main Sidebar widget area.', 'gambit' ),
+				'classname'                   => 'gambit-magazine-sidebar-widget',
+				'description'                 => esc_html__( 'Displays your posts from a selected category. You can use this widget in the Main Sidebar widget area.', 'gambit' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -67,8 +67,10 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 
 		<div class="widget-magazine-posts-sidebar widget-magazine-posts clearfix">
 
-			<?php // Display Title.
-			$this->widget_title( $args, $settings ); ?>
+			<?php
+			// Display Title.
+			$this->widget_title( $args, $settings );
+			?>
 
 			<div class="widget-magazine-posts-content">
 
@@ -107,7 +109,7 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
 		);
-		$posts_query = new WP_Query( $query_arguments );
+		$posts_query     = new WP_Query( $query_arguments );
 
 		// Check if there are posts.
 		if ( $posts_query->have_posts() ) :
@@ -119,7 +121,8 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 			set_query_var( 'gambit_post_excerpt', (bool) $settings['excerpt'] );
 
 			// Display Posts.
-			while ( $posts_query->have_posts() ) : $posts_query->the_post();
+			while ( $posts_query->have_posts() ) :
+				$posts_query->the_post();
 
 				get_template_part( 'template-parts/widgets/magazine-large-post', 'sidebar' );
 
@@ -165,11 +168,11 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 	 */
 	function update( $new_instance, $old_instance ) {
 
-		$instance = $old_instance;
-		$instance['title'] = sanitize_text_field( $new_instance['title'] );
+		$instance             = $old_instance;
+		$instance['title']    = sanitize_text_field( $new_instance['title'] );
 		$instance['category'] = (int) $new_instance['category'];
-		$instance['number'] = (int) $new_instance['number'];
-		$instance['excerpt'] = ! empty( $new_instance['excerpt'] );
+		$instance['number']   = (int) $new_instance['number'];
+		$instance['excerpt']  = ! empty( $new_instance['excerpt'] );
 
 		gambit_flush_magazine_post_ids();
 
@@ -195,17 +198,18 @@ class Gambit_Magazine_Posts_Sidebar_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'gambit' ); ?></label><br/>
-			<?php // Display Category Select.
+			<?php
+			// Display Category Select.
 				$args = array(
 					'show_option_all' => esc_html__( 'All Categories', 'gambit' ),
-					'show_count' 		  => true,
-					'hide_empty'		  => false,
+					'show_count'      => true,
+					'hide_empty'      => false,
 					'selected'        => $settings['category'],
 					'name'            => $this->get_field_name( 'category' ),
 					'id'              => $this->get_field_id( 'category' ),
 				);
 				wp_dropdown_categories( $args );
-			?>
+				?>
 		</p>
 
 		<p>

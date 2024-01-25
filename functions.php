@@ -43,31 +43,46 @@ if ( ! function_exists( 'gambit_setup' ) ) :
 		register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'gambit' ) );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
-		add_theme_support( 'html5', array(
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'gambit_custom_background_args', array( 'default-color' => 'e5e5e5' ) ) );
 
 		// Set up the WordPress core custom logo feature.
-		add_theme_support( 'custom-logo', apply_filters( 'gambit_custom_logo_args', array(
-			'height'      => 40,
-			'width'       => 250,
-			'flex-height' => true,
-			'flex-width'  => true,
-		) ) );
+		add_theme_support(
+			'custom-logo',
+			apply_filters(
+				'gambit_custom_logo_args',
+				array(
+					'height'      => 40,
+					'width'       => 250,
+					'flex-height' => true,
+					'flex-width'  => true,
+				)
+			)
+		);
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support( 'custom-header', apply_filters( 'gambit_custom_header_args', array(
-			'header-text' => false,
-			'width'       => 1340,
-			'height'      => 420,
-			'flex-height' => true,
-		) ) );
+		add_theme_support(
+			'custom-header',
+			apply_filters(
+				'gambit_custom_header_args',
+				array(
+					'header-text' => false,
+					'width'       => 1340,
+					'height'      => 420,
+					'flex-height' => true,
+				)
+			)
+		);
 
 		// Add Theme Support for wooCommerce.
 		add_theme_support( 'woocommerce' );
@@ -106,45 +121,53 @@ add_action( 'after_setup_theme', 'gambit_content_width', 0 );
  */
 function gambit_widgets_init() {
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Main Sidebar', 'gambit' ),
-		'id'            => 'sidebar',
-		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'gambit' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Main Sidebar', 'gambit' ),
+			'id'            => 'sidebar',
+			'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'gambit' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Small Sidebar', 'gambit' ),
-		'id'            => 'sidebar-small',
-		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'gambit' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Small Sidebar', 'gambit' ),
+			'id'            => 'sidebar-small',
+			'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'gambit' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Header', 'gambit' ),
-		'id'            => 'header',
-		'description'   => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'gambit' ),
-		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="header-widget-title">',
-		'after_title'   => '</h4>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Header', 'gambit' ),
+			'id'            => 'header',
+			'description'   => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'gambit' ),
+			'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h4 class="header-widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Magazine Homepage', 'gambit' ),
-		'id'            => 'magazine-homepage',
-		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'gambit' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Magazine Homepage', 'gambit' ),
+			'id'            => 'magazine-homepage',
+			'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'gambit' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'gambit_widgets_init' );
 
@@ -192,8 +215,8 @@ add_action( 'wp_enqueue_scripts', 'gambit_scripts' );
 
 
 /**
-* Enqueue theme fonts.
-*/
+ * Enqueue theme fonts.
+ */
 function gambit_theme_fonts() {
 	$fonts_url = gambit_get_fonts_url();
 
@@ -248,11 +271,14 @@ add_action( 'after_setup_theme', 'gambit_add_image_sizes' );
  * Make custom image sizes available in Gutenberg.
  */
 function gambit_add_image_size_names( $sizes ) {
-	return array_merge( $sizes, array(
-		'post-thumbnail'         => esc_html__( 'Gambit Single Post', 'gambit' ),
-		'gambit-thumbnail-large' => esc_html__( 'Gambit Magazine Post', 'gambit' ),
-		'gambit-thumbnail-small' => esc_html__( 'Gambit Thumbnail', 'gambit' ),
-	) );
+	return array_merge(
+		$sizes,
+		array(
+			'post-thumbnail'         => esc_html__( 'Gambit Single Post', 'gambit' ),
+			'gambit-thumbnail-large' => esc_html__( 'Gambit Magazine Post', 'gambit' ),
+			'gambit-thumbnail-small' => esc_html__( 'Gambit Thumbnail', 'gambit' ),
+		)
+	);
 }
 add_filter( 'image_size_names_choose', 'gambit_add_image_size_names' );
 

@@ -23,8 +23,8 @@ class Gambit_Magazine_Posts_Grid_Widget extends WP_Widget {
 			'gambit-magazine-posts-grid', // ID.
 			esc_html__( 'Magazine (Grid)', 'gambit' ), // Name.
 			array(
-				'classname' => 'gambit-magazine-grid-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout.', 'gambit' ),
+				'classname'                   => 'gambit-magazine-grid-widget',
+				'description'                 => esc_html__( 'Displays your posts from a selected category in a grid layout.', 'gambit' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -70,8 +70,10 @@ class Gambit_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		<div class="widget-magazine-posts-grid widget-magazine-posts clearfix">
 
-			<?php // Display Title.
-			$this->widget_title( $args, $settings ); ?>
+			<?php
+			// Display Title.
+			$this->widget_title( $args, $settings );
+			?>
 
 			<div class="widget-magazine-posts-content <?php echo $class; ?> magazine-grid">
 
@@ -110,7 +112,7 @@ class Gambit_Magazine_Posts_Grid_Widget extends WP_Widget {
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
 		);
-		$posts_query = new WP_Query( $query_arguments );
+		$posts_query     = new WP_Query( $query_arguments );
 
 		// Set template.
 		$template = ( 'three-columns' === $settings['layout'] ) ? 'medium-post' : 'large-post';
@@ -122,7 +124,9 @@ class Gambit_Magazine_Posts_Grid_Widget extends WP_Widget {
 			add_filter( 'excerpt_length', 'gambit_magazine_posts_excerpt_length' );
 
 			// Display Posts.
-			while ( $posts_query->have_posts() ) : $posts_query->the_post(); ?>
+			while ( $posts_query->have_posts() ) :
+				$posts_query->the_post();
+				?>
 
 				<div class="post-column">
 
@@ -173,11 +177,11 @@ class Gambit_Magazine_Posts_Grid_Widget extends WP_Widget {
 	 */
 	function update( $new_instance, $old_instance ) {
 
-		$instance = $old_instance;
-		$instance['title'] = sanitize_text_field( $new_instance['title'] );
+		$instance             = $old_instance;
+		$instance['title']    = sanitize_text_field( $new_instance['title'] );
 		$instance['category'] = (int) $new_instance['category'];
-		$instance['layout'] = esc_attr( $new_instance['layout'] );
-		$instance['number'] = (int) $new_instance['number'];
+		$instance['layout']   = esc_attr( $new_instance['layout'] );
+		$instance['number']   = (int) $new_instance['number'];
 
 		gambit_flush_magazine_post_ids();
 
@@ -203,17 +207,18 @@ class Gambit_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'gambit' ); ?></label><br/>
-			<?php // Display Category Select.
+			<?php
+			// Display Category Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'gambit' ),
-					'show_count' 		 => true,
-					'hide_empty'		 => false,
-					'selected'           => $settings['category'],
-					'name'               => $this->get_field_name( 'category' ),
-					'id'                 => $this->get_field_id( 'category' ),
+					'show_option_all' => esc_html__( 'All Categories', 'gambit' ),
+					'show_count'      => true,
+					'hide_empty'      => false,
+					'selected'        => $settings['category'],
+					'name'            => $this->get_field_name( 'category' ),
+					'id'              => $this->get_field_id( 'category' ),
 				);
 				wp_dropdown_categories( $args );
-			?>
+				?>
 		</p>
 
 		<p>

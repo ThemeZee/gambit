@@ -90,7 +90,7 @@ if ( ! function_exists( 'gambit_slider_image' ) ) :
 				</figure>
 			</a>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
