@@ -223,7 +223,7 @@ function gambit_theme_fonts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'gambit_theme_fonts', 1 );
-add_action( 'enqueue_block_editor_assets', 'gambit_theme_fonts', 1 );
+add_action( 'enqueue_block_assets', 'gambit_theme_fonts', 1 );
 
 
 /**
